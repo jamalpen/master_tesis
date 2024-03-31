@@ -1,0 +1,22 @@
+# Geant4 container
+
+First, create a working directory on your local computer:
+
+```
+cd
+mkdir Geant4_Simulations
+chmod -R 777 Geant4_Simulations
+```
+
+Then, download the Geant4 container and start it with the docker run command.
+
+If you are on native Linux and want to use X11-forwarding, use
+
+```bash
+docker run -it --env="LIBGL_ALWAYS_SOFTWARE=1"  --name my_geant4   --net=host   --env="DISPLAY"   -v $HOME/.Xauthority:/root/.Xauthority:rw   -v ${HOME}/Geant4_Simulations:/home/geant4lab/Geant4_projects   jpenafiell/geant4-v10.3.0:latest
+```
+
+Now let's understand the options that were used for the docker run command
+
+* First, the `-it` option means to start the container in interactive mode. Essentially, you'll find yourself within the environment of the container.
+
