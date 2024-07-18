@@ -20,7 +20,7 @@ If you want to use the graphical user interface (GUI) capabilities of the Geant4
 
 ```bash
 xhost +local:root
-``
+```
 
 Now let's understand the options that were used for the docker run command
 
@@ -38,6 +38,6 @@ However, in this container, the setup process has been made more efficient. Inst
 
 ```bash
 g4make
-``
+```
 
 This single command is sufficient for preparing the container for the initialization of a Geant4 program. This simplification enhances user convenience and accelerates the process of getting started with Geant4 projects within this container.
