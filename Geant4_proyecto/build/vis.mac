@@ -1,0 +1,20 @@
+# Open a new viewer with OpenGL
+/vis/open OGL 800x600
+
+# Draw volume
+/vis/drawVolume
+
+# Specify view angle
+/vis/viewer/set/viewpointThetaPhi 90 0
+
+# Add axes at the origin, with lengths of 1 meter
+/vis/scene/add/axes 0 0 0 50000 m
+
+# Draw smooth trajectories at end of event
+/vis/scene/add/trajectories smooth
+
+# Enable auto refresh
+/vis/viewer/set/autoRefresh true
+
+# Refresh the viewer
+/vis/viewer/flush
