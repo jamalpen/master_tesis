@@ -1,0 +1,6 @@
+/control/execute vis.mac
+/control/execute init_vis.mac
+/vis/scene/add/trajectories smooth
+/vis/scene/endOfEventAction accumulate
+/vis/scene/endOfRunAction accumulate
+
