@@ -2,6 +2,7 @@
 // Include the standard input/output library for basic operations
 
 #include "G4RunManager.hh"
+#include "G4MTRunManager.hh"
 // Include the header for G4RunManager, which manages the simulation run
 
 #include "G4UImanager.hh"
@@ -23,17 +24,29 @@
 int main(int argc, char** argv) {
     // Define the main function with command line arguments
     
-    G4RunManager *runManager = new G4RunManager();
+    G4UIExecutive *ui = 0;
+    
+    #ifdef G4MULTITHREADED
+        G4MTRunManager *runManager = new G4MTRunManager();
+    #else
+        G4RunManager *runManager = new G4RunManager();
+    #endif
+    
+    
     // Create an instance of G4RunManager to manage the simulation
     
     runManager->SetUserInitialization(new MyDetectorConstruction());
     runManager->SetUserInitialization(new MyPhysicsList());
-    runManager->SetUserInitialization(new MyActionInitialization());
-    
-    runManager->Initialize();
+    runManager->SetUserInitialization(new MyActionInitialization());      
     
     
-    G4UIExecutive *ui = new G4UIExecutive(argc, argv);
+    if(argc == 1){
+    
+         ui = new G4UIExecutive(argc, argv);
+    
+    }
+    
+    
     // Create an instance of G4UIExecutive to manage the user interface session, using command line arguments
     
     G4VisManager *visManager = new G4VisExecutive();
@@ -44,17 +57,25 @@ int main(int argc, char** argv) {
     G4UImanager *UImanager = G4UImanager::GetUIpointer();
     // Get a pointer to the singleton instance of G4UImanager to manage UI commands
     
-    UImanager->ApplyCommand("/vis/open OGL");
-    UImanager->ApplyCommand("/vis/viewer/set/viewpointVector 1 1 1");
-    UImanager->ApplyCommand("/vis/drawVolume");
-    UImanager->ApplyCommand("/vis/viewer/set/autoRefresh true");
-    UImanager->ApplyCommand("/vis/scene/add/trajectories smooth");
-    UImanager->ApplyCommand("/vis/scene/endOfEventAction accumulate");
+    if(ui){
+        
+          UImanager->ApplyCommand("/control/execute vis.mac");
+
+          ui->SessionStart();
+          // Start the UI session, allowing interactive commands to be processed
+    
+    }
+    
+    else{
+          
+          G4String command = "/control/execute ";
+          G4String fileName = argv[1];
+          UImanager->ApplyCommand(command+fileName);
+    
+    }
     
     
-    
-    ui->SessionStart();
-    // Start the UI session, allowing interactive commands to be processed
+
     
     return 0;    
     // Return 0 to indicate successful execution

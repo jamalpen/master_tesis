@@ -1,9 +1,0 @@
-# Set some default verbose
-/control/verbose 2
-/run/verbose 2
-
-# Initialize kernel
-/run/initialize
-
-# Execute visualization settings
-/control/execute vis.mac

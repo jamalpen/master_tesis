@@ -1,9 +1,0 @@
-/control/execute init_vis.mac
-/vis/open OGL 800x600-0+0
-/vis/viewer/set/viewpointThetaPhi 90 180
-/vis/drawVolume
-/vis/scene/add/trajectories
-/vis/scene/endOfEventAction accumulate
-/vis/scene/add/hits
-/vis/viewer/update
-/vis/verbose warnings

@@ -1,5 +1,0 @@
-# init_vis.mac
-# Geant4 Visualization Initialization Macro
-
-/control/execute vis.mac
-

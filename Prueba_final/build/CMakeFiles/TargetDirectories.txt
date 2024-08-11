@@ -1,4 +1,0 @@
-/home/geant4lab/Geant4_projects/Prueba_final/build/CMakeFiles/rebuild_cache.dir
-/home/geant4lab/Geant4_projects/Prueba_final/build/CMakeFiles/Simulation.dir
-/home/geant4lab/Geant4_projects/Prueba_final/build/CMakeFiles/edit_cache.dir
-/home/geant4lab/Geant4_projects/Prueba_final/build/CMakeFiles/sim.dir

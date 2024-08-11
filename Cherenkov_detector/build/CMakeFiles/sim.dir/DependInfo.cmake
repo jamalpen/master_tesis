@@ -6,8 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/geant4lab/Geant4_projects/Cherenkov_detector/action.cc" "/home/geant4lab/Geant4_projects/Cherenkov_detector/build/CMakeFiles/sim.dir/action.cc.o"
   "/home/geant4lab/Geant4_projects/Cherenkov_detector/construction.cc" "/home/geant4lab/Geant4_projects/Cherenkov_detector/build/CMakeFiles/sim.dir/construction.cc.o"
+  "/home/geant4lab/Geant4_projects/Cherenkov_detector/detector.cc" "/home/geant4lab/Geant4_projects/Cherenkov_detector/build/CMakeFiles/sim.dir/detector.cc.o"
   "/home/geant4lab/Geant4_projects/Cherenkov_detector/generator.cc" "/home/geant4lab/Geant4_projects/Cherenkov_detector/build/CMakeFiles/sim.dir/generator.cc.o"
   "/home/geant4lab/Geant4_projects/Cherenkov_detector/physics.cc" "/home/geant4lab/Geant4_projects/Cherenkov_detector/build/CMakeFiles/sim.dir/physics.cc.o"
+  "/home/geant4lab/Geant4_projects/Cherenkov_detector/run.cc" "/home/geant4lab/Geant4_projects/Cherenkov_detector/build/CMakeFiles/sim.dir/run.cc.o"
   "/home/geant4lab/Geant4_projects/Cherenkov_detector/sim.cc" "/home/geant4lab/Geant4_projects/Cherenkov_detector/build/CMakeFiles/sim.dir/sim.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

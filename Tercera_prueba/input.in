@@ -1,9 +1,0 @@
-# Verbose levels
-/control/verbose 0
-/tracking/verbose 1
-
-# Set world dimensions in kilometers
-/mydetector/worldDimensions 100 100 150 km
-
-# Run the simulation
-/run/beamOn 1

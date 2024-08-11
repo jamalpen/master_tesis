@@ -10,6 +10,8 @@
 #include "G4SystemOfUnits.hh"
 // Header guard to prevent multiple inclusions of this header file
 
+#include "detector.hh"
+
 class MyDetectorConstruction : public G4VUserDetectorConstruction {
     // Define the MyDetectorConstruction class inheriting from G4UserDetectorConstruction
 
@@ -23,6 +25,10 @@ public:
     virtual G4VPhysicalVolume *Construct();
     // Declaration of the Construct method, which overrides a virtual method
     // from G4UserDetectorConstruction and returns a pointer to G4VPhysicalVolume
+    
+private:
+    G4LogicalVolume *logicDetector;
+    virtual void ConstructSDandField();
 };
 
 #endif
