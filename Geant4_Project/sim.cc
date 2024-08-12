@@ -19,6 +19,8 @@ int main(int argc, char** argv) {
     //Initialize the runManager
     //runManager->Initialize(); 
     
+    //hola bebe
+
     //if conditions
     
     if(argc == 1){
