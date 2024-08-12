@@ -129,6 +129,8 @@ CMakeFiles/sim.dir/sim.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LorentzVector.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MTBarrier.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MTRunManager.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Material.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesIndex.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesTable.hh
@@ -188,6 +190,7 @@ CMakeFiles/sim.dir/sim.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ProcessVector.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Profiler.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Profiler.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RNGHelper.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RayTracer.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RayTracerX.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ReferenceCountedHandle.hh

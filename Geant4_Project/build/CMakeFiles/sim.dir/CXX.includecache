@@ -11,6 +11,8 @@ iostream
 -
 G4RunManager.hh
 /home/geant4lab/Geant4_projects/G4RunManager.hh
+G4MTRunManager.hh
+/home/geant4lab/Geant4_projects/G4MTRunManager.hh
 G4UImanager.hh
 /home/geant4lab/Geant4_projects/G4UImanager.hh
 G4VisManager.hh
@@ -882,6 +884,26 @@ globals.hh
 CLHEP/Vector/LorentzVector.h
 -
 
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MTBarrier.hh
+G4Threading.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Threading.hh
+
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MTRunManager.hh
+G4MTBarrier.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MTBarrier.hh
+G4RNGHelper.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RNGHelper.hh
+G4RunManager.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RunManager.hh
+G4Threading.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Threading.hh
+G4Profiler.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Profiler.hh
+list
+-
+map
+-
+
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Material.hh
 vector
 -
@@ -1424,6 +1446,14 @@ sstream
 PTL/Globals.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/PTL/Globals.hh
 timemory/utility/utility.hpp
+-
+
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RNGHelper.hh
+globals.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
+queue
+-
+vector
 -
 
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RayTracer.hh
