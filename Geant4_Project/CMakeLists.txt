@@ -22,4 +22,9 @@ file(GLOB DATA_FILES
 )
 file(COPY ${DATA_FILES} DESTINATION ${PROJECT_BINARY_DIR})
 
+file(GLOB INPUT_FILES
+  "*.in"
+)
+file(COPY ${INPUT_FILES} DESTINATION ${PROJECT_BINARY_DIR})
+
 add_custom_target(Simulation DEPENDS sim)
