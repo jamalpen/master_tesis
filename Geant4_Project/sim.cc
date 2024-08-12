@@ -17,9 +17,7 @@ int main(int argc, char** argv) {
     //Create the G4RunManager object
     G4RunManager *runManager = new G4RunManager();
     //Initialize the runManager
-    //runManager->Initialize(); 
-    
-    //hola bebe
+    //runManager->Initialize();
 
     //if conditions
     
