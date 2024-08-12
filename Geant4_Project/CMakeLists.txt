@@ -1,7 +1,8 @@
+#----------------------------------------------------------------------------------
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-
 project(Simulation)
 
+#----------------------------------------------------------------------------------
 find_package(Geant4 REQUIRED ui_all vis_all)
 
 include(${Geant4_USE_FILE})

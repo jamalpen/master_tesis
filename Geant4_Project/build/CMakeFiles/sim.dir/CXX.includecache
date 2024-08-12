@@ -7,20 +7,22 @@
 #IncludeRegexTransform: 
 
 /home/geant4lab/Geant4_projects/sim.cc
-iostream
--
 G4RunManager.hh
 /home/geant4lab/Geant4_projects/G4RunManager.hh
 G4MTRunManager.hh
 /home/geant4lab/Geant4_projects/G4MTRunManager.hh
-G4UImanager.hh
-/home/geant4lab/Geant4_projects/G4UImanager.hh
-G4VisManager.hh
-/home/geant4lab/Geant4_projects/G4VisManager.hh
 G4VisExecutive.hh
 /home/geant4lab/Geant4_projects/G4VisExecutive.hh
 G4UIExecutive.hh
 /home/geant4lab/Geant4_projects/G4UIExecutive.hh
+G4UImanager.hh
+/home/geant4lab/Geant4_projects/G4UImanager.hh
+G4VisManager.hh
+/home/geant4lab/Geant4_projects/G4VisManager.hh
+Randomize.hh
+/home/geant4lab/Geant4_projects/Randomize.hh
+iostream
+-
 
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
 iosfwd
