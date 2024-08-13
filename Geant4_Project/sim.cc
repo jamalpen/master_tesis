@@ -6,6 +6,10 @@
 #include "G4UImanager.hh"
 #include "G4VisManager.hh"
 
+#include "MyDetectorConstruction.hh"
+#include "MyPhysicsList.hh"
+#include "ActionInitialization.hh"
+
 // C++ Libraries
 #include "Randomize.hh"
 #include <iostream>
@@ -79,10 +83,13 @@ int main(int argc, char** argv) {
     G4String physName = "QGSP_BERT_HP";
 
     // Set mandatory initialization classes
-    
+    runManager->SetUserInitialization(new MyDetectorConstruction());
+    runManager->SetUserInitialization(new MyPhysicsList(physName));
+    runManager->SetUserInitialization(new ActionInitialization());
+
 
     // Initialize G4 kernel
-    //runManager->Initialize();
+    runManager->Initialize();
 
     // Visualization manager
     G4VisManager *visManager = new G4VisExecutive();
