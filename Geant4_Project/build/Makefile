@@ -136,6 +136,222 @@ sim/fast:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/build
 .PHONY : sim/fast
 
+ActionInitialization.o: ActionInitialization.cc.o
+
+.PHONY : ActionInitialization.o
+
+# target to build an object file
+ActionInitialization.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/ActionInitialization.cc.o
+.PHONY : ActionInitialization.cc.o
+
+ActionInitialization.i: ActionInitialization.cc.i
+
+.PHONY : ActionInitialization.i
+
+# target to preprocess a source file
+ActionInitialization.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/ActionInitialization.cc.i
+.PHONY : ActionInitialization.cc.i
+
+ActionInitialization.s: ActionInitialization.cc.s
+
+.PHONY : ActionInitialization.s
+
+# target to generate assembly for a file
+ActionInitialization.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/ActionInitialization.cc.s
+.PHONY : ActionInitialization.cc.s
+
+MyDetectorConstruction.o: MyDetectorConstruction.cc.o
+
+.PHONY : MyDetectorConstruction.o
+
+# target to build an object file
+MyDetectorConstruction.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MyDetectorConstruction.cc.o
+.PHONY : MyDetectorConstruction.cc.o
+
+MyDetectorConstruction.i: MyDetectorConstruction.cc.i
+
+.PHONY : MyDetectorConstruction.i
+
+# target to preprocess a source file
+MyDetectorConstruction.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MyDetectorConstruction.cc.i
+.PHONY : MyDetectorConstruction.cc.i
+
+MyDetectorConstruction.s: MyDetectorConstruction.cc.s
+
+.PHONY : MyDetectorConstruction.s
+
+# target to generate assembly for a file
+MyDetectorConstruction.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MyDetectorConstruction.cc.s
+.PHONY : MyDetectorConstruction.cc.s
+
+MyPhysicsList.o: MyPhysicsList.cc.o
+
+.PHONY : MyPhysicsList.o
+
+# target to build an object file
+MyPhysicsList.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MyPhysicsList.cc.o
+.PHONY : MyPhysicsList.cc.o
+
+MyPhysicsList.i: MyPhysicsList.cc.i
+
+.PHONY : MyPhysicsList.i
+
+# target to preprocess a source file
+MyPhysicsList.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MyPhysicsList.cc.i
+.PHONY : MyPhysicsList.cc.i
+
+MyPhysicsList.s: MyPhysicsList.cc.s
+
+.PHONY : MyPhysicsList.s
+
+# target to generate assembly for a file
+MyPhysicsList.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MyPhysicsList.cc.s
+.PHONY : MyPhysicsList.cc.s
+
+MySensitiveDetector.o: MySensitiveDetector.cc.o
+
+.PHONY : MySensitiveDetector.o
+
+# target to build an object file
+MySensitiveDetector.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MySensitiveDetector.cc.o
+.PHONY : MySensitiveDetector.cc.o
+
+MySensitiveDetector.i: MySensitiveDetector.cc.i
+
+.PHONY : MySensitiveDetector.i
+
+# target to preprocess a source file
+MySensitiveDetector.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MySensitiveDetector.cc.i
+.PHONY : MySensitiveDetector.cc.i
+
+MySensitiveDetector.s: MySensitiveDetector.cc.s
+
+.PHONY : MySensitiveDetector.s
+
+# target to generate assembly for a file
+MySensitiveDetector.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MySensitiveDetector.cc.s
+.PHONY : MySensitiveDetector.cc.s
+
+PrimaryGeneratorAction.o: PrimaryGeneratorAction.cc.o
+
+.PHONY : PrimaryGeneratorAction.o
+
+# target to build an object file
+PrimaryGeneratorAction.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.o
+.PHONY : PrimaryGeneratorAction.cc.o
+
+PrimaryGeneratorAction.i: PrimaryGeneratorAction.cc.i
+
+.PHONY : PrimaryGeneratorAction.i
+
+# target to preprocess a source file
+PrimaryGeneratorAction.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.i
+.PHONY : PrimaryGeneratorAction.cc.i
+
+PrimaryGeneratorAction.s: PrimaryGeneratorAction.cc.s
+
+.PHONY : PrimaryGeneratorAction.s
+
+# target to generate assembly for a file
+PrimaryGeneratorAction.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimaryGeneratorAction.cc.s
+.PHONY : PrimaryGeneratorAction.cc.s
+
+PrimaryGeneratorMessenger.o: PrimaryGeneratorMessenger.cc.o
+
+.PHONY : PrimaryGeneratorMessenger.o
+
+# target to build an object file
+PrimaryGeneratorMessenger.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimaryGeneratorMessenger.cc.o
+.PHONY : PrimaryGeneratorMessenger.cc.o
+
+PrimaryGeneratorMessenger.i: PrimaryGeneratorMessenger.cc.i
+
+.PHONY : PrimaryGeneratorMessenger.i
+
+# target to preprocess a source file
+PrimaryGeneratorMessenger.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimaryGeneratorMessenger.cc.i
+.PHONY : PrimaryGeneratorMessenger.cc.i
+
+PrimaryGeneratorMessenger.s: PrimaryGeneratorMessenger.cc.s
+
+.PHONY : PrimaryGeneratorMessenger.s
+
+# target to generate assembly for a file
+PrimaryGeneratorMessenger.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimaryGeneratorMessenger.cc.s
+.PHONY : PrimaryGeneratorMessenger.cc.s
+
+PrimarySpectrum.o: PrimarySpectrum.cc.o
+
+.PHONY : PrimarySpectrum.o
+
+# target to build an object file
+PrimarySpectrum.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimarySpectrum.cc.o
+.PHONY : PrimarySpectrum.cc.o
+
+PrimarySpectrum.i: PrimarySpectrum.cc.i
+
+.PHONY : PrimarySpectrum.i
+
+# target to preprocess a source file
+PrimarySpectrum.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimarySpectrum.cc.i
+.PHONY : PrimarySpectrum.cc.i
+
+PrimarySpectrum.s: PrimarySpectrum.cc.s
+
+.PHONY : PrimarySpectrum.s
+
+# target to generate assembly for a file
+PrimarySpectrum.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimarySpectrum.cc.s
+.PHONY : PrimarySpectrum.cc.s
+
+PrimarySpectrumMessenger.o: PrimarySpectrumMessenger.cc.o
+
+.PHONY : PrimarySpectrumMessenger.o
+
+# target to build an object file
+PrimarySpectrumMessenger.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.o
+.PHONY : PrimarySpectrumMessenger.cc.o
+
+PrimarySpectrumMessenger.i: PrimarySpectrumMessenger.cc.i
+
+.PHONY : PrimarySpectrumMessenger.i
+
+# target to preprocess a source file
+PrimarySpectrumMessenger.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.i
+.PHONY : PrimarySpectrumMessenger.cc.i
+
+PrimarySpectrumMessenger.s: PrimarySpectrumMessenger.cc.s
+
+.PHONY : PrimarySpectrumMessenger.s
+
+# target to generate assembly for a file
+PrimarySpectrumMessenger.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.s
+.PHONY : PrimarySpectrumMessenger.cc.s
+
 sim.o: sim.cc.o
 
 .PHONY : sim.o
@@ -173,6 +389,30 @@ help:
 	@echo "... Simulation"
 	@echo "... edit_cache"
 	@echo "... sim"
+	@echo "... ActionInitialization.o"
+	@echo "... ActionInitialization.i"
+	@echo "... ActionInitialization.s"
+	@echo "... MyDetectorConstruction.o"
+	@echo "... MyDetectorConstruction.i"
+	@echo "... MyDetectorConstruction.s"
+	@echo "... MyPhysicsList.o"
+	@echo "... MyPhysicsList.i"
+	@echo "... MyPhysicsList.s"
+	@echo "... MySensitiveDetector.o"
+	@echo "... MySensitiveDetector.i"
+	@echo "... MySensitiveDetector.s"
+	@echo "... PrimaryGeneratorAction.o"
+	@echo "... PrimaryGeneratorAction.i"
+	@echo "... PrimaryGeneratorAction.s"
+	@echo "... PrimaryGeneratorMessenger.o"
+	@echo "... PrimaryGeneratorMessenger.i"
+	@echo "... PrimaryGeneratorMessenger.s"
+	@echo "... PrimarySpectrum.o"
+	@echo "... PrimarySpectrum.i"
+	@echo "... PrimarySpectrum.s"
+	@echo "... PrimarySpectrumMessenger.o"
+	@echo "... PrimarySpectrumMessenger.i"
+	@echo "... PrimarySpectrumMessenger.s"
 	@echo "... sim.o"
 	@echo "... sim.i"
 	@echo "... sim.s"
