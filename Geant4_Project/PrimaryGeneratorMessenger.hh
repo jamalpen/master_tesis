@@ -20,8 +20,8 @@ public:
 
 private:
     PrimaryGeneratorAction* fAction;
-    G4UIdirectory* fGunDir;
 
+    G4UIdirectory* fGunDir;
     G4UIcmdWithADoubleAndUnit* fPolarCmd;
     G4UIcmdWithADoubleAndUnit* valueForTest;
     G4UIcmdWithADoubleAndUnit* xInitCmd;
