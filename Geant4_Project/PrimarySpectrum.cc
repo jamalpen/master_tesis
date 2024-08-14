@@ -24,7 +24,7 @@
 #include <stdio.h>
 
 PrimarySpectrum::PrimarySpectrum():
-    pi(3.14159265358979323846)
+    pi(3.14159265358979323846), lineNumber(0)
 {
     // Here I modify for the initial position of the particle.
     particlePosition = G4ThreeVector(0., 0., 400.*cm);
@@ -33,7 +33,7 @@ PrimarySpectrum::PrimarySpectrum():
     fSpectMessenger = new PrimarySpectrumMessenger(this);
     inputFile = new char();
     //inputFile = "pao-fluxSec-dec2006.shw.bz2";
-    
+
     //openFile(inputFile);
 
     initx = 0.*m;
@@ -69,29 +69,32 @@ void PrimarySpectrum::primaryMomento()
 {
     G4int search = 1;
     char line[256];
-    G4int lineNumber = 0;
+
 
     while (search)
-    {
+    { 
         if (feof(inFile))
-            openFile(inputFile);
+
+        openFile(inputFile);
 
         if (fgets(line, 256, inFile))
         {
             lineNumber++;
-            
+            std::cout << "Numero de linea: " << lineNumber << std::endl;
             // Saltar las primeras 5 líneas
             if (lineNumber <= 5)
                 continue;
-
+                
             // Comprobar si la línea es un comentario o resumen
             if (line[0] == '#' || feof(inFile))
                 break;
 
             if (line[0] != '#')
-            {
+            {   
                 sscanf(line, "%d %lf %lf %lf %lf %lf %lf %d %d %lf %lf %lf\n",
                        &crkId, &px, &py, &pz, &x, &y, &z, &shwId, &prmId, &prmEner, &prmThe, &prmPhi);
+                std::cout << "El numero de la linea que se analizo es: " << lineNumber << std::endl;
+                std::cout << "Linea: " << line << std::endl;
             }
         }
 
@@ -149,10 +152,11 @@ void PrimarySpectrum::primaryMomento()
         }
     }
 
-    //particleDirection = G4ThreeVector(px * GeV, py * GeV, -1. * (pz * GeV));
+    particleDirection = G4ThreeVector(px * GeV, py * GeV, -1. * (pz * GeV));
     particlePosition = G4ThreeVector(x * m, y * m, z * m); // Update position particle with input.in file
     G4cout << "Dirección de la partícula: " << particleDirection << G4endl;
     G4cout << "Posición de la partícula: " << particlePosition << G4endl;
+    G4cout << "El ID de la particula es: " << parId << G4endl;
 }
 
 void PrimarySpectrum::primaryPosition()
@@ -162,6 +166,8 @@ void PrimarySpectrum::primaryPosition()
     //initz = (G4UniformRand() - 0.5) * areaDimZ;
 
     //particlePosition = G4ThreeVector(initx, inity, initz);
+
+    //G4cout << "Posición de la partícula: " << particlePosition << G4endl;
 }
 
 void PrimarySpectrum::setInitPosX(G4double xx)

@@ -6,6 +6,7 @@
 #include "globals.hh"
 
 class PrimarySpectrum;
+
 class G4UIdirectory;
 class G4UIcmdWithAString;
 class G4UIcmdWithADoubleAndUnit;
@@ -20,8 +21,8 @@ public:
 
 private:
     PrimarySpectrum* fSpectrum;
-    G4UIdirectory* fSpecDir;
 
+    G4UIdirectory* fSpecDir;
     G4UIcmdWithAString* inFile;
     G4UIcmdWithADoubleAndUnit* xInit;
     G4UIcmdWithADoubleAndUnit* yInit;

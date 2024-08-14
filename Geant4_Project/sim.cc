@@ -10,6 +10,8 @@
 #include "MyPhysicsList.hh"
 #include "ActionInitialization.hh"
 
+#include "PrimarySpectrum.hh"
+
 // C++ Libraries
 #include "Randomize.hh"
 #include <iostream>
@@ -28,6 +30,17 @@ int main(int argc, char** argv) {
     
     // Initial debug message
     G4cout << "Starting Geant4 program..." << G4endl;
+
+    // Prueba del método openfile de PrimarySpectrum
+    PrimarySpectrum* james1 = new PrimarySpectrum();
+    int james = james1->openFile("particle.shw.bz2");
+    std::cout << "El valor del numero es: " << james << std::endl;
+
+    //Prueba del método primaryMomento
+    james1->primaryMomento();
+    james1->primaryMomento();
+    james1->primaryMomento();
+    
 
     // Evaluate arguments
     if ( argc > 9 ) {

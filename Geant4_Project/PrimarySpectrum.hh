@@ -72,6 +72,8 @@ private:
 
     FILE *inFile = NULL;
     PrimarySpectrumMessenger* fSpectMessenger;
+
+    G4int lineNumber;
 };
 
 #endif

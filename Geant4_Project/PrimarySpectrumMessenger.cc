@@ -1,14 +1,10 @@
 #include "PrimarySpectrumMessenger.hh"
-
 #include "PrimaryGeneratorAction.hh"
-
 #include "G4UIdirectory.hh"
 #include "G4UIcmdWithADoubleAndUnit.hh"
 #include "G4UIcmdWithAString.hh"
 #include "G4SystemOfUnits.hh"
-
 // C++ Libraries
-//
 #include <string>  
 #include <fstream>
 #include <sstream>
@@ -94,4 +90,3 @@ void PrimarySpectrumMessenger::SetNewValue(G4UIcommand* command, G4String newVal
   if (command == areaDimZ)
     fSpectrum->setAreaDimZ(areaDimZ->GetNewDoubleValue(newValue));
 }
-
