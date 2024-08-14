@@ -24,12 +24,6 @@ private:
     G4UIdirectory* fGunDir;
     G4UIcmdWithADoubleAndUnit* fPolarCmd;
     G4UIcmdWithADoubleAndUnit* valueForTest;
-    G4UIcmdWithADoubleAndUnit* xInitCmd;
-    G4UIcmdWithADoubleAndUnit* yInitCmd;
-    G4UIcmdWithADoubleAndUnit* zInitCmd;
-    G4UIcmdWithADoubleAndUnit* areaDimXCmd;
-    G4UIcmdWithADoubleAndUnit* areaDimYCmd;
-    G4UIcmdWithADoubleAndUnit* areaDimZCmd;
 };
 
 #endif
