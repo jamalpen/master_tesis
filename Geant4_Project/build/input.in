@@ -4,16 +4,6 @@
 # Leer el archivo de espectro
 /spectrum/readfile particle.shw.bz2
 
-# Establecer la posición inicial en X, Y y Z
-/spectrum/iniposX 0. m
-/spectrum/iniposY 0. m
-/spectrum/iniposZ 500. m
-
-# Establecer las dimensiones del detector
-/spectrum/areaDimX 1. km
-/spectrum/areaDimY 1. km
-/spectrum/areaDimZ 1. m
-
 # Definir dimensiones del mundo madre
 /geometry/worldSizeX 2 km
 /geometry/worldSizeY 2 km

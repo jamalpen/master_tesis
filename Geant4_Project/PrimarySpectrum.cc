@@ -35,13 +35,6 @@ PrimarySpectrum::PrimarySpectrum():
     //inputFile = "pao-fluxSec-dec2006.shw.bz2";
 
     //openFile(inputFile);
-
-    initx = 1.*m;
-    inity = 1.*m;
-    initz = 1.5*m;
-    areaDimX = 1.0*km; // Ejemplo de dimensión inicial en X
-    areaDimY = 1.0*km; // Ejemplo de dimensión inicial en Y
-    areaDimZ = 1.0*km; // Ejemplo de dimensión inicial en Z
     r = 0.;
     theta = 0.;
     px = 0.*GeV;
@@ -158,54 +151,6 @@ void PrimarySpectrum::primaryMomento()
     G4cout << "Posición de la partícula: " << particlePosition << G4endl;
     G4cout << "El ID de la particula es: " << parId << G4endl;
 }
-
-/*void PrimarySpectrum::primaryPosition()
-{
-    //initx = (G4UniformRand() - 0.5) * areaDimX;
-    //inity = (G4UniformRand() - 0.5) * areaDimY;
-    //initz = (G4UniformRand() - 0.5) * areaDimZ;
-
-    //particlePosition = G4ThreeVector(initx, inity, initz);
-
-    //G4cout << "Posición de la partícula: " << particlePosition << G4endl;
-}*/
-
-void PrimarySpectrum::setInitPosX(G4double xx)
-{
-    G4cout << "La posición en x es: " << initx << G4endl;
-    this->initx = xx;
-}
-
-void PrimarySpectrum::setInitPosY(G4double yy)
-{
-    G4cout << "La posición en y es: " << inity << G4endl;
-    this->inity = yy;
-}
-
-void PrimarySpectrum::setInitPosZ(G4double zz)
-{
-    G4cout << "La posición en z es: " << initz << G4endl;
-    this->initz = zz;
-}
-
-void PrimarySpectrum::setAreaDimX(G4double dimX)
-{
-    G4cout << "La dimensión en x es: " << areaDimX << G4endl;
-    this->areaDimX = dimX;
-}
-
-void PrimarySpectrum::setAreaDimY(G4double dimY)
-{
-    G4cout << "La dimensión en y es: " << areaDimY << G4endl;
-    this->areaDimY = dimY;
-}
-
-void PrimarySpectrum::setAreaDimZ(G4double dimZ)
-{
-    G4cout << "La dimensión en z es: " << areaDimZ << G4endl;
-    this->areaDimZ = dimZ;
-}
-
 
 G4double PrimarySpectrum::getEnergy() const
 {

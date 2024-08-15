@@ -24,12 +24,6 @@ private:
 
     G4UIdirectory* fSpecDir;
     G4UIcmdWithAString* inFile;
-    G4UIcmdWithADoubleAndUnit* xInit;
-    G4UIcmdWithADoubleAndUnit* yInit;
-    G4UIcmdWithADoubleAndUnit* zInit;
-    G4UIcmdWithADoubleAndUnit* areaDimX;
-    G4UIcmdWithADoubleAndUnit* areaDimY;
-    G4UIcmdWithADoubleAndUnit* areaDimZ;
 };
 
 #endif
