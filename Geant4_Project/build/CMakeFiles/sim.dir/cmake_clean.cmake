@@ -8,7 +8,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/sim.dir/PrimaryGeneratorMessenger.cc.o"
   "CMakeFiles/sim.dir/PrimarySpectrum.cc.o"
   "CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.o"
-  "CMakeFiles/sim.dir/RunAction.cc.o"
   "CMakeFiles/sim.dir/sim.cc.o"
   "sim"
   "sim.pdb"

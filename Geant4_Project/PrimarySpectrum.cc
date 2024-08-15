@@ -26,11 +26,12 @@
 PrimarySpectrum::PrimarySpectrum():
     pi(3.14159265358979323846), lineNumber(0)
 {
-    // Here I modify for the initial position of the particle.
+    //Simplemente inicializo la partícula con cualquier valor
     particlePosition = G4ThreeVector(0., 0., 400.*cm);
     particleDirection = G4ThreeVector(0., 0., -1.);
 
     fSpectMessenger = new PrimarySpectrumMessenger(this);
+    
     inputFile = new char();
     //inputFile = "pao-fluxSec-dec2006.shw.bz2";
 

@@ -1412,8 +1412,6 @@ CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/templates.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
-CMakeFiles/sim.dir/RunAction.cc.o
- /home/geant4lab/Geant4_projects/RunAction.cc
 CMakeFiles/sim.dir/sim.cc.o
  /home/geant4lab/Geant4_projects/ActionInitialization.hh
  /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh

@@ -25,14 +25,13 @@ public:
     PrimarySpectrum();
     ~PrimarySpectrum();
 
-    //void primaryPosition();
     void primaryMomento();
     int openFile(std::string name);
     
-    G4ThreeVector getPosition() const;
-    G4ThreeVector getDirection() const;
-    G4String getParticleId() const;
-    G4double getEnergy() const; // Nuevo getter
+    G4ThreeVector getPosition() const;// no se creo ni se uso
+    G4ThreeVector getDirection() const;//no se creo ni se uso
+    G4String getParticleId() const; // no se definio ni se uso
+    G4double getEnergy() const; //Solo se uso este metodo
 
     G4ThreeVector particlePosition;
     G4ThreeVector particleDirection;

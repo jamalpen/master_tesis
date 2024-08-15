@@ -19,8 +19,6 @@
 /geometry/detectorPosY 1 mm
 /geometry/detectorPosZ 1 mm
 
-
-
 # Iniciar la simulación con N eventos
-/run/beamOn 6
+/run/beamOn 1
 

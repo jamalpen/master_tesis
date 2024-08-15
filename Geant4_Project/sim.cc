@@ -31,6 +31,7 @@ int main(int argc, char** argv) {
     // Initial debug message
     G4cout << "Starting Geant4 program..." << G4endl;
 
+    /*
     // Prueba del método openfile de PrimarySpectrum
     PrimarySpectrum* james1 = new PrimarySpectrum();
     int james = james1->openFile("particle.shw.bz2");
@@ -48,7 +49,7 @@ int main(int argc, char** argv) {
     double energia2 = james1->getEnergy();
     std::cout << "El valor de la energia es: " << energia2 << std::endl;
     
-
+    */
 
     // Evaluate arguments
     if ( argc > 9 ) {

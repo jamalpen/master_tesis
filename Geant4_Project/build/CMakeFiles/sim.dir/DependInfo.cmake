@@ -13,7 +13,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/geant4lab/Geant4_projects/PrimaryGeneratorMessenger.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/PrimaryGeneratorMessenger.cc.o"
   "/home/geant4lab/Geant4_projects/PrimarySpectrum.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/PrimarySpectrum.cc.o"
   "/home/geant4lab/Geant4_projects/PrimarySpectrumMessenger.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.o"
-  "/home/geant4lab/Geant4_projects/RunAction.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/RunAction.cc.o"
   "/home/geant4lab/Geant4_projects/sim.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/sim.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
