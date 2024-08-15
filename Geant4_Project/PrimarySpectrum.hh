@@ -25,7 +25,7 @@ public:
     PrimarySpectrum();
     ~PrimarySpectrum();
 
-    void primaryPosition();
+    //void primaryPosition();
     void primaryMomento();
     int openFile(std::string name);
     

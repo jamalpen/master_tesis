@@ -26,6 +26,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction(PrimarySpectrum* crkPart)
   // Create a messenger for this class
   fGunMessenger = new PrimaryGeneratorMessenger(this);
 
+  //Configuración inicial de la partícula que puede ser modificada luego
   // Default kinematic (commented out as per original code)
   /*
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
@@ -47,8 +48,8 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   G4cout << "Generando partículas primarias" << G4endl;
   
   // Update primary particle properties from the PrimarySpectrum object
-  fCrkPar->primaryPosition(); // Esta función no hace nada.
-  fCrkPar->primaryMomento();
+  //fCrkPar->primaryPosition(); // Esta función no hace nada.
+  fCrkPar->primaryMomento();//Ajusta la posición inicial de la partícula y su momento.
 
   position = fCrkPar->particlePosition;
   direction = fCrkPar->particleDirection;
@@ -69,12 +70,13 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
     return;
   }
 
+  //Configuración del generador de partículas con las propiedades del espectro primario
   fParticleGun->SetParticleDefinition(particle);
   G4cout << "La partícula es: " << particle << G4endl;
   fParticleGun->SetParticlePosition(position);
   G4cout << "La posición de la partícula es: " << position << G4endl;
   fParticleGun->SetParticleMomentumDirection(direction);
-  G4cout << "La momento de la partícula es: " << direction << G4endl;
+  G4cout << "El momento de la partícula es: " << direction << G4endl;
   fParticleGun->SetParticleEnergy(fCrkPar->getEnergy());
 
   fParticleGun->GeneratePrimaryVertex(anEvent);

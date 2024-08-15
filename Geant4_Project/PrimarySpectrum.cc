@@ -159,7 +159,7 @@ void PrimarySpectrum::primaryMomento()
     G4cout << "El ID de la particula es: " << parId << G4endl;
 }
 
-void PrimarySpectrum::primaryPosition()
+/*void PrimarySpectrum::primaryPosition()
 {
     //initx = (G4UniformRand() - 0.5) * areaDimX;
     //inity = (G4UniformRand() - 0.5) * areaDimY;
@@ -168,7 +168,7 @@ void PrimarySpectrum::primaryPosition()
     //particlePosition = G4ThreeVector(initx, inity, initz);
 
     //G4cout << "Posición de la partícula: " << particlePosition << G4endl;
-}
+}*/
 
 void PrimarySpectrum::setInitPosX(G4double xx)
 {
