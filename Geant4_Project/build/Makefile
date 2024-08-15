@@ -163,6 +163,33 @@ ActionInitialization.cc.s:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/ActionInitialization.cc.s
 .PHONY : ActionInitialization.cc.s
 
+GeometryMessenger.o: GeometryMessenger.cc.o
+
+.PHONY : GeometryMessenger.o
+
+# target to build an object file
+GeometryMessenger.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/GeometryMessenger.cc.o
+.PHONY : GeometryMessenger.cc.o
+
+GeometryMessenger.i: GeometryMessenger.cc.i
+
+.PHONY : GeometryMessenger.i
+
+# target to preprocess a source file
+GeometryMessenger.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/GeometryMessenger.cc.i
+.PHONY : GeometryMessenger.cc.i
+
+GeometryMessenger.s: GeometryMessenger.cc.s
+
+.PHONY : GeometryMessenger.s
+
+# target to generate assembly for a file
+GeometryMessenger.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/GeometryMessenger.cc.s
+.PHONY : GeometryMessenger.cc.s
+
 MyDetectorConstruction.o: MyDetectorConstruction.cc.o
 
 .PHONY : MyDetectorConstruction.o
@@ -392,6 +419,9 @@ help:
 	@echo "... ActionInitialization.o"
 	@echo "... ActionInitialization.i"
 	@echo "... ActionInitialization.s"
+	@echo "... GeometryMessenger.o"
+	@echo "... GeometryMessenger.i"
+	@echo "... GeometryMessenger.s"
 	@echo "... MyDetectorConstruction.o"
 	@echo "... MyDetectorConstruction.i"
 	@echo "... MyDetectorConstruction.s"

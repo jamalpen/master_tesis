@@ -6,33 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/geant4lab/Geant4_projects/ActionInitialization.cc
-G4RunManager.hh
-/home/geant4lab/Geant4_projects/G4RunManager.hh
-G4Event.hh
-/home/geant4lab/Geant4_projects/G4Event.hh
-G4SDManager.hh
-/home/geant4lab/Geant4_projects/G4SDManager.hh
-G4HCofThisEvent.hh
-/home/geant4lab/Geant4_projects/G4HCofThisEvent.hh
-ActionInitialization.hh
-/home/geant4lab/Geant4_projects/ActionInitialization.hh
-PrimaryGeneratorAction.hh
-/home/geant4lab/Geant4_projects/PrimaryGeneratorAction.hh
-
 /home/geant4lab/Geant4_projects/ActionInitialization.hh
 G4VUserActionInitialization.hh
 /home/geant4lab/Geant4_projects/G4VUserActionInitialization.hh
-PrimarySpectrum.hh
-/home/geant4lab/Geant4_projects/PrimarySpectrum.hh
-
-/home/geant4lab/Geant4_projects/MyDetectorConstruction.cc
 MyDetectorConstruction.hh
 /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
-G4SDManager.hh
-/home/geant4lab/Geant4_projects/G4SDManager.hh
-cmath
--
+PrimarySpectrum.hh
+/home/geant4lab/Geant4_projects/PrimarySpectrum.hh
 
 /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
 G4VUserDetectorConstruction.hh
@@ -74,33 +54,9 @@ G4RadioactiveDecayPhysics.hh
 G4DecayPhysics.hh
 /home/geant4lab/Geant4_projects/G4DecayPhysics.hh
 
-/home/geant4lab/Geant4_projects/MySensitiveDetector.cc
-G4Step.hh
-/home/geant4lab/Geant4_projects/G4Step.hh
-G4Track.hh
-/home/geant4lab/Geant4_projects/G4Track.hh
-G4StepPoint.hh
-/home/geant4lab/Geant4_projects/G4StepPoint.hh
-G4SystemOfUnits.hh
-/home/geant4lab/Geant4_projects/G4SystemOfUnits.hh
-G4ios.hh
-/home/geant4lab/Geant4_projects/G4ios.hh
-MySensitiveDetector.hh
-/home/geant4lab/Geant4_projects/MySensitiveDetector.hh
-
 /home/geant4lab/Geant4_projects/MySensitiveDetector.hh
 G4VSensitiveDetector.hh
 /home/geant4lab/Geant4_projects/G4VSensitiveDetector.hh
-
-/home/geant4lab/Geant4_projects/PrimaryGeneratorAction.hh
-G4VUserPrimaryGeneratorAction.hh
-/home/geant4lab/Geant4_projects/G4VUserPrimaryGeneratorAction.hh
-globals.hh
-/home/geant4lab/Geant4_projects/globals.hh
-PrimarySpectrum.hh
-/home/geant4lab/Geant4_projects/PrimarySpectrum.hh
-string
--
 
 /home/geant4lab/Geant4_projects/PrimarySpectrum.hh
 globals.hh
@@ -141,6 +97,8 @@ MyPhysicsList.hh
 /home/geant4lab/Geant4_projects/MyPhysicsList.hh
 ActionInitialization.hh
 /home/geant4lab/Geant4_projects/ActionInitialization.hh
+PrimarySpectrum.hh
+/home/geant4lab/Geant4_projects/PrimarySpectrum.hh
 Randomize.hh
 /home/geant4lab/Geant4_projects/Randomize.hh
 iostream
@@ -1045,12 +1003,6 @@ G4Allocator.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Allocator.hh
 G4VHitsCollection.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VHitsCollection.hh
-vector
--
-
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4HCtable.hh
-globals.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
 vector
 -
 
@@ -2050,26 +2002,6 @@ G4EventManager.hh
 globals.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
 
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SDManager.hh
-globals.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
-G4SDStructure.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SDStructure.hh
-G4HCtable.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4HCtable.hh
-G4VSDFilter.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VSDFilter.hh
-vector
--
-
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SDStructure.hh
-globals.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
-G4VSensitiveDetector.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VSensitiveDetector.hh
-vector
--
-
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SandiaTable.hh
 G4OrderedTable.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4OrderedTable.hh
@@ -3029,8 +2961,6 @@ G4VUPLSplitter.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VUPLSplitter.hh
 G4Threading.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Threading.hh
-
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh
 
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VUserTrackInformation.hh
 globals.hh

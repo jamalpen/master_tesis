@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/sim.dir/ActionInitialization.cc.o"
+  "CMakeFiles/sim.dir/GeometryMessenger.cc.o"
   "CMakeFiles/sim.dir/MyDetectorConstruction.cc.o"
   "CMakeFiles/sim.dir/MyPhysicsList.cc.o"
   "CMakeFiles/sim.dir/MySensitiveDetector.cc.o"
