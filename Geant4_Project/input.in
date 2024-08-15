@@ -14,15 +14,17 @@
 /spectrum/areaDimY 1. km
 /spectrum/areaDimZ 1. m
 
-# Definir dimensiones del mundo madre y del detector
-/geometry/worldSizeX 90 km
-/geometry/worldSizeY 90 km
-/geometry/worldSizeZ 90 km
+# Definir dimensiones del mundo madre
+/geometry/worldSizeX 2 km
+/geometry/worldSizeY 2 km
+/geometry/worldSizeZ 2 km
+
+# Definir dimensiones del detector
 /geometry/detectorSizeX 1 km
 /geometry/detectorSizeY 1 km
 /geometry/detectorSizeZ 1 km
 
 
 # Iniciar la simulación con N eventos
-/run/beamOn 1
+/run/beamOn 6
 

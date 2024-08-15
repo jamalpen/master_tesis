@@ -43,6 +43,9 @@ PrimaryGeneratorAction::~PrimaryGeneratorAction()
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
+  
+  G4cout << "Generando partículas primarias" << G4endl;
+  
   // Update primary particle properties from the PrimarySpectrum object
   fCrkPar->primaryPosition(); // Esta función no hace nada.
   fCrkPar->primaryMomento();
@@ -50,6 +53,12 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   position = fCrkPar->particlePosition;
   direction = fCrkPar->particleDirection;
   primaryId = fCrkPar->parId;
+
+  // Debugging messages to verify the properties of the generated particles
+  G4cout << "Posición de la partícula generada: " << position << G4endl;
+  G4cout << "Dirección de la partícula generada: " << direction << G4endl;
+  G4cout << "Tipo de partícula generada: " << primaryId << G4endl;
+  G4cout << "Energía de la partícula generada: " << fCrkPar->getEnergy() << G4endl;
 
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
   G4ParticleDefinition* particle = particleTable->FindParticle(primaryId);
@@ -69,6 +78,8 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   fParticleGun->SetParticleEnergy(fCrkPar->getEnergy());
 
   fParticleGun->GeneratePrimaryVertex(anEvent);
+
+  G4cout << "Partícula generada exitosamente." << G4endl;
 }
 
 void PrimaryGeneratorAction::SetOptPhotonPolar()

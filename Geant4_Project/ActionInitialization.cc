@@ -25,6 +25,10 @@ void ActionInitialization::Build() const
 {
     PrimaryGeneratorAction* primaryGenAction = new PrimaryGeneratorAction(parCrk);
     SetUserAction(primaryGenAction);
+
+    // Pasa el detector sensible a RunAction
+    //RunAction* runAction = new RunAction(fSensitiveDetector);
+    //SetUserAction(runAction);
     
     //MySteppingAction* steppingAction = new MySteppingAction();
     //SetUserAction(steppingAction);

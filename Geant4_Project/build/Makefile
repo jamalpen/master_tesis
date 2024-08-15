@@ -379,6 +379,33 @@ PrimarySpectrumMessenger.cc.s:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.s
 .PHONY : PrimarySpectrumMessenger.cc.s
 
+RunAction.o: RunAction.cc.o
+
+.PHONY : RunAction.o
+
+# target to build an object file
+RunAction.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/RunAction.cc.o
+.PHONY : RunAction.cc.o
+
+RunAction.i: RunAction.cc.i
+
+.PHONY : RunAction.i
+
+# target to preprocess a source file
+RunAction.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/RunAction.cc.i
+.PHONY : RunAction.cc.i
+
+RunAction.s: RunAction.cc.s
+
+.PHONY : RunAction.s
+
+# target to generate assembly for a file
+RunAction.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/RunAction.cc.s
+.PHONY : RunAction.cc.s
+
 sim.o: sim.cc.o
 
 .PHONY : sim.o
@@ -443,6 +470,9 @@ help:
 	@echo "... PrimarySpectrumMessenger.o"
 	@echo "... PrimarySpectrumMessenger.i"
 	@echo "... PrimarySpectrumMessenger.s"
+	@echo "... RunAction.o"
+	@echo "... RunAction.i"
+	@echo "... RunAction.s"
 	@echo "... sim.o"
 	@echo "... sim.i"
 	@echo "... sim.s"
