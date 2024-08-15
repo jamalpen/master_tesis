@@ -56,10 +56,10 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   primaryId = fCrkPar->parId;
 
   // Debugging messages to verify the properties of the generated particles
-  G4cout << "Posición de la partícula generada: " << position << G4endl;
-  G4cout << "Dirección de la partícula generada: " << direction << G4endl;
-  G4cout << "Tipo de partícula generada: " << primaryId << G4endl;
-  G4cout << "Energía de la partícula generada: " << fCrkPar->getEnergy() << G4endl;
+  //G4cout << "Posición de la partícula generada: " << position << G4endl;
+  //G4cout << "Dirección de la partícula generada: " << direction << G4endl;
+  //G4cout << "Tipo de partícula generada: " << primaryId << G4endl;
+  //G4cout << "Energía de la partícula generada: " << fCrkPar->getEnergy() << G4endl;
 
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
   G4ParticleDefinition* particle = particleTable->FindParticle(primaryId);
@@ -72,11 +72,11 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 
   //Configuración del generador de partículas con las propiedades del espectro primario
   fParticleGun->SetParticleDefinition(particle);
-  G4cout << "La partícula es: " << particle << G4endl;
+  //G4cout << "La partícula es: " << particle << G4endl;
   fParticleGun->SetParticlePosition(position);
-  G4cout << "La posición de la partícula es: " << position << G4endl;
+  //G4cout << "La posición de la partícula es: " << position << G4endl;
   fParticleGun->SetParticleMomentumDirection(direction);
-  G4cout << "El momento de la partícula es: " << direction << G4endl;
+  //G4cout << "El momento de la partícula es: " << direction << G4endl;
   fParticleGun->SetParticleEnergy(fCrkPar->getEnergy());
 
   fParticleGun->GeneratePrimaryVertex(anEvent);

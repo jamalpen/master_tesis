@@ -111,7 +111,9 @@ int main(int argc, char** argv) {
 
 
     // Initialize G4 kernel
-    runManager->Initialize();
+    //El Initialize lo puedes poner aqui o directamente en el archivo macro con 
+    //el comando /run/initialize
+    //runManager->Initialize();
 
     // Visualization manager
     G4VisManager *visManager = new G4VisExecutive();
@@ -122,6 +124,7 @@ int main(int argc, char** argv) {
 
     if ( macro.size() ) {
       // Batch mode
+      runManager->Initialize();
       G4String command = "/control/execute ";
       UImanager->ApplyCommand(command+macro);
       //UImanager->ApplyCommand("/control/execute vis.mac");
@@ -129,6 +132,7 @@ int main(int argc, char** argv) {
     } else { 
       // Define UI session for interactive mode
       G4UIExecutive * ui = new G4UIExecutive(argc, argv, session);
+      UImanager->ApplyCommand("/control/execute geometry.mac");
       UImanager->ApplyCommand("/control/execute vis.mac");
       //UImanager->ApplyCommand("/control/execute input.in");
       if (ui->IsGUI()){

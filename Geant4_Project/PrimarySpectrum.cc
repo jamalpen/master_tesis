@@ -31,7 +31,7 @@ PrimarySpectrum::PrimarySpectrum():
     particleDirection = G4ThreeVector(0., 0., -1.);
 
     fSpectMessenger = new PrimarySpectrumMessenger(this);
-    
+
     inputFile = new char();
     //inputFile = "pao-fluxSec-dec2006.shw.bz2";
 
@@ -74,7 +74,7 @@ void PrimarySpectrum::primaryMomento()
         if (fgets(line, 256, inFile))
         {
             lineNumber++;
-            std::cout << "Numero de linea: " << lineNumber << std::endl;
+            //std::cout << "Numero de linea: " << lineNumber << std::endl;
             // Saltar las primeras 5 líneas
             if (lineNumber <= 5)
                 continue;
@@ -87,8 +87,8 @@ void PrimarySpectrum::primaryMomento()
             {   
                 sscanf(line, "%d %lf %lf %lf %lf %lf %lf %d %d %lf %lf %lf\n",
                        &crkId, &px, &py, &pz, &x, &y, &z, &shwId, &prmId, &prmEner, &prmThe, &prmPhi);
-                std::cout << "El numero de la linea que se analizo es: " << lineNumber << std::endl;
-                std::cout << "Linea: " << line << std::endl;
+                //std::cout << "El numero de la linea que se analizo es: " << lineNumber << std::endl;
+                //std::cout << "Linea: " << line << std::endl;
             }
         }
 
@@ -148,9 +148,9 @@ void PrimarySpectrum::primaryMomento()
 
     particleDirection = G4ThreeVector(px * GeV, py * GeV, -1. * (pz * GeV));
     particlePosition = G4ThreeVector(x * m, y * m, z * m); // Update position particle with input.in file
-    G4cout << "Dirección de la partícula: " << particleDirection << G4endl;
-    G4cout << "Posición de la partícula: " << particlePosition << G4endl;
-    G4cout << "El ID de la particula es: " << parId << G4endl;
+    //G4cout << "Dirección de la partícula: " << particleDirection << G4endl;
+    //G4cout << "Posición de la partícula: " << particlePosition << G4endl;
+    //G4cout << "El ID de la particula es: " << parId << G4endl;
 }
 
 G4double PrimarySpectrum::getEnergy() const

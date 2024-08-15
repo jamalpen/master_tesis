@@ -4,7 +4,7 @@
 #include <cmath>
 
 MyDetectorConstruction::MyDetectorConstruction(): worldSizeX(100*km), worldSizeY(100*km), worldSizeZ(100*km),
-      detectorSizeX(1*km), detectorSizeY(1*m), detectorSizeZ(1*km), detectorPosX(0), detectorPosY(0), detectorPosZ(0)
+      detectorSizeX(10*km), detectorSizeY(10*km), detectorSizeZ(10*km), detectorPosX(0), detectorPosY(0), detectorPosZ(0)
 {
 
     fGMessenger = new GeometryMessenger(this);
@@ -61,15 +61,15 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     //G4double maxStep = 10.0 * cm;
     //logicGhostDetector->SetUserLimits(new G4UserLimits(maxStep));
 
-    G4cout << "El tamaño inicial del mundo en x es: " << worldSizeX << G4endl;
-    G4cout << "El tamaño inicial del mundo en y es: " << worldSizeY << G4endl;
-    G4cout << "El tamaño inicial del mundo en z es: " << worldSizeZ << G4endl;
-    G4cout << "El tamano inicial del detector en x es: " << detectorSizeX << G4endl;
-    G4cout << "El tamano inicial del detector en y es: " << detectorSizeY << G4endl;
-    G4cout << "El tamano inicial del detector en z es: " << detectorSizeZ << G4endl;
-    G4cout << "La posición inicial del detector en x es: " << detectorPosX << G4endl;
-    G4cout << "La posición inicial del detector en y es: " << detectorPosY << G4endl;
-    G4cout << "La posición inicial del detector en z es: " << detectorPosZ << G4endl;
+    //G4cout << "El tamaño inicial del mundo en x es: " << worldSizeX << G4endl;
+    //G4cout << "El tamaño inicial del mundo en y es: " << worldSizeY << G4endl;
+    //G4cout << "El tamaño inicial del mundo en z es: " << worldSizeZ << G4endl;
+    //G4cout << "El tamano inicial del detector en x es: " << detectorSizeX << G4endl;
+    //G4cout << "El tamano inicial del detector en y es: " << detectorSizeY << G4endl;
+    //G4cout << "El tamano inicial del detector en z es: " << detectorSizeZ << G4endl;
+    //G4cout << "La posición inicial del detector en x es: " << detectorPosX << G4endl;
+    //G4cout << "La posición inicial del detector en y es: " << detectorPosY << G4endl;
+    //G4cout << "La posición inicial del detector en z es: " << detectorPosZ << G4endl;
 
     return physWorld;
 }
@@ -90,49 +90,49 @@ void MyDetectorConstruction::ConstructSDandField()
 
 void MyDetectorConstruction::SetWorldSizeX(G4double newWorldSizeX) {
     worldSizeX = newWorldSizeX;
-    G4cout << "El tamaño del mundo en X es: " << worldSizeX << G4endl;
+    //G4cout << "El tamaño del mundo en X es: " << worldSizeX << G4endl;
 }
 
 void MyDetectorConstruction::SetWorldSizeY(G4double newWorldSizeY) {
     worldSizeY = newWorldSizeY;
-    G4cout << "El tamaño del mundo en Y es: " << worldSizeY << G4endl;
+    //G4cout << "El tamaño del mundo en Y es: " << worldSizeY << G4endl;
 }
 
 void MyDetectorConstruction::SetWorldSizeZ(G4double newWorldSizeZ) {
     worldSizeZ = newWorldSizeZ;
-    G4cout << "El tamaño del mundo en Z es: " << worldSizeZ << G4endl;
+    //G4cout << "El tamaño del mundo en Z es: " << worldSizeZ << G4endl;
 }
 
 void MyDetectorConstruction::SetDetectorSizeX(G4double newDetectorSizeX) {
     detectorSizeX = newDetectorSizeX;
-    G4cout << "El tamaño del detector en X es: " << detectorSizeX << G4endl;
+    //G4cout << "El tamaño del detector en X es: " << detectorSizeX << G4endl;
 }
 
 void MyDetectorConstruction::SetDetectorSizeY(G4double newDetectorSizeY) {
     detectorSizeY = newDetectorSizeY;
-    G4cout << "El tamaño del detector en Y es: " << detectorSizeY << G4endl;
+    //G4cout << "El tamaño del detector en Y es: " << detectorSizeY << G4endl;
 }
 
 void MyDetectorConstruction::SetDetectorSizeZ(G4double newDetectorSizeZ) {
     detectorSizeZ = newDetectorSizeZ;
-    G4cout << "El tamaño del detector en Z es: " << detectorSizeZ << G4endl;
+    //G4cout << "El tamaño del detector en Z es: " << detectorSizeZ << G4endl;
 }
 
 void MyDetectorConstruction::SetDetectorPosX(G4double newPosX)
 {
     detectorPosX = newPosX;
-    G4cout << "El posición en el eje x del detector es: " << detectorPosX << G4endl;
+    //G4cout << "El posición en el eje x del detector es: " << detectorPosX << G4endl;
 }
 
 void MyDetectorConstruction::SetDetectorPosY(G4double newPosY)
 {
     detectorPosY = newPosY;
-    G4cout << "El posición en el eje y del detector es: " << detectorPosY << G4endl;
+    //G4cout << "El posición en el eje y del detector es: " << detectorPosY << G4endl;
 }
 
 void MyDetectorConstruction::SetDetectorPosZ(G4double newPosZ)
 {
     detectorPosZ = newPosZ;
-    G4cout << "El posición en el eje z del detector es: " << detectorPosZ << G4endl;
+    //G4cout << "El posición en el eje z del detector es: " << detectorPosZ << G4endl;
 }
 
