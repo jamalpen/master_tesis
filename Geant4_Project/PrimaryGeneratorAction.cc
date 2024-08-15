@@ -61,8 +61,11 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   }
 
   fParticleGun->SetParticleDefinition(particle);
+  G4cout << "La partícula es: " << particle << G4endl;
   fParticleGun->SetParticlePosition(position);
+  G4cout << "La posición de la partícula es: " << position << G4endl;
   fParticleGun->SetParticleMomentumDirection(direction);
+  G4cout << "La momento de la partícula es: " << direction << G4endl;
   fParticleGun->SetParticleEnergy(fCrkPar->getEnergy());
 
   fParticleGun->GeneratePrimaryVertex(anEvent);

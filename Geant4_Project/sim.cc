@@ -35,12 +35,20 @@ int main(int argc, char** argv) {
     PrimarySpectrum* james1 = new PrimarySpectrum();
     int james = james1->openFile("particle.shw.bz2");
     std::cout << "El valor del numero es: " << james << std::endl;
-
+    
+    
     //Prueba del método primaryMomento
     james1->primaryMomento();
+    double energia = james1->getEnergy();
+    std::cout << "El valor de la energia es: " << energia << std::endl;
     james1->primaryMomento();
+    double energia1 = james1->getEnergy();
+    std::cout << "El valor de la energia es: " << energia1 << std::endl;
     james1->primaryMomento();
+    double energia2 = james1->getEnergy();
+    std::cout << "El valor de la energia es: " << energia2 << std::endl;
     
+
 
     // Evaluate arguments
     if ( argc > 9 ) {

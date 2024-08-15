@@ -36,8 +36,8 @@ PrimarySpectrum::PrimarySpectrum():
 
     //openFile(inputFile);
 
-    initx = 0.*m;
-    inity = 0.*m;
+    initx = 1.*m;
+    inity = 1.*m;
     initz = 1.5*m;
     areaDimX = 1.0*km; // Ejemplo de dimensión inicial en X
     areaDimY = 1.0*km; // Ejemplo de dimensión inicial en Y
@@ -172,31 +172,37 @@ void PrimarySpectrum::primaryPosition()
 
 void PrimarySpectrum::setInitPosX(G4double xx)
 {
+    G4cout << "La posición en x es: " << initx << G4endl;
     this->initx = xx;
 }
 
 void PrimarySpectrum::setInitPosY(G4double yy)
 {
+    G4cout << "La posición en y es: " << inity << G4endl;
     this->inity = yy;
 }
 
 void PrimarySpectrum::setInitPosZ(G4double zz)
 {
+    G4cout << "La posición en z es: " << initz << G4endl;
     this->initz = zz;
 }
 
 void PrimarySpectrum::setAreaDimX(G4double dimX)
 {
+    G4cout << "La dimensión en x es: " << areaDimX << G4endl;
     this->areaDimX = dimX;
 }
 
 void PrimarySpectrum::setAreaDimY(G4double dimY)
 {
+    G4cout << "La dimensión en y es: " << areaDimY << G4endl;
     this->areaDimY = dimY;
 }
 
 void PrimarySpectrum::setAreaDimZ(G4double dimZ)
 {
+    G4cout << "La dimensión en z es: " << areaDimZ << G4endl;
     this->areaDimZ = dimZ;
 }
 
