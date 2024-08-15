@@ -6,24 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/geant4lab/Geant4_projects/GeometryMessenger.cc
-GeometryMessenger.hh
-/home/geant4lab/Geant4_projects/GeometryMessenger.hh
-MyDetectorConstruction.hh
-/home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
-G4UIdirectory.hh
-/home/geant4lab/Geant4_projects/G4UIdirectory.hh
-G4UIcmdWithADoubleAndUnit.hh
-/home/geant4lab/Geant4_projects/G4UIcmdWithADoubleAndUnit.hh
-G4SystemOfUnits.hh
-/home/geant4lab/Geant4_projects/G4SystemOfUnits.hh
-string
--
-fstream
--
-sstream
--
-
 /home/geant4lab/Geant4_projects/GeometryMessenger.hh
 G4UImessenger.hh
 /home/geant4lab/Geant4_projects/G4UImessenger.hh
@@ -1301,10 +1283,6 @@ VecGeom/volumes/UnplacedBox.h
 -
 G4Polyhedron.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Polyhedron.hh
-
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIcmdWithADoubleAndUnit.hh
-G4UIcommand.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIcommand.hh
 
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIcommand.hh
 vector

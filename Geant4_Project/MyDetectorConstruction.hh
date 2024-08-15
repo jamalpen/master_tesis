@@ -28,22 +28,29 @@ public:
 
     virtual G4VPhysicalVolume *Construct();
 
-    //Métodos para actualizar las dimensiones del mundo y el detector
+    //Métodos para actualizar las dimensiones del mundo y el detector y la posicion del detector
     void SetWorldSizeX(G4double worldSizeX);
     void SetWorldSizeY(G4double worldSizeY);
     void SetWorldSizeZ(G4double worldSizeZ);
+
     void SetDetectorSizeX(G4double detectorSizeX);
     void SetDetectorSizeY(G4double detectorSizeY);
     void SetDetectorSizeZ(G4double detectorSizeZ);
+
+    void SetDetectorPosX(G4double);
+    void SetDetectorPosY(G4double);
+    void SetDetectorPosZ(G4double);
+
 
 private:
 
     G4double worldSizeX, worldSizeY, worldSizeZ;
     G4double detectorSizeX, detectorSizeY, detectorSizeZ;
+    G4double detectorPosX, detectorPosY, detectorPosZ;
 
     G4LogicalVolume *logicDetector;
 
-    GeometryMessenger* fGMessenger; // Puntero a GeometryMessenger
+    GeometryMessenger* fGMessenger; // Puntero a GeometryMessenger, nunca olvidar
 
     virtual void ConstructSDandField();
 };

@@ -24,7 +24,13 @@
 /geometry/detectorSizeY 1 km
 /geometry/detectorSizeZ 1 km
 
+# Definir la posición del detector dentro del mundo de Geant4
+/geometry/detectorPosX 1 m
+/geometry/detectorPosY 1 m
+/geometry/detectorPosZ 1 m
+
+
 
 # Iniciar la simulación con N eventos
-/run/beamOn 6
+/run/beamOn 1
 
