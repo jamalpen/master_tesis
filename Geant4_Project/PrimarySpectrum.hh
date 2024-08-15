@@ -25,21 +25,13 @@ public:
     PrimarySpectrum();
     ~PrimarySpectrum();
 
-    void primaryPosition();
     void primaryMomento();
     int openFile(std::string name);
     
-    void setInitPosX(G4double xx);
-    void setInitPosY(G4double yy);
-    void setInitPosZ(G4double zz);
-    void setAreaDimX(G4double dimX);
-    void setAreaDimY(G4double dimY);
-    void setAreaDimZ(G4double dimZ);
-    
-    G4ThreeVector getPosition() const;
-    G4ThreeVector getDirection() const;
-    G4String getParticleId() const;
-    G4double getEnergy() const; // Nuevo getter
+    G4ThreeVector getPosition() const;// no se creo ni se uso
+    G4ThreeVector getDirection() const;//no se creo ni se uso
+    G4String getParticleId() const; // no se definio ni se uso
+    G4double getEnergy() const; //Solo se uso este metodo
 
     G4ThreeVector particlePosition;
     G4ThreeVector particleDirection;
@@ -48,12 +40,6 @@ public:
     
 private:
     G4double pi;
-    G4double initx;
-    G4double inity;
-    G4double initz;
-    G4double areaDimX;
-    G4double areaDimY;
-    G4double areaDimZ;
     float r;
     float theta;
 
@@ -72,6 +58,8 @@ private:
 
     FILE *inFile = NULL;
     PrimarySpectrumMessenger* fSpectMessenger;
+
+    G4int lineNumber;
 };
 
 #endif

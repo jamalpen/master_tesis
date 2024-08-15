@@ -10,6 +10,8 @@
 #include "MyPhysicsList.hh"
 #include "ActionInitialization.hh"
 
+#include "PrimarySpectrum.hh"
+
 // C++ Libraries
 #include "Randomize.hh"
 #include <iostream>
@@ -28,6 +30,26 @@ int main(int argc, char** argv) {
     
     // Initial debug message
     G4cout << "Starting Geant4 program..." << G4endl;
+
+    /*
+    // Prueba del método openfile de PrimarySpectrum
+    PrimarySpectrum* james1 = new PrimarySpectrum();
+    int james = james1->openFile("particle.shw.bz2");
+    std::cout << "El valor del numero es: " << james << std::endl;
+    
+    
+    //Prueba del método primaryMomento
+    james1->primaryMomento();
+    double energia = james1->getEnergy();
+    std::cout << "El valor de la energia es: " << energia << std::endl;
+    james1->primaryMomento();
+    double energia1 = james1->getEnergy();
+    std::cout << "El valor de la energia es: " << energia1 << std::endl;
+    james1->primaryMomento();
+    double energia2 = james1->getEnergy();
+    std::cout << "El valor de la energia es: " << energia2 << std::endl;
+    
+    */
 
     // Evaluate arguments
     if ( argc > 9 ) {
@@ -89,7 +111,9 @@ int main(int argc, char** argv) {
 
 
     // Initialize G4 kernel
-    runManager->Initialize();
+    //El Initialize lo puedes poner aqui o directamente en el archivo macro con 
+    //el comando /run/initialize
+    //runManager->Initialize();
 
     // Visualization manager
     G4VisManager *visManager = new G4VisExecutive();
@@ -100,12 +124,15 @@ int main(int argc, char** argv) {
 
     if ( macro.size() ) {
       // Batch mode
+      runManager->Initialize();
       G4String command = "/control/execute ";
       UImanager->ApplyCommand(command+macro);
+      //UImanager->ApplyCommand("/control/execute vis.mac");
       //UImanager->ApplyCommand("/vis/open OGL");
     } else { 
       // Define UI session for interactive mode
       G4UIExecutive * ui = new G4UIExecutive(argc, argv, session);
+      UImanager->ApplyCommand("/control/execute geometry.mac");
       UImanager->ApplyCommand("/control/execute vis.mac");
       //UImanager->ApplyCommand("/control/execute input.in");
       if (ui->IsGUI()){

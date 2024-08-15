@@ -2,6 +2,7 @@
 #define ACTIONINITIALIZATION_HH
 
 #include "G4VUserActionInitialization.hh"
+#include "MyDetectorConstruction.hh"
 
 #include "PrimarySpectrum.hh"
 
