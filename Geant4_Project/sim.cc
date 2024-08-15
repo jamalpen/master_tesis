@@ -123,6 +123,7 @@ int main(int argc, char** argv) {
       // Batch mode
       G4String command = "/control/execute ";
       UImanager->ApplyCommand(command+macro);
+      //UImanager->ApplyCommand("/control/execute vis.mac");
       //UImanager->ApplyCommand("/vis/open OGL");
     } else { 
       // Define UI session for interactive mode
