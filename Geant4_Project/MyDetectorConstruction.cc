@@ -55,11 +55,14 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     logicDetector = new G4LogicalVolume(solidDetector, ghostDetectorMat, "logicDetector");
 
     // Colocar el volumen lógico del detector fantasma en el volumen lógico del mundo
-    G4VPhysicalVolume *physGhostDetector = new G4PVPlacement(0, G4ThreeVector(0., -50*km, 10*km), logicDetector, "physDetector", logicWorld, false, 0, true);
+    G4VPhysicalVolume *physGhostDetector = new G4PVPlacement(0, G4ThreeVector(0., 0., 0.), logicDetector, "physDetector", logicWorld, false, 0, true);
     
     // Definir límites de producción
     //G4double maxStep = 10.0 * cm;
     //logicGhostDetector->SetUserLimits(new G4UserLimits(maxStep));
+
+    G4cout << "El tamaño del mundo en x es: " << worldSizeX << G4endl;
+    G4cout << "El tamano del detector en x es: " << detectorSizeX << G4endl;
 
     return physWorld;
 }
