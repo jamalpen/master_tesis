@@ -37,9 +37,9 @@ public:
     void SetDetectorSizeY(G4double detectorSizeY);
     void SetDetectorSizeZ(G4double detectorSizeZ);
 
-    void SetDetectorPosX(G4double);
-    void SetDetectorPosY(G4double);
-    void SetDetectorPosZ(G4double);
+    void SetDetectorPosX(G4double detectorPosX);
+    void SetDetectorPosY(G4double detectorPosY);
+    void SetDetectorPosZ(G4double detectorPosZ);
 
 
 private:

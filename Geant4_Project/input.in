@@ -1,4 +1,3 @@
-/run/initialize
 # Este archivo es unicamente cuando no quieres usar la interfaz gráfica.
 # Tendrías que usar ./sim -m input.in. 
 
@@ -20,15 +19,17 @@
 # Definir dimensiones del detector
 /geometry/detectorSizeX 1 km
 /geometry/detectorSizeY 1 km
-/geometry/detectorSizeZ 0.05 km
+/geometry/detectorSizeZ 1 km
 
 # Definir la posición del detector dentro del mundo de Geant4
 # La posición inicial del detector con respecto al mundo madre
 # es (0.,0.,0.). Si no quieres modificar esto solo omite estos comandos.
-#/geometry/detectorPosX 1 km
-#/geometry/detectorPosY 1 km
-#/geometry/detectorPosZ  10 km
+/geometry/detectorPosX 0 km
+/geometry/detectorPosY 0 km
+/geometry/detectorPosZ 0 km
+
+#inicializar aquí para que se actualice el mundo con los parametros de arriba
+/run/initialize
 
 # Iniciar la simulación con N eventos
-/run/beamOn 100
-
+/run/beamOn 10
