@@ -46,7 +46,6 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {
   
   G4cout << "Generando partículas primarias" << G4endl;
-  //hola bebe
   // Update primary particle properties from the PrimarySpectrum object
   //fCrkPar->primaryPosition(); // Esta función no hace nada.
   fCrkPar->primaryMomento();//Ajusta la posición inicial de la partícula y su momento.

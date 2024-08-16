@@ -47,9 +47,9 @@ private:
     G4double px;
     G4double py;
     G4double pz;
-    G4double x;
-    G4double y;
-    G4double z;
+    G4double x;//seria posicion en x de la particula del archivo .shw.bz2
+    G4double y;//seria posicion en y de la particula del archivo .shw.bz2
+    G4double z;//seria posicion en z de la particula del archivo .shw.bz2
     G4int shwId;
     G4int prmId;
     G4double prmEner;
