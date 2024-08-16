@@ -5,9 +5,8 @@
 
 #include "ActionInitialization.hh"
 #include "PrimaryGeneratorAction.hh"
-//#include "SteppingAction.hh"
 
-//#include "RunAction.hh"
+
 
 ActionInitialization::ActionInitialization()
  : G4VUserActionInitialization(),
@@ -25,10 +24,6 @@ void ActionInitialization::Build() const
 {
     PrimaryGeneratorAction* primaryGenAction = new PrimaryGeneratorAction(parCrk);
     SetUserAction(primaryGenAction);
-
-    // Pasa el detector sensible a RunAction
-    //RunAction* runAction = new RunAction(fSensitiveDetector);
-    //SetUserAction(runAction);
     
     //MySteppingAction* steppingAction = new MySteppingAction();
     //SetUserAction(steppingAction);

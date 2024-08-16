@@ -2,10 +2,13 @@
 /run/initialize
 
 /vis/open OGL
-#/vis/viewer/set/viewpointVector 1 1 1
+/vis/viewer/set/viewpointVector 1 1 1
 /vis/drawVolume
 /vis/viewer/set/autoRefresh true
 /vis/scene/add/trajectories smooth
-#/vis/scene/add/axes
+/vis/scene/add/scale 1 km
+/vis/scene/add/axes
+/vis/scene/add/eventID
+/vis/scene/endOfEventAction accumulate 100
 
 

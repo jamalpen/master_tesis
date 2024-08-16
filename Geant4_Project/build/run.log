@@ -1,0 +1,1863 @@
+Starting Geant4 program...
+Multithreading support enabled.
+Number of threads set to: 1
+Random engine configured.
+
+**************************************************************
+ Geant4 version Name: geant4-10-07-patch-03 [MT]   (19-November-2021)
+  << in Multi-threaded mode >> 
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+G4MTRunManager created (multithreading support).
+Seed set to: 1723784309
+...PrimarySpectrum...
+...PrimarySpectrumMessenger...
+...ActionInitialization...
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Registered graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRep (HepRepXML)
+  G4HepRepFile (HepRepFile)
+  RayTracer (RayTracer)
+  VRML1FILE (VRML1FILE)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+  OpenGLImmediateQt (OGLIQt, OGLI)
+  OpenGLStoredQt (OGLSQt, OGL, OGLS)
+  OpenGLImmediateX (OGLIX, OGLIQt_FALLBACK)
+  OpenGLStoredX (OGLSX, OGLSQt_FALLBACK)
+  RayTracerX (RayTracerX)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered models:
+  None
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+Registered filters:
+  None
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+Checking overlaps for volume physDetector (G4Box) ... OK! 
+### Birks coefficients used in run time
+
+phot:  for gamma SubType=12 BuildTable=0
+      LambdaPrime table from 200 keV to 100 TeV in 61 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric : Emin=    0 eV  Emax=  100 TeV  SauterGavrila Fluo
+
+compt:  for gamma SubType=13 BuildTable=1
+      Lambda table from 100 eV  to 1 MeV, 7 bins/decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 56 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina : Emin=    0 eV  Emax=  100 TeV
+
+conv:  for gamma SubType=14 BuildTable=1
+      Lambda table from 1.022 MeV to 100 TeV, 18 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+     BetheHeitlerLPM : Emin=    0 eV  Emax=  100 TeV  ModifiedTsai
+
+Rayl:  for gamma SubType=11 BuildTable=1
+      Lambda table from 100 eV  to 100 keV, 7 bins/decade, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 63 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh : Emin=    0 eV  Emax=  100 TeV  CullenGenerator
+
+msc:  for e-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
+
+eIoni:  for e-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+CoulombScat:  for e-, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for e+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 MeV Nbins=42 100 eV  - 100 MeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
+        WentzelVIUni : Emin=  100 MeV Emax=  100 TeV Nbins=42 100 MeV - 100 TeV
+              StepLim=UseSafety Rfact=0.04 Gfact=2.5 Sfact=0.6 DispFlag:1 Skin=1 Llimit=1
+
+eIoni:  for e+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha : Emin=    0 eV  Emax=  100 TeV
+
+eBrem:  for e+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB : Emin=    0 eV  Emax=    1 GeV  ModifiedTsai
+            eBremLPM : Emin=    1 GeV Emax=  100 TeV  ModifiedTsai
+
+annihil:  for e+, integral:1  SubType=5 BuildTable=0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg : Emin=    0 eV  Emax=  100 TeV
+
+CoulombScat:  for e+, integral:1  SubType=1 BuildTable=1
+      Lambda table from 100 MeV to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=  100 MeV Emax=  100 TeV
+
+msc:  for proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+hIoni:  for proton  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for proton  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for proton  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for GenericIon  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+ionIoni:  for GenericIon  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      Stopping Power data for 17 ion/material pairs
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+msc:  for alpha  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+ionIoni:  for alpha  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon : Emin=    0 eV  Emax=7.9452 MeV
+          BetheBloch : Emin=7.9452 MeV Emax=  100 TeV
+
+msc:  for anti_proton  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+hIoni:  for anti_proton  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=    2 MeV
+          BetheBloch : Emin=    2 MeV Emax=  100 TeV
+
+hBrems:  for anti_proton  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for anti_proton  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for anti_proton, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+hIoni:  for kaon+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for kaon-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+hIoni:  for kaon-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=1.05231 MeV
+          BetheBloch : Emin=1.05231 MeV Emax=  100 TeV
+
+hBrems:  for kaon-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for kaon-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for kaon-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+muIoni:  for mu+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=  200 keV
+          BetheBloch : Emin=  200 keV Emax=    1 GeV
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+
+muBrems:  for mu+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001; from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for mu-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+muIoni:  for mu-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=  200 keV
+          BetheBloch : Emin=  200 keV Emax=    1 GeV
+        MuBetheBloch : Emin=    1 GeV Emax=  100 TeV
+
+muBrems:  for mu-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+muPairProd:  for mu-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 21x1001; from 1 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for mu-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi+  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+hIoni:  for pi+  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi+  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi+  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi+, integral:1  SubType=1 BuildTable=1
+      Lambda table from threshold  to 100 TeV, 7 bins/decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+
+msc:  for pi-  SubType= 10
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni : Emin=    0 eV  Emax=  100 TeV Nbins=84 100 eV  - 100 TeV
+              StepLim=Minimal Rfact=0.2 Gfact=2.5 Sfact=0.6 DispFlag:0 Skin=1 Llimit=1
+
+hIoni:  for pi-  SubType=2
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      StepFunction=(0.2, 0.1 mm), integ: 1, fluct: 1, linLossLim= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO : Emin=    0 eV  Emax=297.505 keV
+          BetheBloch : Emin=297.505 keV Emax=  100 TeV
+
+hBrems:  for pi-  SubType=3
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+hPairProd:  for pi-  SubType=4
+      dE/dx and range tables from 100 eV  to 100 TeV in 84 bins
+      Lambda tables from threshold to 100 TeV, 7 bins/decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd : Emin=    0 eV  Emax=  100 TeV  ModifiedMephi
+
+CoulombScat:  for pi-, integral:1  SubType=1 BuildTable=1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering : Emin=    0 eV  Emax=  100 TeV
+G4VDecayChannel::FillDaughters() - [ kaon+ ]1:nu_mu is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ kaon+ ]1:pi0 is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ kaon+ ]0:pi0 is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ kaon+ ]0:pi0 is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ kaon+ ]1:pi0 is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ kaon- ]1:anti_nu_mu is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ kaon- ]1:pi0 is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ kaon- ]0:pi0 is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ kaon- ]0:pi0 is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ kaon- ]1:pi0 is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ mu+ ]1:nu_e is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ mu- ]1:anti_nu_e is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ pi+ ]1:nu_mu is not defined !!
+ The BR of this decay mode is set to zero.
+G4VDecayChannel::FillDaughters() - [ pi- ]1:anti_nu_mu is not defined !!
+ The BR of this decay mode is set to zero.
+
+=======================================================================
+--> G4MTRunManager::CreateAndStartWorkers() --> Initializing workers...
+=======================================================================
+
+G4WT0 > ...PrimaryGeneratorAction...
+G4WT0 > ...PrimaryGeneratorMessenger...
+File was opened
+G4VisManager: Using G4TrajectoryDrawByCharge as fallback trajectory model.
+See commands in /vis/modeling/trajectories/ for other options.
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (19.357,-26.4315,-121.43)
+G4WT0 > Número total de partículas que han entrado al detector: 1
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (2.64493,-3.26014,-17.0382)
+G4WT0 > Número total de partículas que han entrado al detector: 2
+G4WT0 > Posición inicial de la partícula es: (2.64493,-3.26014,-17.0382)
+G4WT0 > Posición final de la partícula es: (2.79437,-3.31904,-17.0157)
+G4WT0 > Número total de partículas que han entrado al detector: 3
+G4WT0 > Generando partículas primarias
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-0.0702158,-33.6205,-64.1632)
+G4WT0 > Número total de partículas que han entrado al detector: 4
+G4WT0 > Posición inicial de la partícula es: (-0.0702158,-33.6205,-64.1632)
+G4WT0 > Posición final de la partícula es: (-0.221666,-33.6174,-64.1745)
+G4WT0 > Número total de partículas que han entrado al detector: 5
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-81934.3,-274712,-233415)
+G4WT0 > Número total de partículas que han entrado al detector: 6
+G4WT0 > Posición inicial de la partícula es: (-81934.3,-274712,-233415)
+G4WT0 > Posición final de la partícula es: (-81937.3,-274722,-233423)
+G4WT0 > Número total de partículas que han entrado al detector: 7
+G4WT0 > Posición inicial de la partícula es: (-81937.3,-274722,-233423)
+G4WT0 > Posición final de la partícula es: (-213450,-714302,-607544)
+G4WT0 > Número total de partículas que han entrado al detector: 8
+G4WT0 > Posición inicial de la partícula es: (-213450,-714302,-607544)
+G4WT0 > Posición final de la partícula es: (-213462,-714574,-607774)
+G4WT0 > Número total de partículas que han entrado al detector: 9
+G4WT0 > Posición inicial de la partícula es: (-213462,-714574,-607774)
+G4WT0 > Posición final de la partícula es: (-213462,-714574,-607774)
+G4WT0 > Número total de partículas que han entrado al detector: 10
+G4WT0 > Posición inicial de la partícula es: (-81934.3,-274712,-233415)
+G4WT0 > Posición final de la partícula es: (-81971.1,-274836,-233520)
+G4WT0 > Número total de partículas que han entrado al detector: 11
+G4WT0 > Posición inicial de la partícula es: (-81971.1,-274836,-233520)
+G4WT0 > Posición final de la partícula es: (-81970.6,-274836,-233520)
+G4WT0 > Número total de partículas que han entrado al detector: 12
+G4WT0 > Generando partículas primarias
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (541.894,-11122.1,-58520.7)
+G4WT0 > Número total de partículas que han entrado al detector: 13
+G4WT0 > Posición inicial de la partícula es: (541.894,-11122.1,-58520.7)
+G4WT0 > Posición final de la partícula es: (543.718,-11160.5,-58722.9)
+G4WT0 > Número total de partículas que han entrado al detector: 14
+G4WT0 > Posición inicial de la partícula es: (543.718,-11160.5,-58722.9)
+G4WT0 > Posición final de la partícula es: (543.758,-11160.6,-58722.9)
+G4WT0 > Número total de partículas que han entrado al detector: 15
+G4WT0 > Posición inicial de la partícula es: (541.894,-11122.1,-58520.7)
+G4WT0 > Posición final de la partícula es: (542.251,-11128.6,-58554.6)
+G4WT0 > Número total de partículas que han entrado al detector: 16
+G4WT0 > Posición inicial de la partícula es: (542.251,-11128.6,-58554.6)
+G4WT0 > Posición final de la partícula es: (545.786,-11131.8,-58554.8)
+G4WT0 > Número total de partículas que han entrado al detector: 17
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (98724.5,-102817,-112066)
+G4WT0 > Número total de partículas que han entrado al detector: 18
+G4WT0 > Posición inicial de la partícula es: (98724.5,-102817,-112066)
+G4WT0 > Posición final de la partícula es: (98827.2,-102924,-112182)
+G4WT0 > Número total de partículas que han entrado al detector: 19
+G4WT0 > Posición inicial de la partícula es: (98827.2,-102924,-112182)
+G4WT0 > Posición final de la partícula es: (98827.7,-102924,-112182)
+G4WT0 > Número total de partículas que han entrado al detector: 20
+G4WT0 > Posición inicial de la partícula es: (98724.5,-102817,-112066)
+G4WT0 > Posición final de la partícula es: (98731.6,-102825,-112074)
+G4WT0 > Número total de partículas que han entrado al detector: 21
+G4WT0 > Posición inicial de la partícula es: (98731.6,-102825,-112074)
+G4WT0 > Posición final de la partícula es: (98731.9,-102825,-112074)
+G4WT0 > Número total de partículas que han entrado al detector: 22
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (21750.6,-122742,-247172)
+G4WT0 > Número total de partículas que han entrado al detector: 23
+G4WT0 > Posición inicial de la partícula es: (21750.6,-122742,-247172)
+G4WT0 > Posición final de la partícula es: (21759.8,-122794,-247278)
+G4WT0 > Número total de partículas que han entrado al detector: 24
+G4WT0 > Posición inicial de la partícula es: (21759.8,-122794,-247278)
+G4WT0 > Posición final de la partícula es: (21788.9,-122802,-247302)
+G4WT0 > Número total de partículas que han entrado al detector: 25
+G4WT0 > Posición inicial de la partícula es: (21788.9,-122802,-247302)
+G4WT0 > Posición final de la partícula es: (21788.8,-122801,-247302)
+G4WT0 > Número total de partículas que han entrado al detector: 26
+G4WT0 > Posición inicial de la partícula es: (21750.6,-122742,-247172)
+G4WT0 > Posición final de la partícula es: (21771.9,-122871,-247296)
+G4WT0 > Número total de partículas que han entrado al detector: 27
+G4WT0 > Posición inicial de la partícula es: (21771.9,-122871,-247296)
+G4WT0 > Posición final de la partícula es: (21771.9,-122871,-247296)
+G4WT0 > Número total de partículas que han entrado al detector: 28
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (0.521423,-2.05864,-2.47053)
+G4WT0 > Número total de partículas que han entrado al detector: 29
+G4WT0 > Posición inicial de la partícula es: (0.521423,-2.05864,-2.47053)
+G4WT0 > Posición final de la partícula es: (0.978239,-2.95855,-1.88433)
+G4WT0 > Número total de partículas que han entrado al detector: 30
+G4WT0 > Posición inicial de la partícula es: (0.978239,-2.95855,-1.88433)
+G4WT0 > Posición final de la partícula es: (0.864609,-3.01238,-1.79545)
+G4WT0 > Número total de partículas que han entrado al detector: 31
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (6121.39,-12222.4,-77234.6)
+G4WT0 > Número total de partículas que han entrado al detector: 32
+G4WT0 > Posición inicial de la partícula es: (6121.39,-12222.4,-77234.6)
+G4WT0 > Posición final de la partícula es: (6137.8,-12254.8,-77437.4)
+G4WT0 > Número total de partículas que han entrado al detector: 33
+G4WT0 > Posición inicial de la partícula es: (6137.8,-12254.8,-77437.4)
+G4WT0 > Posición final de la partícula es: (6137.81,-12254.8,-77437.4)
+G4WT0 > Número total de partículas que han entrado al detector: 34
+G4WT0 > Posición inicial de la partícula es: (6121.39,-12222.4,-77234.6)
+G4WT0 > Posición final de la partícula es: (6122.19,-12224,-77244.9)
+G4WT0 > Número total de partículas que han entrado al detector: 35
+G4WT0 > Posición inicial de la partícula es: (6122.19,-12224,-77244.9)
+G4WT0 > Posición final de la partícula es: (6122.12,-12223.8,-77245)
+G4WT0 > Número total de partículas que han entrado al detector: 36
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-10.8955,4.5522,-35.1696)
+G4WT0 > Número total de partículas que han entrado al detector: 37
+G4WT0 > Posición inicial de la partícula es: (-10.8955,4.5522,-35.1696)
+G4WT0 > Posición final de la partícula es: (-10.8861,4.5341,-35.1755)
+G4WT0 > Número total de partículas que han entrado al detector: 38
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-0.569013,-31.6561,-88.8568)
+G4WT0 > Número total de partículas que han entrado al detector: 39
+G4WT0 > Posición inicial de la partícula es: (-0.569013,-31.6561,-88.8568)
+G4WT0 > Posición final de la partícula es: (-0.584139,-31.6255,-88.8691)
+G4WT0 > Número total de partículas que han entrado al detector: 40
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-425.721,1242.53,-2531.45)
+G4WT0 > Número total de partículas que han entrado al detector: 41
+G4WT0 > Posición inicial de la partícula es: (-425.721,1242.53,-2531.45)
+G4WT0 > Posición final de la partícula es: (-436.441,1273.78,-2595.07)
+G4WT0 > Número total de partículas que han entrado al detector: 42
+G4WT0 > Posición inicial de la partícula es: (-436.441,1273.78,-2595.07)
+G4WT0 > Posición final de la partícula es: (-436.562,1273.43,-2595.26)
+G4WT0 > Número total de partículas que han entrado al detector: 43
+G4WT0 > Posición inicial de la partícula es: (-425.721,1242.53,-2531.45)
+G4WT0 > Posición final de la partícula es: (-429.476,1253.62,-2554.19)
+G4WT0 > Número total de partículas que han entrado al detector: 44
+G4WT0 > Posición inicial de la partícula es: (-429.476,1253.62,-2554.19)
+G4WT0 > Posición final de la partícula es: (-429.458,1253.64,-2554.19)
+G4WT0 > Número total de partículas que han entrado al detector: 45
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (29.719,8.32021,-73.6568)
+G4WT0 > Número total de partículas que han entrado al detector: 46
+G4WT0 > Posición inicial de la partícula es: (29.719,8.32021,-73.6568)
+G4WT0 > Posición final de la partícula es: (29.2757,8.82049,-73.844)
+G4WT0 > Número total de partículas que han entrado al detector: 47
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (58283,-52391.9,-107989)
+G4WT0 > Número total de partículas que han entrado al detector: 48
+G4WT0 > Posición inicial de la partícula es: (58283,-52391.9,-107989)
+G4WT0 > Posición final de la partícula es: (58292.4,-52400.3,-108007)
+G4WT0 > Número total de partículas que han entrado al detector: 49
+G4WT0 > Posición inicial de la partícula es: (58292.4,-52400.3,-108007)
+G4WT0 > Posición final de la partícula es: (58292.6,-52400.1,-108007)
+G4WT0 > Número total de partículas que han entrado al detector: 50
+G4WT0 > Posición inicial de la partícula es: (58283,-52391.9,-107989)
+G4WT0 > Posición final de la partícula es: (58389.6,-52488.1,-108187)
+G4WT0 > Número total de partículas que han entrado al detector: 51
+G4WT0 > Posición inicial de la partícula es: (58389.6,-52488.1,-108187)
+G4WT0 > Posición final de la partícula es: (58389.6,-52488.1,-108187)
+G4WT0 > Número total de partículas que han entrado al detector: 52
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (23017.3,-17034.7,-63051.2)
+G4WT0 > Número total de partículas que han entrado al detector: 53
+G4WT0 > Posición inicial de la partícula es: (23017.3,-17034.7,-63051.2)
+G4WT0 > Posición final de la partícula es: (23020.2,-17036.9,-63059.1)
+G4WT0 > Número total de partículas que han entrado al detector: 54
+G4WT0 > Posición inicial de la partícula es: (23020.2,-17036.9,-63059.1)
+G4WT0 > Posición final de la partícula es: (23020.2,-17036.9,-63059.1)
+G4WT0 > Número total de partículas que han entrado al detector: 55
+G4WT0 > Posición inicial de la partícula es: (23017.3,-17034.7,-63051.2)
+G4WT0 > Posición final de la partícula es: (23035.3,-17056.4,-63104.6)
+G4WT0 > Número total de partículas que han entrado al detector: 56
+G4WT0 > Posición inicial de la partícula es: (23035.3,-17056.4,-63104.6)
+G4WT0 > Posición final de la partícula es: (23035.3,-17056.4,-63104.6)
+G4WT0 > Número total de partículas que han entrado al detector: 57
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (120882,-81682.5,-474866)
+G4WT0 > Número total de partículas que han entrado al detector: 58
+G4WT0 > Posición inicial de la partícula es: (120882,-81682.5,-474866)
+G4WT0 > Posición final de la partícula es: (121033,-81787.7,-475420)
+G4WT0 > Número total de partículas que han entrado al detector: 59
+G4WT0 > Posición inicial de la partícula es: (121033,-81787.7,-475420)
+G4WT0 > Posición final de la partícula es: (121032,-81788,-475421)
+G4WT0 > Número total de partículas que han entrado al detector: 60
+G4WT0 > Posición inicial de la partícula es: (120882,-81682.5,-474866)
+G4WT0 > Posición final de la partícula es: (120894,-81690.7,-474913)
+G4WT0 > Número total de partículas que han entrado al detector: 61
+G4WT0 > Posición inicial de la partícula es: (120894,-81690.7,-474913)
+G4WT0 > Posición final de la partícula es: (120895,-81690.8,-474913)
+G4WT0 > Número total de partículas que han entrado al detector: 62
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-323482,98644.5,-187042)
+G4WT0 > Número total de partículas que han entrado al detector: 63
+G4WT0 > Posición inicial de la partícula es: (-323482,98644.5,-187042)
+G4WT0 > Posición final de la partícula es: (-323575,98672.9,-187096)
+G4WT0 > Número total de partículas que han entrado al detector: 64
+G4WT0 > Posición inicial de la partícula es: (-323575,98672.9,-187096)
+G4WT0 > Posición final de la partícula es: (-323575,98672.8,-187096)
+G4WT0 > Número total de partículas que han entrado al detector: 65
+G4WT0 > Posición inicial de la partícula es: (-323482,98644.5,-187042)
+G4WT0 > Posición final de la partícula es: (-323535,98661.4,-187073)
+G4WT0 > Número total de partículas que han entrado al detector: 66
+G4WT0 > Posición inicial de la partícula es: (-323535,98661.4,-187073)
+G4WT0 > Posición final de la partícula es: (-323535,98661.4,-187073)
+G4WT0 > Número total de partículas que han entrado al detector: 67
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (80525.4,-98287.8,-147261)
+G4WT0 > Número total de partículas que han entrado al detector: 68
+G4WT0 > Posición inicial de la partícula es: (80525.4,-98287.8,-147261)
+G4WT0 > Posición final de la partícula es: (80650.7,-98441.3,-147490)
+G4WT0 > Número total de partículas que han entrado al detector: 69
+G4WT0 > Posición inicial de la partícula es: (80650.7,-98441.3,-147490)
+G4WT0 > Posición final de la partícula es: (80650.8,-98441.4,-147490)
+G4WT0 > Número total de partículas que han entrado al detector: 70
+G4WT0 > Posición inicial de la partícula es: (80525.4,-98287.8,-147261)
+G4WT0 > Posición final de la partícula es: (80531.5,-98295.2,-147272)
+G4WT0 > Número total de partículas que han entrado al detector: 71
+G4WT0 > Posición inicial de la partícula es: (80531.5,-98295.2,-147272)
+G4WT0 > Posición final de la partícula es: (80531.4,-98295.1,-147272)
+G4WT0 > Número total de partículas que han entrado al detector: 72
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (37082.8,-51403,-77240.6)
+G4WT0 > Número total de partículas que han entrado al detector: 73
+G4WT0 > Posición inicial de la partícula es: (37082.8,-51403,-77240.6)
+G4WT0 > Posición final de la partícula es: (37102,-51429.5,-77280.5)
+G4WT0 > Número total de partículas que han entrado al detector: 74
+G4WT0 > Posición inicial de la partícula es: (37102,-51429.5,-77280.5)
+G4WT0 > Posición final de la partícula es: (37102,-51429.5,-77280.5)
+G4WT0 > Número total de partículas que han entrado al detector: 75
+G4WT0 > Posición inicial de la partícula es: (37082.8,-51403,-77240.6)
+G4WT0 > Posición final de la partícula es: (37085.5,-51406.8,-77246.3)
+G4WT0 > Número total de partículas que han entrado al detector: 76
+G4WT0 > Posición inicial de la partícula es: (37085.5,-51406.8,-77246.3)
+G4WT0 > Posición final de la partícula es: (37084.7,-51408.4,-77245.9)
+G4WT0 > Número total de partículas que han entrado al detector: 77
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (72.2977,-99.2409,-155.676)
+G4WT0 > Número total de partículas que han entrado al detector: 78
+G4WT0 > Posición inicial de la partícula es: (72.2977,-99.2409,-155.676)
+G4WT0 > Posición final de la partícula es: (72.1975,-99.1962,-155.761)
+G4WT0 > Número total de partículas que han entrado al detector: 79
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (156198,-214190,-352383)
+G4WT0 > Número total de partículas que han entrado al detector: 80
+G4WT0 > Posición inicial de la partícula es: (156198,-214190,-352383)
+G4WT0 > Posición final de la partícula es: (156235,-214240,-352467)
+G4WT0 > Número total de partículas que han entrado al detector: 81
+G4WT0 > Posición inicial de la partícula es: (156235,-214240,-352467)
+G4WT0 > Posición final de la partícula es: (156235,-214240,-352467)
+G4WT0 > Número total de partículas que han entrado al detector: 82
+G4WT0 > Posición inicial de la partícula es: (156198,-214190,-352383)
+G4WT0 > Posición final de la partícula es: (156210,-214206,-352409)
+G4WT0 > Número total de partículas que han entrado al detector: 83
+G4WT0 > Posición inicial de la partícula es: (156210,-214206,-352409)
+G4WT0 > Posición final de la partícula es: (156210,-214206,-352409)
+G4WT0 > Número total de partículas que han entrado al detector: 84
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (41437,-103262,-283139)
+G4WT0 > Número total de partículas que han entrado al detector: 85
+G4WT0 > Posición inicial de la partícula es: (41437,-103262,-283139)
+G4WT0 > Posición final de la partícula es: (41468,-103339,-283351)
+G4WT0 > Número total de partículas que han entrado al detector: 86
+G4WT0 > Posición inicial de la partícula es: (41468,-103339,-283351)
+G4WT0 > Posición final de la partícula es: (41468.1,-103339,-283351)
+G4WT0 > Número total de partículas que han entrado al detector: 87
+G4WT0 > Posición inicial de la partícula es: (41437,-103262,-283139)
+G4WT0 > Posición final de la partícula es: (41474.3,-103355,-283397)
+G4WT0 > Número total de partículas que han entrado al detector: 88
+G4WT0 > Posición inicial de la partícula es: (41474.3,-103355,-283397)
+G4WT0 > Posición final de la partícula es: (41474.3,-103355,-283397)
+G4WT0 > Número total de partículas que han entrado al detector: 89
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-55448.9,-205452,-327198)
+G4WT0 > Número total de partículas que han entrado al detector: 90
+G4WT0 > Posición inicial de la partícula es: (-55448.9,-205452,-327198)
+G4WT0 > Posición final de la partícula es: (-55449.8,-205455,-327203)
+G4WT0 > Número total de partículas que han entrado al detector: 91
+G4WT0 > Posición inicial de la partícula es: (-55449.8,-205455,-327203)
+G4WT0 > Posición final de la partícula es: (-55449.8,-205455,-327203)
+G4WT0 > Número total de partículas que han entrado al detector: 92
+G4WT0 > Posición inicial de la partícula es: (-55448.9,-205452,-327198)
+G4WT0 > Posición final de la partícula es: (-55455.4,-205476,-327238)
+G4WT0 > Número total de partículas que han entrado al detector: 93
+G4WT0 > Posición inicial de la partícula es: (-55455.4,-205476,-327238)
+G4WT0 > Posición final de la partícula es: (-55455.6,-205475,-327238)
+G4WT0 > Número total de partículas que han entrado al detector: 94
+G4WT0 > Posición inicial de la partícula es: (-55455.6,-205475,-327238)
+G4WT0 > Posición final de la partícula es: (-55455.6,-205476,-327238)
+G4WT0 > Número total de partículas que han entrado al detector: 95
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (31176.2,-88864.8,-243532)
+G4WT0 > Número total de partículas que han entrado al detector: 96
+G4WT0 > Posición inicial de la partícula es: (31176.2,-88864.8,-243532)
+G4WT0 > Posición final de la partícula es: (31191.6,-88908.5,-243651)
+G4WT0 > Número total de partículas que han entrado al detector: 97
+G4WT0 > Posición inicial de la partícula es: (31191.6,-88908.5,-243651)
+G4WT0 > Posición final de la partícula es: (31191.5,-88908.6,-243651)
+G4WT0 > Número total de partículas que han entrado al detector: 98
+G4WT0 > Posición inicial de la partícula es: (31176.2,-88864.8,-243532)
+G4WT0 > Posición final de la partícula es: (31180.3,-88876.7,-243565)
+G4WT0 > Número total de partículas que han entrado al detector: 99
+G4WT0 > Posición inicial de la partícula es: (31180.3,-88876.7,-243565)
+G4WT0 > Posición final de la partícula es: (31180.3,-88876.7,-243565)
+G4WT0 > Número total de partículas que han entrado al detector: 100
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (97775.8,-279040,-759028)
+G4WT0 > Número total de partículas que han entrado al detector: 101
+G4WT0 > Posición inicial de la partícula es: (97775.8,-279040,-759028)
+G4WT0 > Posición final de la partícula es: (97796.6,-279100,-759191)
+G4WT0 > Número total de partículas que han entrado al detector: 102
+G4WT0 > Posición inicial de la partícula es: (97796.6,-279100,-759191)
+G4WT0 > Posición final de la partícula es: (97796.6,-279100,-759191)
+G4WT0 > Número total de partículas que han entrado al detector: 103
+G4WT0 > Posición inicial de la partícula es: (97775.8,-279040,-759028)
+G4WT0 > Posición final de la partícula es: (97788.7,-279076,-759125)
+G4WT0 > Número total de partículas que han entrado al detector: 104
+G4WT0 > Posición inicial de la partícula es: (97788.7,-279076,-759125)
+G4WT0 > Posición final de la partícula es: (97788.7,-279076,-759125)
+G4WT0 > Número total de partículas que han entrado al detector: 105
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (101511,-284301,-780632)
+G4WT0 > Número total de partículas que han entrado al detector: 106
+G4WT0 > Posición inicial de la partícula es: (101511,-284301,-780632)
+G4WT0 > Posición final de la partícula es: (101515,-284311,-780663)
+G4WT0 > Número total de partículas que han entrado al detector: 107
+G4WT0 > Posición inicial de la partícula es: (101515,-284311,-780663)
+G4WT0 > Posición final de la partícula es: (101513,-284314,-780664)
+G4WT0 > Número total de partículas que han entrado al detector: 108
+G4WT0 > Posición inicial de la partícula es: (101513,-284314,-780664)
+G4WT0 > Posición final de la partícula es: (101513,-284314,-780664)
+G4WT0 > Número total de partículas que han entrado al detector: 109
+G4WT0 > Posición inicial de la partícula es: (101511,-284301,-780632)
+G4WT0 > Posición final de la partícula es: (101513,-284307,-780651)
+G4WT0 > Número total de partículas que han entrado al detector: 110
+G4WT0 > Posición inicial de la partícula es: (101513,-284307,-780651)
+G4WT0 > Posición final de la partícula es: (101513,-284307,-780651)
+G4WT0 > Número total de partículas que han entrado al detector: 111
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (34267.6,-92144.6,-255702)
+G4WT0 > Número total de partículas que han entrado al detector: 112
+G4WT0 > Posición inicial de la partícula es: (34267.6,-92144.6,-255702)
+G4WT0 > Posición final de la partícula es: (34267.7,-92144.9,-255703)
+G4WT0 > Número total de partículas que han entrado al detector: 113
+G4WT0 > Posición inicial de la partícula es: (34267.7,-92144.9,-255703)
+G4WT0 > Posición final de la partícula es: (34267.7,-92144.9,-255703)
+G4WT0 > Número total de partículas que han entrado al detector: 114
+G4WT0 > Posición inicial de la partícula es: (34267.6,-92144.6,-255702)
+G4WT0 > Posición final de la partícula es: (34272.3,-92157.2,-255737)
+G4WT0 > Número total de partículas que han entrado al detector: 115
+G4WT0 > Posición inicial de la partícula es: (34272.3,-92157.2,-255737)
+G4WT0 > Posición final de la partícula es: (34272.3,-92157.3,-255737)
+G4WT0 > Número total de partículas que han entrado al detector: 116
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (55011.9,-142511,-403402)
+G4WT0 > Número total de partículas que han entrado al detector: 117
+G4WT0 > Posición inicial de la partícula es: (55011.9,-142511,-403402)
+G4WT0 > Posición final de la partícula es: (55012.1,-142511,-403404)
+G4WT0 > Número total de partículas que han entrado al detector: 118
+G4WT0 > Posición inicial de la partícula es: (55012.1,-142511,-403404)
+G4WT0 > Posición final de la partícula es: (55012.2,-142511,-403404)
+G4WT0 > Número total de partículas que han entrado al detector: 119
+G4WT0 > Posición inicial de la partícula es: (55011.9,-142511,-403402)
+G4WT0 > Posición final de la partícula es: (55027.4,-142551,-403515)
+G4WT0 > Número total de partículas que han entrado al detector: 120
+G4WT0 > Posición inicial de la partícula es: (55027.4,-142551,-403515)
+G4WT0 > Posición final de la partícula es: (55027.4,-142551,-403515)
+G4WT0 > Número total de partículas que han entrado al detector: 121
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (17.9686,-43.0756,-124.373)
+G4WT0 > Número total de partículas que han entrado al detector: 122
+G4WT0 > Posición inicial de la partícula es: (17.9686,-43.0756,-124.373)
+G4WT0 > Posición final de la partícula es: (17.9407,-43.0155,-124.402)
+G4WT0 > Número total de partículas que han entrado al detector: 123
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (26.2861,-69.496,-226.261)
+G4WT0 > Número total de partículas que han entrado al detector: 124
+G4WT0 > Posición inicial de la partícula es: (26.2861,-69.496,-226.261)
+G4WT0 > Posición final de la partícula es: (26.2682,-69.4853,-226.267)
+G4WT0 > Número total de partículas que han entrado al detector: 125
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (5.48449,-23.6217,-78.1373)
+G4WT0 > Número total de partículas que han entrado al detector: 126
+G4WT0 > Posición inicial de la partícula es: (5.48449,-23.6217,-78.1373)
+G4WT0 > Posición final de la partícula es: (5.45031,-23.6147,-78.1432)
+G4WT0 > Número total de partículas que han entrado al detector: 127
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (3.78384,-10.8236,-39.2955)
+G4WT0 > Número total de partículas que han entrado al detector: 128
+G4WT0 > Posición inicial de la partícula es: (3.78384,-10.8236,-39.2955)
+G4WT0 > Posición final de la partícula es: (3.79257,-10.8581,-39.2866)
+G4WT0 > Número total de partículas que han entrado al detector: 129
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (3.94416,-11.3607,-32.0242)
+G4WT0 > Número total de partículas que han entrado al detector: 130
+G4WT0 > Posición inicial de la partícula es: (3.94416,-11.3607,-32.0242)
+G4WT0 > Posición final de la partícula es: (3.96814,-11.3688,-32.0192)
+G4WT0 > Número total de partículas que han entrado al detector: 131
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (6.35427,-17.7491,-57.5992)
+G4WT0 > Número total de partículas que han entrado al detector: 132
+G4WT0 > Posición inicial de la partícula es: (6.35427,-17.7491,-57.5992)
+G4WT0 > Posición final de la partícula es: (6.20049,-17.1244,-57.8727)
+G4WT0 > Número total de partículas que han entrado al detector: 133
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (1.3118,-3.64148,-9.66817)
+G4WT0 > Número total de partículas que han entrado al detector: 134
+G4WT0 > Posición inicial de la partícula es: (1.3118,-3.64148,-9.66817)
+G4WT0 > Posición final de la partícula es: (1.29442,-3.6697,-9.66123)
+G4WT0 > Número total de partículas que han entrado al detector: 135
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (2.27927,-6.10947,-18.156)
+G4WT0 > Número total de partículas que han entrado al detector: 136
+G4WT0 > Posición inicial de la partícula es: (2.27927,-6.10947,-18.156)
+G4WT0 > Posición final de la partícula es: (2.32032,-6.11577,-18.1505)
+G4WT0 > Número total de partículas que han entrado al detector: 137
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (2.86075,-5.07954,-32.6655)
+G4WT0 > Número total de partículas que han entrado al detector: 138
+G4WT0 > Posición inicial de la partícula es: (2.86075,-5.07954,-32.6655)
+G4WT0 > Posición final de la partícula es: (2.84674,-5.14836,-32.6593)
+G4WT0 > Número total de partículas que han entrado al detector: 139
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-13540.7,-193519,-462336)
+G4WT0 > Número total de partículas que han entrado al detector: 140
+G4WT0 > Posición inicial de la partícula es: (-13540.7,-193519,-462336)
+G4WT0 > Posición final de la partícula es: (-13543.8,-193550,-462410)
+G4WT0 > Número total de partículas que han entrado al detector: 141
+G4WT0 > Posición inicial de la partícula es: (-13543.8,-193550,-462410)
+G4WT0 > Posición final de la partícula es: (-13543.8,-193550,-462410)
+G4WT0 > Número total de partículas que han entrado al detector: 142
+G4WT0 > Posición inicial de la partícula es: (-13543.8,-193550,-462410)
+G4WT0 > Posición final de la partícula es: (-13543.8,-193550,-462410)
+G4WT0 > Número total de partículas que han entrado al detector: 143
+G4WT0 > Posición inicial de la partícula es: (-13540.7,-193519,-462336)
+G4WT0 > Posición final de la partícula es: (-13540.9,-193521,-462342)
+G4WT0 > Número total de partículas que han entrado al detector: 144
+G4WT0 > Posición inicial de la partícula es: (-13540.9,-193521,-462342)
+G4WT0 > Posición final de la partícula es: (-13540.9,-193521,-462342)
+G4WT0 > Número total de partículas que han entrado al detector: 145
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (48.209,-78.5712,-300.877)
+G4WT0 > Número total de partículas que han entrado al detector: 146
+G4WT0 > Posición inicial de la partícula es: (48.209,-78.5712,-300.877)
+G4WT0 > Posición final de la partícula es: (48.1887,-78.5466,-300.888)
+G4WT0 > Número total de partículas que han entrado al detector: 147
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (44.7519,-61.7278,-211.296)
+G4WT0 > Número total de partículas que han entrado al detector: 148
+G4WT0 > Posición inicial de la partícula es: (44.7519,-61.7278,-211.296)
+G4WT0 > Posición final de la partícula es: (44.6775,-61.7865,-211.299)
+G4WT0 > Número total de partículas que han entrado al detector: 149
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (23.0878,-48.2615,-153.162)
+G4WT0 > Número total de partículas que han entrado al detector: 150
+G4WT0 > Posición inicial de la partícula es: (23.0878,-48.2615,-153.162)
+G4WT0 > Posición final de la partícula es: (23.0579,-48.4429,-153.121)
+G4WT0 > Número total de partículas que han entrado al detector: 151
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (11.376,-36.001,-69.7809)
+G4WT0 > Número total de partículas que han entrado al detector: 152
+G4WT0 > Posición inicial de la partícula es: (11.376,-36.001,-69.7809)
+G4WT0 > Posición final de la partícula es: (11.3905,-35.9785,-69.7912)
+G4WT0 > Número total de partículas que han entrado al detector: 153
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (23809.3,-37384,-153107)
+G4WT0 > Número total de partículas que han entrado al detector: 154
+G4WT0 > Posición inicial de la partícula es: (23809.3,-37384,-153107)
+G4WT0 > Posición final de la partícula es: (23831.3,-37418.2,-153248)
+G4WT0 > Número total de partículas que han entrado al detector: 155
+G4WT0 > Posición inicial de la partícula es: (23831.3,-37418.2,-153248)
+G4WT0 > Posición final de la partícula es: (23831.4,-37418.2,-153247)
+G4WT0 > Número total de partículas que han entrado al detector: 156
+G4WT0 > Posición inicial de la partícula es: (23809.3,-37384,-153107)
+G4WT0 > Posición final de la partícula es: (23818.2,-37398.4,-153165)
+G4WT0 > Número total de partículas que han entrado al detector: 157
+G4WT0 > Posición inicial de la partícula es: (23818.2,-37398.4,-153165)
+G4WT0 > Posición final de la partícula es: (23818.3,-37398.1,-153165)
+G4WT0 > Número total de partículas que han entrado al detector: 158
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (0.111969,-0.342372,-0.912688)
+G4WT0 > Número total de partículas que han entrado al detector: 159
+G4WT0 > Posición inicial de la partícula es: (0.111969,-0.342372,-0.912688)
+G4WT0 > Posición final de la partícula es: (-0.16252,-0.313628,-0.977815)
+G4WT0 > Número total de partículas que han entrado al detector: 160
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (68.9633,-118.666,-313.355)
+G4WT0 > Número total de partículas que han entrado al detector: 161
+G4WT0 > Posición inicial de la partícula es: (68.9633,-118.666,-313.355)
+G4WT0 > Posición final de la partícula es: (67.2877,-119.645,-313.621)
+G4WT0 > Número total de partículas que han entrado al detector: 162
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-144664,-390712,-657710)
+G4WT0 > Número total de partículas que han entrado al detector: 163
+G4WT0 > Posición inicial de la partícula es: (-144664,-390712,-657710)
+G4WT0 > Posición final de la partícula es: (-144682,-390755,-657782)
+G4WT0 > Número total de partículas que han entrado al detector: 164
+G4WT0 > Posición inicial de la partícula es: (-144682,-390755,-657782)
+G4WT0 > Posición final de la partícula es: (-144681,-390755,-657782)
+G4WT0 > Número total de partículas que han entrado al detector: 165
+G4WT0 > Posición inicial de la partícula es: (-144664,-390712,-657710)
+G4WT0 > Posición final de la partícula es: (-144667,-390720,-657723)
+G4WT0 > Número total de partículas que han entrado al detector: 166
+G4WT0 > Posición inicial de la partícula es: (-144667,-390720,-657723)
+G4WT0 > Posición final de la partícula es: (-144667,-390720,-657723)
+G4WT0 > Número total de partículas que han entrado al detector: 167
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (2.19546,-7.68077,-21.6263)
+G4WT0 > Número total de partículas que han entrado al detector: 168
+G4WT0 > Posición inicial de la partícula es: (2.19546,-7.68077,-21.6263)
+G4WT0 > Posición final de la partícula es: (2.48524,-9.91389,-21.1306)
+G4WT0 > Número total de partículas que han entrado al detector: 169
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (0.883491,-14.5491,-41.5667)
+G4WT0 > Número total de partículas que han entrado al detector: 170
+G4WT0 > Posición inicial de la partícula es: (0.883491,-14.5491,-41.5667)
+G4WT0 > Posición final de la partícula es: (0.840901,-14.5889,-41.5564)
+G4WT0 > Número total de partículas que han entrado al detector: 171
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (4672.94,-6503.07,-17243.7)
+G4WT0 > Número total de partículas que han entrado al detector: 172
+G4WT0 > Posición inicial de la partícula es: (4672.94,-6503.07,-17243.7)
+G4WT0 > Posición final de la partícula es: (4698.26,-6534.66,-17336.6)
+G4WT0 > Número total de partículas que han entrado al detector: 173
+G4WT0 > Posición inicial de la partícula es: (4698.26,-6534.66,-17336.6)
+G4WT0 > Posición final de la partícula es: (4698.24,-6534.67,-17336.6)
+G4WT0 > Número total de partículas que han entrado al detector: 174
+G4WT0 > Posición inicial de la partícula es: (4672.94,-6503.07,-17243.7)
+G4WT0 > Posición final de la partícula es: (4722.1,-6572.42,-17425.4)
+G4WT0 > Número total de partículas que han entrado al detector: 175
+G4WT0 > Posición inicial de la partícula es: (4722.1,-6572.42,-17425.4)
+G4WT0 > Posición final de la partícula es: (4721.43,-6572.86,-17425.5)
+G4WT0 > Número total de partículas que han entrado al detector: 176
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (6.76633,-29.18,-93.8064)
+G4WT0 > Número total de partículas que han entrado al detector: 177
+G4WT0 > Posición inicial de la partícula es: (6.76633,-29.18,-93.8064)
+G4WT0 > Posición final de la partícula es: (6.77236,-29.2088,-93.7982)
+G4WT0 > Número total de partículas que han entrado al detector: 178
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (46543.8,-38380.6,-134052)
+G4WT0 > Número total de partículas que han entrado al detector: 179
+G4WT0 > Posición inicial de la partícula es: (46543.8,-38380.6,-134052)
+G4WT0 > Posición final de la partícula es: (46558.4,-38392.7,-134094)
+G4WT0 > Número total de partículas que han entrado al detector: 180
+G4WT0 > Posición inicial de la partícula es: (46558.4,-38392.7,-134094)
+G4WT0 > Posición final de la partícula es: (46558.4,-38392.7,-134094)
+G4WT0 > Número total de partículas que han entrado al detector: 181
+G4WT0 > Posición inicial de la partícula es: (46543.8,-38380.6,-134052)
+G4WT0 > Posición final de la partícula es: (46552.5,-38387.8,-134077)
+G4WT0 > Número total de partículas que han entrado al detector: 182
+G4WT0 > Posición inicial de la partícula es: (46552.5,-38387.8,-134077)
+G4WT0 > Posición final de la partícula es: (46552.6,-38387.8,-134077)
+G4WT0 > Número total de partículas que han entrado al detector: 183
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (137315,-150147,-234741)
+G4WT0 > Número total de partículas que han entrado al detector: 184
+G4WT0 > Posición inicial de la partícula es: (137315,-150147,-234741)
+G4WT0 > Posición final de la partícula es: (137378,-150220,-234856)
+G4WT0 > Número total de partículas que han entrado al detector: 185
+G4WT0 > Posición inicial de la partícula es: (137378,-150220,-234856)
+G4WT0 > Posición final de la partícula es: (137378,-150220,-234856)
+G4WT0 > Número total de partículas que han entrado al detector: 186
+G4WT0 > Posición inicial de la partícula es: (137315,-150147,-234741)
+G4WT0 > Posición final de la partícula es: (137334,-150167,-234774)
+G4WT0 > Número total de partículas que han entrado al detector: 187
+G4WT0 > Posición inicial de la partícula es: (137334,-150167,-234774)
+G4WT0 > Posición final de la partícula es: (137335,-150168,-234773)
+G4WT0 > Número total de partículas que han entrado al detector: 188
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (442215,-115394,-525897)
+G4WT0 > Número total de partículas que han entrado al detector: 189
+G4WT0 > Posición inicial de la partícula es: (442215,-115394,-525897)
+G4WT0 > Posición final de la partícula es: (442613,-115501,-526372)
+G4WT0 > Número total de partículas que han entrado al detector: 190
+G4WT0 > Posición inicial de la partícula es: (442613,-115501,-526372)
+G4WT0 > Posición final de la partícula es: (442613,-115502,-526371)
+G4WT0 > Número total de partículas que han entrado al detector: 191
+G4WT0 > Posición inicial de la partícula es: (442215,-115394,-525897)
+G4WT0 > Posición final de la partícula es: (442222,-115396,-525906)
+G4WT0 > Número total de partículas que han entrado al detector: 192
+G4WT0 > Posición inicial de la partícula es: (442222,-115396,-525906)
+G4WT0 > Posición final de la partícula es: (442222,-115396,-525906)
+G4WT0 > Número total de partículas que han entrado al detector: 193
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-93018.8,-64504.3,-151146)
+G4WT0 > Número total de partículas que han entrado al detector: 194
+G4WT0 > Posición inicial de la partícula es: (-93018.8,-64504.3,-151146)
+G4WT0 > Posición final de la partícula es: (-93092.7,-64555.4,-151265)
+G4WT0 > Número total de partículas que han entrado al detector: 195
+G4WT0 > Posición inicial de la partícula es: (-93092.7,-64555.4,-151265)
+G4WT0 > Posición final de la partícula es: (-93092.6,-64555.4,-151265)
+G4WT0 > Número total de partículas que han entrado al detector: 196
+G4WT0 > Posición inicial de la partícula es: (-93018.8,-64504.3,-151146)
+G4WT0 > Posición final de la partícula es: (-93074.4,-64542.9,-151236)
+G4WT0 > Número total de partículas que han entrado al detector: 197
+G4WT0 > Posición inicial de la partícula es: (-93074.4,-64542.9,-151236)
+G4WT0 > Posición final de la partícula es: (-93074.5,-64542.8,-151236)
+G4WT0 > Número total de partículas que han entrado al detector: 198
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (43208.4,8671.79,-357416)
+G4WT0 > Número total de partículas que han entrado al detector: 199
+G4WT0 > Posición inicial de la partícula es: (43208.4,8671.79,-357416)
+G4WT0 > Posición final de la partícula es: (43225.4,8675.43,-357558)
+G4WT0 > Número total de partículas que han entrado al detector: 200
+G4WT0 > Posición inicial de la partícula es: (43225.4,8675.43,-357558)
+G4WT0 > Posición final de la partícula es: (43225.4,8675.4,-357558)
+G4WT0 > Número total de partículas que han entrado al detector: 201
+G4WT0 > Posición inicial de la partícula es: (43208.4,8671.79,-357416)
+G4WT0 > Posición final de la partícula es: (43233.5,8676.63,-357623)
+G4WT0 > Número total de partículas que han entrado al detector: 202
+G4WT0 > Posición inicial de la partícula es: (43233.5,8676.63,-357623)
+G4WT0 > Posición final de la partícula es: (43233.6,8677.09,-357623)
+G4WT0 > Número total de partículas que han entrado al detector: 203
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (62725.8,228072,-1.00081e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 204
+G4WT0 > Posición inicial de la partícula es: (62725.8,228072,-1.00081e+06)
+G4WT0 > Posición final de la partícula es: (62726.1,228073,-1.00081e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 205
+G4WT0 > Posición inicial de la partícula es: (62726.1,228073,-1.00081e+06)
+G4WT0 > Posición final de la partícula es: (62726.2,228073,-1.00081e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 206
+G4WT0 > Posición inicial de la partícula es: (62725.8,228072,-1.00081e+06)
+G4WT0 > Posición final de la partícula es: (62731.1,228090,-1.00088e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 207
+G4WT0 > Posición inicial de la partícula es: (62731.1,228090,-1.00088e+06)
+G4WT0 > Posición final de la partícula es: (62730.6,228090,-1.00088e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 208
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (115887,-195624,-739944)
+G4WT0 > Número total de partículas que han entrado al detector: 209
+G4WT0 > Posición inicial de la partícula es: (115887,-195624,-739944)
+G4WT0 > Posición final de la partícula es: (115890,-195629,-739965)
+G4WT0 > Número total de partículas que han entrado al detector: 210
+G4WT0 > Posición inicial de la partícula es: (115890,-195629,-739965)
+G4WT0 > Posición final de la partícula es: (115890,-195629,-739965)
+G4WT0 > Número total de partículas que han entrado al detector: 211
+G4WT0 > Posición inicial de la partícula es: (115887,-195624,-739944)
+G4WT0 > Posición final de la partícula es: (115888,-195626,-739951)
+G4WT0 > Número total de partículas que han entrado al detector: 212
+G4WT0 > Posición inicial de la partícula es: (115888,-195626,-739951)
+G4WT0 > Posición final de la partícula es: (115888,-195626,-739951)
+G4WT0 > Número total de partículas que han entrado al detector: 213
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (58999.7,-201053,-789558)
+G4WT0 > Número total de partículas que han entrado al detector: 214
+G4WT0 > Posición inicial de la partícula es: (58999.7,-201053,-789558)
+G4WT0 > Posición final de la partícula es: (59004.2,-201068,-789618)
+G4WT0 > Número total de partículas que han entrado al detector: 215
+G4WT0 > Posición inicial de la partícula es: (59004.2,-201068,-789618)
+G4WT0 > Posición final de la partícula es: (59006,-201070,-789618)
+G4WT0 > Número total de partículas que han entrado al detector: 216
+G4WT0 > Posición inicial de la partícula es: (58999.7,-201053,-789558)
+G4WT0 > Posición final de la partícula es: (59012.2,-201097,-789728)
+G4WT0 > Número total de partículas que han entrado al detector: 217
+G4WT0 > Posición inicial de la partícula es: (59012.2,-201097,-789728)
+G4WT0 > Posición final de la partícula es: (59012.2,-201097,-789728)
+G4WT0 > Número total de partículas que han entrado al detector: 218
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (3.11155,-9.81972,-32.2813)
+G4WT0 > Número total de partículas que han entrado al detector: 219
+G4WT0 > Posición inicial de la partícula es: (3.11155,-9.81972,-32.2813)
+G4WT0 > Posición final de la partícula es: (3.05687,-9.77935,-32.3023)
+G4WT0 > Número total de partículas que han entrado al detector: 220
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (15.4404,-57.5999,-155.168)
+G4WT0 > Número total de partículas que han entrado al detector: 221
+G4WT0 > Posición inicial de la partícula es: (15.4404,-57.5999,-155.168)
+G4WT0 > Posición final de la partícula es: (15.5931,-57.676,-155.136)
+G4WT0 > Número total de partículas que han entrado al detector: 222
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-735.729,3131.96,-1058.3)
+G4WT0 > Número total de partículas que han entrado al detector: 223
+G4WT0 > Posición inicial de la partícula es: (-735.729,3131.96,-1058.3)
+G4WT0 > Posición final de la partícula es: (-812.484,3460.92,-1169.15)
+G4WT0 > Número total de partículas que han entrado al detector: 224
+G4WT0 > Posición inicial de la partícula es: (-812.484,3460.92,-1169.15)
+G4WT0 > Posición final de la partícula es: (-812.557,3460.9,-1169.17)
+G4WT0 > Número total de partículas que han entrado al detector: 225
+G4WT0 > Posición inicial de la partícula es: (-735.729,3131.96,-1058.3)
+G4WT0 > Posición final de la partícula es: (-743.421,3164.7,-1069.36)
+G4WT0 > Número total de partículas que han entrado al detector: 226
+G4WT0 > Posición inicial de la partícula es: (-743.421,3164.7,-1069.36)
+G4WT0 > Posición final de la partícula es: (-743.399,3164.71,-1069.36)
+G4WT0 > Número total de partículas que han entrado al detector: 227
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-154706,-49953.5,-326336)
+G4WT0 > Número total de partículas que han entrado al detector: 228
+G4WT0 > Posición inicial de la partícula es: (-154706,-49953.5,-326336)
+G4WT0 > Posición final de la partícula es: (-154723,-49959.4,-326372)
+G4WT0 > Número total de partículas que han entrado al detector: 229
+G4WT0 > Posición inicial de la partícula es: (-154723,-49959.4,-326372)
+G4WT0 > Posición final de la partícula es: (-154723,-49959.5,-326372)
+G4WT0 > Número total de partículas que han entrado al detector: 230
+G4WT0 > Posición inicial de la partícula es: (-154706,-49953.5,-326336)
+G4WT0 > Posición final de la partícula es: (-154760,-49970.9,-326450)
+G4WT0 > Número total de partículas que han entrado al detector: 231
+G4WT0 > Posición inicial de la partícula es: (-154760,-49970.9,-326450)
+G4WT0 > Posición final de la partícula es: (-154760,-49970.9,-326450)
+G4WT0 > Número total de partículas que han entrado al detector: 232
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-353583,-95055.5,-512510)
+G4WT0 > Número total de partículas que han entrado al detector: 233
+G4WT0 > Posición inicial de la partícula es: (-353583,-95055.5,-512510)
+G4WT0 > Posición final de la partícula es: (-353609,-95062.3,-512546)
+G4WT0 > Número total de partículas que han entrado al detector: 234
+G4WT0 > Posición inicial de la partícula es: (-353609,-95062.3,-512546)
+G4WT0 > Posición final de la partícula es: (-353609,-95062.4,-512546)
+G4WT0 > Número total de partículas que han entrado al detector: 235
+G4WT0 > Posición inicial de la partícula es: (-353583,-95055.5,-512510)
+G4WT0 > Posición final de la partícula es: (-353654,-95074,-512611)
+G4WT0 > Número total de partículas que han entrado al detector: 236
+G4WT0 > Posición inicial de la partícula es: (-353654,-95074,-512611)
+G4WT0 > Posición final de la partícula es: (-353654,-95074,-512611)
+G4WT0 > Número total de partículas que han entrado al detector: 237
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (16477.7,-41073.5,-111082)
+G4WT0 > Número total de partículas que han entrado al detector: 238
+G4WT0 > Posición inicial de la partícula es: (16477.7,-41073.5,-111082)
+G4WT0 > Posición final de la partícula es: (16478.5,-41075.5,-111088)
+G4WT0 > Número total de partículas que han entrado al detector: 239
+G4WT0 > Posición inicial de la partícula es: (16478.5,-41075.5,-111088)
+G4WT0 > Posición final de la partícula es: (16478.5,-41075.2,-111088)
+G4WT0 > Número total de partículas que han entrado al detector: 240
+G4WT0 > Posición inicial de la partícula es: (16478.5,-41075.2,-111088)
+G4WT0 > Posición final de la partícula es: (16478.5,-41075.2,-111088)
+G4WT0 > Número total de partículas que han entrado al detector: 241
+G4WT0 > Posición inicial de la partícula es: (16477.7,-41073.5,-111082)
+G4WT0 > Posición final de la partícula es: (16495.6,-41118.4,-111203)
+G4WT0 > Número total de partículas que han entrado al detector: 242
+G4WT0 > Posición inicial de la partícula es: (16495.6,-41118.4,-111203)
+G4WT0 > Posición final de la partícula es: (16495.7,-41118.4,-111203)
+G4WT0 > Número total de partículas que han entrado al detector: 243
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-51.6795,-22.6831,-77.1311)
+G4WT0 > Número total de partículas que han entrado al detector: 244
+G4WT0 > Posición inicial de la partícula es: (-51.6795,-22.6831,-77.1311)
+G4WT0 > Posición final de la partícula es: (-51.662,-22.7017,-77.1385)
+G4WT0 > Número total de partículas que han entrado al detector: 245
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (24311,-8081.49,-94154.1)
+G4WT0 > Número total de partículas que han entrado al detector: 246
+G4WT0 > Posición inicial de la partícula es: (24311,-8081.49,-94154.1)
+G4WT0 > Posición final de la partícula es: (24315.8,-8083.04,-94172.6)
+G4WT0 > Número total de partículas que han entrado al detector: 247
+G4WT0 > Posición inicial de la partícula es: (24315.8,-8083.04,-94172.6)
+G4WT0 > Posición final de la partícula es: (24315.7,-8083.07,-94172.6)
+G4WT0 > Número total de partículas que han entrado al detector: 248
+G4WT0 > Posición inicial de la partícula es: (24311,-8081.49,-94154.1)
+G4WT0 > Posición final de la partícula es: (24361.6,-8098.58,-94349.5)
+G4WT0 > Número total de partículas que han entrado al detector: 249
+G4WT0 > Posición inicial de la partícula es: (24361.6,-8098.58,-94349.5)
+G4WT0 > Posición final de la partícula es: (24361.6,-8098.55,-94349.5)
+G4WT0 > Número total de partículas que han entrado al detector: 250
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (6475.57,-28381.8,-70988.5)
+G4WT0 > Número total de partículas que han entrado al detector: 251
+G4WT0 > Posición inicial de la partícula es: (6475.57,-28381.8,-70988.5)
+G4WT0 > Posición final de la partícula es: (6480.55,-28403.8,-71043.4)
+G4WT0 > Número total de partículas que han entrado al detector: 252
+G4WT0 > Posición inicial de la partícula es: (6480.55,-28403.8,-71043.4)
+G4WT0 > Posición final de la partícula es: (6480.52,-28403.8,-71043.5)
+G4WT0 > Número total de partículas que han entrado al detector: 253
+G4WT0 > Posición inicial de la partícula es: (6475.57,-28381.8,-70988.5)
+G4WT0 > Posición final de la partícula es: (6479.19,-28392.4,-71015.1)
+G4WT0 > Número total de partículas que han entrado al detector: 254
+G4WT0 > Posición inicial de la partícula es: (6479.19,-28392.4,-71015.1)
+G4WT0 > Posición final de la partícula es: (6479.22,-28392.4,-71015)
+G4WT0 > Número total de partículas que han entrado al detector: 255
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-86632.7,-95118.3,-72110.4)
+G4WT0 > Número total de partículas que han entrado al detector: 256
+G4WT0 > Posición inicial de la partícula es: (-86632.7,-95118.3,-72110.4)
+G4WT0 > Posición final de la partícula es: (-86767.4,-95266.5,-72222.5)
+G4WT0 > Número total de partículas que han entrado al detector: 257
+G4WT0 > Posición inicial de la partícula es: (-86767.4,-95266.5,-72222.5)
+G4WT0 > Posición final de la partícula es: (-86767.4,-95266.5,-72222.5)
+G4WT0 > Número total de partículas que han entrado al detector: 258
+G4WT0 > Posición inicial de la partícula es: (-86632.7,-95118.3,-72110.4)
+G4WT0 > Posición final de la partícula es: (-86669.6,-95158.7,-72141.2)
+G4WT0 > Número total de partículas que han entrado al detector: 259
+G4WT0 > Posición inicial de la partícula es: (-86669.6,-95158.7,-72141.2)
+G4WT0 > Posición final de la partícula es: (-86669.6,-95158.7,-72141.2)
+G4WT0 > Número total de partículas que han entrado al detector: 260
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-339674,99902,-406605)
+G4WT0 > Número total de partículas que han entrado al detector: 261
+G4WT0 > Posición inicial de la partícula es: (-339674,99902,-406605)
+G4WT0 > Posición final de la partícula es: (-339723,99916.3,-406664)
+G4WT0 > Número total de partículas que han entrado al detector: 262
+G4WT0 > Posición inicial de la partícula es: (-339723,99916.3,-406664)
+G4WT0 > Posición final de la partícula es: (-339723,99916.3,-406664)
+G4WT0 > Número total de partículas que han entrado al detector: 263
+G4WT0 > Posición inicial de la partícula es: (-339674,99902,-406605)
+G4WT0 > Posición final de la partícula es: (-339711,99916.7,-406652)
+G4WT0 > Número total de partículas que han entrado al detector: 264
+G4WT0 > Posición inicial de la partícula es: (-339711,99916.7,-406652)
+G4WT0 > Posición final de la partícula es: (-339711,99916.4,-406652)
+G4WT0 > Número total de partículas que han entrado al detector: 265
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (68998.9,-435860,-1.15866e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 266
+G4WT0 > Posición inicial de la partícula es: (68998.9,-435860,-1.15866e+06)
+G4WT0 > Posición final de la partícula es: (69000,-435867,-1.15868e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 267
+G4WT0 > Posición inicial de la partícula es: (69000,-435867,-1.15868e+06)
+G4WT0 > Posición final de la partícula es: (69000,-435867,-1.15868e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 268
+G4WT0 > Posición inicial de la partícula es: (68998.9,-435860,-1.15866e+06)
+G4WT0 > Posición final de la partícula es: (68998.9,-435860,-1.15866e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 269
+G4WT0 > Posición inicial de la partícula es: (68998.9,-435860,-1.15866e+06)
+G4WT0 > Posición final de la partícula es: (68998.9,-435860,-1.15866e+06)
+G4WT0 > Número total de partículas que han entrado al detector: 270
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (14059.2,-42250.5,-114285)
+G4WT0 > Número total de partículas que han entrado al detector: 271
+G4WT0 > Posición inicial de la partícula es: (14059.2,-42250.5,-114285)
+G4WT0 > Posición final de la partícula es: (14097.2,-42367.8,-114603)
+G4WT0 > Número total de partículas que han entrado al detector: 272
+G4WT0 > Posición inicial de la partícula es: (14097.2,-42367.8,-114603)
+G4WT0 > Posición final de la partícula es: (14097.2,-42367.7,-114603)
+G4WT0 > Número total de partículas que han entrado al detector: 273
+G4WT0 > Posición inicial de la partícula es: (14059.2,-42250.5,-114285)
+G4WT0 > Posición final de la partícula es: (14061.1,-42256,-114299)
+G4WT0 > Número total de partículas que han entrado al detector: 274
+G4WT0 > Posición inicial de la partícula es: (14061.1,-42256,-114299)
+G4WT0 > Posición final de la partícula es: (14061.1,-42256.1,-114299)
+G4WT0 > Número total de partículas que han entrado al detector: 275
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (41938,-107216,-319139)
+G4WT0 > Número total de partículas que han entrado al detector: 276
+G4WT0 > Posición inicial de la partícula es: (41938,-107216,-319139)
+G4WT0 > Posición final de la partícula es: (41965.2,-107280,-319342)
+G4WT0 > Número total de partículas que han entrado al detector: 277
+G4WT0 > Posición inicial de la partícula es: (41965.2,-107280,-319342)
+G4WT0 > Posición final de la partícula es: (41965.2,-107280,-319342)
+G4WT0 > Número total de partículas que han entrado al detector: 278
+G4WT0 > Posición inicial de la partícula es: (41938,-107216,-319139)
+G4WT0 > Posición final de la partícula es: (41941.3,-107225,-319165)
+G4WT0 > Número total de partículas que han entrado al detector: 279
+G4WT0 > Posición inicial de la partícula es: (41941.3,-107225,-319165)
+G4WT0 > Posición final de la partícula es: (41941.3,-107225,-319165)
+G4WT0 > Número total de partículas que han entrado al detector: 280
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (55990,-137576,-418983)
+G4WT0 > Número total de partículas que han entrado al detector: 281
+G4WT0 > Posición inicial de la partícula es: (55990,-137576,-418983)
+G4WT0 > Posición final de la partícula es: (55990.2,-137577,-418984)
+G4WT0 > Número total de partículas que han entrado al detector: 282
+G4WT0 > Posición inicial de la partícula es: (55990.2,-137577,-418984)
+G4WT0 > Posición final de la partícula es: (55990.2,-137577,-418984)
+G4WT0 > Número total de partículas que han entrado al detector: 283
+G4WT0 > Posición inicial de la partícula es: (55990,-137576,-418983)
+G4WT0 > Posición final de la partícula es: (56008.8,-137623,-419124)
+G4WT0 > Número total de partículas que han entrado al detector: 284
+G4WT0 > Posición inicial de la partícula es: (56008.8,-137623,-419124)
+G4WT0 > Posición final de la partícula es: (56008.7,-137622,-419124)
+G4WT0 > Número total de partículas que han entrado al detector: 285
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (7428.69,-14768.5,-52579.9)
+G4WT0 > Número total de partículas que han entrado al detector: 286
+G4WT0 > Posición inicial de la partícula es: (7428.69,-14768.5,-52579.9)
+G4WT0 > Posición final de la partícula es: (7443.86,-14799.5,-52689.4)
+G4WT0 > Número total de partículas que han entrado al detector: 287
+G4WT0 > Posición inicial de la partícula es: (7443.86,-14799.5,-52689.4)
+G4WT0 > Posición final de la partícula es: (7443.82,-14799.5,-52689.4)
+G4WT0 > Número total de partículas que han entrado al detector: 288
+G4WT0 > Posición inicial de la partícula es: (7428.69,-14768.5,-52579.9)
+G4WT0 > Posición final de la partícula es: (7444.19,-14799.1,-52689.1)
+G4WT0 > Número total de partículas que han entrado al detector: 289
+G4WT0 > Posición inicial de la partícula es: (7444.19,-14799.1,-52689.1)
+G4WT0 > Posición final de la partícula es: (7444.08,-14799.3,-52689)
+G4WT0 > Número total de partículas que han entrado al detector: 290
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-26636.2,-139027,-679668)
+G4WT0 > Número total de partículas que han entrado al detector: 291
+G4WT0 > Posición inicial de la partícula es: (-26636.2,-139027,-679668)
+G4WT0 > Posición final de la partícula es: (-26638.7,-139039,-679723)
+G4WT0 > Número total de partículas que han entrado al detector: 292
+G4WT0 > Posición inicial de la partícula es: (-26638.7,-139039,-679723)
+G4WT0 > Posición final de la partícula es: (-26639,-139039,-679723)
+G4WT0 > Número total de partículas que han entrado al detector: 293
+G4WT0 > Posición inicial de la partícula es: (-26636.2,-139027,-679668)
+G4WT0 > Posición final de la partícula es: (-26637.9,-139036,-679712)
+G4WT0 > Número total de partículas que han entrado al detector: 294
+G4WT0 > Posición inicial de la partícula es: (-26637.9,-139036,-679712)
+G4WT0 > Posición final de la partícula es: (-26637.9,-139036,-679712)
+G4WT0 > Número total de partículas que han entrado al detector: 295
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (5872.32,1714.97,-32609.9)
+G4WT0 > Número total de partículas que han entrado al detector: 296
+G4WT0 > Posición inicial de la partícula es: (5872.32,1714.97,-32609.9)
+G4WT0 > Posición final de la partícula es: (5882.1,1718.32,-32664)
+G4WT0 > Número total de partículas que han entrado al detector: 297
+G4WT0 > Posición inicial de la partícula es: (5882.1,1718.32,-32664)
+G4WT0 > Posición final de la partícula es: (5882.11,1718.34,-32664)
+G4WT0 > Número total de partículas que han entrado al detector: 298
+G4WT0 > Posición inicial de la partícula es: (5872.32,1714.97,-32609.9)
+G4WT0 > Posición final de la partícula es: (5880.43,1717.31,-32654.9)
+G4WT0 > Número total de partículas que han entrado al detector: 299
+G4WT0 > Posición inicial de la partícula es: (5880.43,1717.31,-32654.9)
+G4WT0 > Posición final de la partícula es: (5881.78,1716.72,-32654.9)
+G4WT0 > Número total de partículas que han entrado al detector: 300
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-7955.07,-100240,-6622.31)
+G4WT0 > Número total de partículas que han entrado al detector: 301
+G4WT0 > Posición inicial de la partícula es: (-7955.07,-100240,-6622.31)
+G4WT0 > Posición final de la partícula es: (-7973.44,-100472,-6637.68)
+G4WT0 > Número total de partículas que han entrado al detector: 302
+G4WT0 > Posición inicial de la partícula es: (-7973.44,-100472,-6637.68)
+G4WT0 > Posición final de la partícula es: (-7973.4,-100472,-6637.73)
+G4WT0 > Número total de partículas que han entrado al detector: 303
+G4WT0 > Posición inicial de la partícula es: (-7955.07,-100240,-6622.31)
+G4WT0 > Posición final de la partícula es: (-7977.81,-100526,-6640.61)
+G4WT0 > Número total de partículas que han entrado al detector: 304
+G4WT0 > Posición inicial de la partícula es: (-7977.81,-100526,-6640.61)
+G4WT0 > Posición final de la partícula es: (-7977.92,-100526,-6640.19)
+G4WT0 > Número total de partículas que han entrado al detector: 305
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-11486.9,-5249.67,-104488)
+G4WT0 > Número total de partículas que han entrado al detector: 306
+G4WT0 > Posición inicial de la partícula es: (-11486.9,-5249.67,-104488)
+G4WT0 > Posición final de la partícula es: (-11490.8,-5251.29,-104523)
+G4WT0 > Número total de partículas que han entrado al detector: 307
+G4WT0 > Posición inicial de la partícula es: (-11490.8,-5251.29,-104523)
+G4WT0 > Posición final de la partícula es: (-11490.8,-5251.25,-104523)
+G4WT0 > Número total de partículas que han entrado al detector: 308
+G4WT0 > Posición inicial de la partícula es: (-11486.9,-5249.67,-104488)
+G4WT0 > Posición final de la partícula es: (-11490.8,-5251.89,-104526)
+G4WT0 > Número total de partículas que han entrado al detector: 309
+G4WT0 > Posición inicial de la partícula es: (-11490.8,-5251.89,-104526)
+G4WT0 > Posición final de la partícula es: (-11490.8,-5251.87,-104526)
+G4WT0 > Número total de partículas que han entrado al detector: 310
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-21065.4,-66490.2,-141083)
+G4WT0 > Número total de partículas que han entrado al detector: 311
+G4WT0 > Posición inicial de la partícula es: (-21065.4,-66490.2,-141083)
+G4WT0 > Posición final de la partícula es: (-21080.2,-66537.2,-141182)
+G4WT0 > Número total de partículas que han entrado al detector: 312
+G4WT0 > Posición inicial de la partícula es: (-21080.2,-66537.2,-141182)
+G4WT0 > Posición final de la partícula es: (-21080.2,-66537.2,-141182)
+G4WT0 > Número total de partículas que han entrado al detector: 313
+G4WT0 > Posición inicial de la partícula es: (-21065.4,-66490.2,-141083)
+G4WT0 > Posición final de la partícula es: (-21067.9,-66497.9,-141099)
+G4WT0 > Número total de partículas que han entrado al detector: 314
+G4WT0 > Posición inicial de la partícula es: (-21067.9,-66497.9,-141099)
+G4WT0 > Posición final de la partícula es: (-21067.9,-66497.9,-141099)
+G4WT0 > Número total de partículas que han entrado al detector: 315
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (8709.92,-50879.8,-134737)
+G4WT0 > Número total de partículas que han entrado al detector: 316
+G4WT0 > Posición inicial de la partícula es: (8709.92,-50879.8,-134737)
+G4WT0 > Posición final de la partícula es: (8714.32,-50905.7,-134805)
+G4WT0 > Número total de partículas que han entrado al detector: 317
+G4WT0 > Posición inicial de la partícula es: (8714.32,-50905.7,-134805)
+G4WT0 > Posición final de la partícula es: (8714.33,-50905.7,-134805)
+G4WT0 > Número total de partículas que han entrado al detector: 318
+G4WT0 > Posición inicial de la partícula es: (8709.92,-50879.8,-134737)
+G4WT0 > Posición final de la partícula es: (8713.95,-50898.4,-134788)
+G4WT0 > Número total de partículas que han entrado al detector: 319
+G4WT0 > Posición inicial de la partícula es: (8713.95,-50898.4,-134788)
+G4WT0 > Posición final de la partícula es: (8713.86,-50898.5,-134788)
+G4WT0 > Número total de partículas que han entrado al detector: 320
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (4032.52,-9564.22,-25864.8)
+G4WT0 > Número total de partículas que han entrado al detector: 321
+G4WT0 > Posición inicial de la partícula es: (4032.52,-9564.22,-25864.8)
+G4WT0 > Posición final de la partícula es: (4040.73,-9583.82,-25917.7)
+G4WT0 > Número total de partículas que han entrado al detector: 322
+G4WT0 > Posición inicial de la partícula es: (4040.73,-9583.82,-25917.7)
+G4WT0 > Posición final de la partícula es: (4040.71,-9583.83,-25917.7)
+G4WT0 > Número total de partículas que han entrado al detector: 323
+G4WT0 > Posición inicial de la partícula es: (4032.52,-9564.22,-25864.8)
+G4WT0 > Posición final de la partícula es: (4056.54,-9619.69,-26015.2)
+G4WT0 > Número total de partículas que han entrado al detector: 324
+G4WT0 > Posición inicial de la partícula es: (4056.54,-9619.69,-26015.2)
+G4WT0 > Posición final de la partícula es: (4056.52,-9619.7,-26015.2)
+G4WT0 > Número total de partículas que han entrado al detector: 325
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (811176,-735644,-539220)
+G4WT0 > Número total de partículas que han entrado al detector: 326
+G4WT0 > Posición inicial de la partícula es: (811176,-735644,-539220)
+G4WT0 > Posición final de la partícula es: (811204,-735670,-539240)
+G4WT0 > Número total de partículas que han entrado al detector: 327
+G4WT0 > Posición inicial de la partícula es: (811204,-735670,-539240)
+G4WT0 > Posición final de la partícula es: (811204,-735669,-539240)
+G4WT0 > Número total de partículas que han entrado al detector: 328
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (2.1047,0.583505,-15.8079)
+G4WT0 > Número total de partículas que han entrado al detector: 329
+G4WT0 > Posición inicial de la partícula es: (2.1047,0.583505,-15.8079)
+G4WT0 > Posición final de la partícula es: (2.15112,0.514473,-15.8153)
+G4WT0 > Número total de partículas que han entrado al detector: 330
+G4WT0 > Posición inicial de la partícula es: (2.15112,0.514473,-15.8153)
+G4WT0 > Posición final de la partícula es: (2.13772,0.501161,-15.8274)
+G4WT0 > Número total de partículas que han entrado al detector: 331
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (27753.7,-44061.3,-160961)
+G4WT0 > Número total de partículas que han entrado al detector: 332
+G4WT0 > Posición inicial de la partícula es: (27753.7,-44061.3,-160961)
+G4WT0 > Posición final de la partícula es: (27765.8,-44080.3,-161031)
+G4WT0 > Número total de partículas que han entrado al detector: 333
+G4WT0 > Posición inicial de la partícula es: (27765.8,-44080.3,-161031)
+G4WT0 > Posición final de la partícula es: (27765.7,-44080.2,-161031)
+G4WT0 > Número total de partículas que han entrado al detector: 334
+G4WT0 > Posición inicial de la partícula es: (27753.7,-44061.3,-160961)
+G4WT0 > Posición final de la partícula es: (27768.2,-44084.4,-161046)
+G4WT0 > Número total de partículas que han entrado al detector: 335
+G4WT0 > Posición inicial de la partícula es: (27768.2,-44084.4,-161046)
+G4WT0 > Posición final de la partícula es: (27768.3,-44084.3,-161046)
+G4WT0 > Número total de partículas que han entrado al detector: 336
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (113379,-230372,-830854)
+G4WT0 > Número total de partículas que han entrado al detector: 337
+G4WT0 > Posición inicial de la partícula es: (113379,-230372,-830854)
+G4WT0 > Posición final de la partícula es: (113386,-230386,-830907)
+G4WT0 > Número total de partículas que han entrado al detector: 338
+G4WT0 > Posición inicial de la partícula es: (113386,-230386,-830907)
+G4WT0 > Posición final de la partícula es: (113386,-230386,-830907)
+G4WT0 > Número total de partículas que han entrado al detector: 339
+G4WT0 > Posición inicial de la partícula es: (113379,-230372,-830854)
+G4WT0 > Posición final de la partícula es: (113399,-230414,-831006)
+G4WT0 > Número total de partículas que han entrado al detector: 340
+G4WT0 > Posición inicial de la partícula es: (113399,-230414,-831006)
+G4WT0 > Posición final de la partícula es: (113399,-230413,-831006)
+G4WT0 > Número total de partículas que han entrado al detector: 341
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (20094.8,-38919.5,-108986)
+G4WT0 > Número total de partículas que han entrado al detector: 342
+G4WT0 > Posición inicial de la partícula es: (20094.8,-38919.5,-108986)
+G4WT0 > Posición final de la partícula es: (20112.8,-38957.9,-109090)
+G4WT0 > Número total de partículas que han entrado al detector: 343
+G4WT0 > Posición inicial de la partícula es: (20112.8,-38957.9,-109090)
+G4WT0 > Posición final de la partícula es: (20112.6,-38957.1,-109090)
+G4WT0 > Número total de partículas que han entrado al detector: 344
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (208607,-36793.4,-331329)
+G4WT0 > Número total de partículas que han entrado al detector: 345
+G4WT0 > Posición inicial de la partícula es: (208607,-36793.4,-331329)
+G4WT0 > Posición final de la partícula es: (208702,-36809.8,-331480)
+G4WT0 > Número total de partículas que han entrado al detector: 346
+G4WT0 > Posición inicial de la partícula es: (208702,-36809.8,-331480)
+G4WT0 > Posición final de la partícula es: (208702,-36812,-331480)
+G4WT0 > Número total de partículas que han entrado al detector: 347
+G4WT0 > Posición inicial de la partícula es: (208702,-36812,-331480)
+G4WT0 > Posición final de la partícula es: (208702,-36812,-331480)
+G4WT0 > Número total de partículas que han entrado al detector: 348
+G4WT0 > Posición inicial de la partícula es: (208607,-36793.4,-331329)
+G4WT0 > Posición final de la partícula es: (208654,-36802.5,-331402)
+G4WT0 > Número total de partículas que han entrado al detector: 349
+G4WT0 > Posición inicial de la partícula es: (208654,-36802.5,-331402)
+G4WT0 > Posición final de la partícula es: (208654,-36802.5,-331402)
+G4WT0 > Número total de partículas que han entrado al detector: 350
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-235097,31891.4,-347605)
+G4WT0 > Número total de partículas que han entrado al detector: 351
+G4WT0 > Posición inicial de la partícula es: (-235097,31891.4,-347605)
+G4WT0 > Posición final de la partícula es: (-235103,31892.2,-347614)
+G4WT0 > Número total de partículas que han entrado al detector: 352
+G4WT0 > Posición inicial de la partícula es: (-235103,31892.2,-347614)
+G4WT0 > Posición final de la partícula es: (-235103,31892.2,-347614)
+G4WT0 > Número total de partículas que han entrado al detector: 353
+G4WT0 > Posición inicial de la partícula es: (-235097,31891.4,-347605)
+G4WT0 > Posición final de la partícula es: (-235116,31893.9,-347632)
+G4WT0 > Número total de partículas que han entrado al detector: 354
+G4WT0 > Posición inicial de la partícula es: (-235116,31893.9,-347632)
+G4WT0 > Posición final de la partícula es: (-235116,31893.9,-347632)
+G4WT0 > Número total de partículas que han entrado al detector: 355
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (85189.6,-131511,-146681)
+G4WT0 > Número total de partículas que han entrado al detector: 356
+G4WT0 > Posición inicial de la partícula es: (85189.6,-131511,-146681)
+G4WT0 > Posición final de la partícula es: (85222.3,-131561,-146737)
+G4WT0 > Número total de partículas que han entrado al detector: 357
+G4WT0 > Posición inicial de la partícula es: (85222.3,-131561,-146737)
+G4WT0 > Posición final de la partícula es: (85223,-131562,-146736)
+G4WT0 > Número total de partículas que han entrado al detector: 358
+G4WT0 > Posición inicial de la partícula es: (85189.6,-131511,-146681)
+G4WT0 > Posición final de la partícula es: (85199.6,-131526,-146698)
+G4WT0 > Número total de partículas que han entrado al detector: 359
+G4WT0 > Posición inicial de la partícula es: (85199.6,-131526,-146698)
+G4WT0 > Posición final de la partícula es: (85199.2,-131526,-146699)
+G4WT0 > Número total de partículas que han entrado al detector: 360
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (128071,-267611,-394686)
+G4WT0 > Número total de partículas que han entrado al detector: 361
+G4WT0 > Posición inicial de la partícula es: (128071,-267611,-394686)
+G4WT0 > Posición final de la partícula es: (128079,-267629,-394712)
+G4WT0 > Número total de partículas que han entrado al detector: 362
+G4WT0 > Posición inicial de la partícula es: (128079,-267629,-394712)
+G4WT0 > Posición final de la partícula es: (128074,-267633,-394712)
+G4WT0 > Número total de partículas que han entrado al detector: 363
+G4WT0 > Posición inicial de la partícula es: (128071,-267611,-394686)
+G4WT0 > Posición final de la partícula es: (128093,-267658,-394754)
+G4WT0 > Número total de partículas que han entrado al detector: 364
+G4WT0 > Posición inicial de la partícula es: (128093,-267658,-394754)
+G4WT0 > Posición final de la partícula es: (128110,-267687,-394743)
+G4WT0 > Número total de partículas que han entrado al detector: 365
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (57582.7,-228414,-379788)
+G4WT0 > Número total de partículas que han entrado al detector: 366
+G4WT0 > Posición inicial de la partícula es: (57582.7,-228414,-379788)
+G4WT0 > Posición final de la partícula es: (57603.8,-228534,-379994)
+G4WT0 > Número total de partículas que han entrado al detector: 367
+G4WT0 > Posición inicial de la partícula es: (57603.8,-228534,-379994)
+G4WT0 > Posición final de la partícula es: (57603.6,-228534,-379994)
+G4WT0 > Número total de partículas que han entrado al detector: 368
+G4WT0 > Posición inicial de la partícula es: (57582.7,-228414,-379788)
+G4WT0 > Posición final de la partícula es: (57583.8,-228418,-379795)
+G4WT0 > Número total de partículas que han entrado al detector: 369
+G4WT0 > Posición inicial de la partícula es: (57583.8,-228418,-379795)
+G4WT0 > Posición final de la partícula es: (57583.7,-228418,-379795)
+G4WT0 > Número total de partículas que han entrado al detector: 370
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-630792,234091,-433521)
+G4WT0 > Número total de partículas que han entrado al detector: 371
+G4WT0 > Posición inicial de la partícula es: (-630792,234091,-433521)
+G4WT0 > Posición final de la partícula es: (-631274,234271,-433851)
+G4WT0 > Número total de partículas que han entrado al detector: 372
+G4WT0 > Posición inicial de la partícula es: (-631274,234271,-433851)
+G4WT0 > Posición final de la partícula es: (-631274,234271,-433851)
+G4WT0 > Número total de partículas que han entrado al detector: 373
+G4WT0 > Posición inicial de la partícula es: (-630792,234091,-433521)
+G4WT0 > Posición final de la partícula es: (-630872,234121,-433576)
+G4WT0 > Número total de partículas que han entrado al detector: 374
+G4WT0 > Posición inicial de la partícula es: (-630872,234121,-433576)
+G4WT0 > Posición final de la partícula es: (-630872,234121,-433576)
+G4WT0 > Número total de partículas que han entrado al detector: 375
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (96869,50805.7,-321503)
+G4WT0 > Número total de partículas que han entrado al detector: 376
+G4WT0 > Posición inicial de la partícula es: (96869,50805.7,-321503)
+G4WT0 > Posición final de la partícula es: (96870.9,50806.7,-321507)
+G4WT0 > Número total de partículas que han entrado al detector: 377
+G4WT0 > Posición inicial de la partícula es: (96870.9,50806.7,-321507)
+G4WT0 > Posición final de la partícula es: (96870.8,50806.6,-321507)
+G4WT0 > Número total de partículas que han entrado al detector: 378
+G4WT0 > Posición inicial de la partícula es: (96869,50805.7,-321503)
+G4WT0 > Posición final de la partícula es: (96883.9,50813.6,-321553)
+G4WT0 > Número total de partículas que han entrado al detector: 379
+G4WT0 > Posición inicial de la partícula es: (96883.9,50813.6,-321553)
+G4WT0 > Posición final de la partícula es: (96883.9,50813.6,-321553)
+G4WT0 > Número total de partículas que han entrado al detector: 380
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (8.54557,-44.6306,-141.139)
+G4WT0 > Número total de partículas que han entrado al detector: 381
+G4WT0 > Posición inicial de la partícula es: (8.54557,-44.6306,-141.139)
+G4WT0 > Posición final de la partícula es: (8.51912,-44.6428,-141.137)
+G4WT0 > Número total de partículas que han entrado al detector: 382
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (9.53459,-31.1313,-89.1686)
+G4WT0 > Número total de partículas que han entrado al detector: 383
+G4WT0 > Posición inicial de la partícula es: (9.53459,-31.1313,-89.1686)
+G4WT0 > Posición final de la partícula es: (9.44642,-31.1293,-89.1834)
+G4WT0 > Número total de partículas que han entrado al detector: 384
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (1.33578,-3.3326,-6.23621)
+G4WT0 > Número total de partículas que han entrado al detector: 385
+G4WT0 > Posición inicial de la partícula es: (1.33578,-3.3326,-6.23621)
+G4WT0 > Posición final de la partícula es: (1.35514,-3.34042,-6.2287)
+G4WT0 > Número total de partículas que han entrado al detector: 386
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (-27.0551,-22.4963,-41.5441)
+G4WT0 > Número total de partículas que han entrado al detector: 387
+G4WT0 > Posición inicial de la partícula es: (-27.0551,-22.4963,-41.5441)
+G4WT0 > Posición final de la partícula es: (-27.0317,-22.4809,-41.5696)
+G4WT0 > Número total de partículas que han entrado al detector: 388
+G4WT0 > Generando partículas primarias
+G4WT0 > Partícula generada exitosamente.
+G4WT0 > Posición inicial de la partícula es: (0,0,0)
+G4WT0 > Posición final de la partícula es: (1810.25,2813.15,-14454.8)
+G4WT0 > Número total de partículas que han entrado al detector: 389
+G4WT0 > Posición inicial de la partícula es: (1810.25,2813.15,-14454.8)
+G4WT0 > Posición final de la partícula es: (1817.22,2823.73,-14509.6)
+G4WT0 > Número total de partículas que han entrado al detector: 390
+G4WT0 > Posición inicial de la partícula es: (1817.22,2823.73,-14509.6)
+G4WT0 > Posición final de la partícula es: (1816.23,2823.57,-14509.9)
+G4WT0 > Número total de partículas que han entrado al detector: 391
+G4WT0 > Posición inicial de la partícula es: (1816.23,2823.57,-14509.9)
+G4WT0 > Posición final de la partícula es: (1816.21,2823.62,-14509.8)
+G4WT0 > Número total de partículas que han entrado al detector: 392
+G4WT0 > Posición inicial de la partícula es: (1810.25,2813.15,-14454.8)
+G4WT0 > Posición final de la partícula es: (1821.06,2831.34,-14545.4)
+G4WT0 > Número total de partículas que han entrado al detector: 393
+G4WT0 > Posición inicial de la partícula es: (1821.06,2831.34,-14545.4)
+G4WT0 > Posición final de la partícula es: (1820.83,2831.51,-14545.4)
+G4WT0 > Número total de partículas que han entrado al detector: 394
+0 events have been kept for refreshing and/or reviewing.
+  "/vis/reviewKeptEvents" to review them one by one.
+  "/vis/enable", then "/vis/viewer/flush" or "/vis/viewer/rebuild" to see them accumulated.
+Graphics systems deleted.
+Visualization Manager deleting...

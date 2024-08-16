@@ -6,6 +6,7 @@
 
 #include "PrimarySpectrum.hh"
 
+
 // class B4DetectorConstruction;
 class ActionInitialization : public G4VUserActionInitialization
 {

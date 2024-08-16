@@ -124,7 +124,7 @@ int main(int argc, char** argv) {
 
     if ( macro.size() ) {
       // Batch mode
-      runManager->Initialize();
+      //runManager->Initialize();
       G4String command = "/control/execute ";
       UImanager->ApplyCommand(command+macro);
       //UImanager->ApplyCommand("/control/execute vis.mac");
@@ -132,14 +132,14 @@ int main(int argc, char** argv) {
     } else { 
       // Define UI session for interactive mode
       G4UIExecutive * ui = new G4UIExecutive(argc, argv, session);
-      UImanager->ApplyCommand("/control/execute geometry.mac");
+      //UImanager->ApplyCommand("/control/execute geometry.mac");
       UImanager->ApplyCommand("/control/execute vis.mac");
       //UImanager->ApplyCommand("/control/execute input.in");
-      if (ui->IsGUI()){
+      /*if (ui->IsGUI()){
         UImanager->ApplyCommand("/control/execute gui.mac");
       } else {
         G4cout << "IsGUI() returned false: NO GUI session detected." << G4endl;
-      }
+      }*/
       ui->SessionStart();
       delete ui;
     }

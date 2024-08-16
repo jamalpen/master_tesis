@@ -19,18 +19,29 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     // Obtener la pista de la partícula
     G4Track *track = aStep->GetTrack();
 
-    // Incrementar el contador de partículas
-    particleCount++;
-
-    // Detener y eliminar la pista de la partícula
-    track->SetTrackStatus(fStopAndKill);
-
     // Obtener los puntos de paso de la partícula
     G4StepPoint *preStepPoint = aStep->GetPreStepPoint();
-    G4ThreeVector posPhoton = preStepPoint->GetPosition();
+    G4StepPoint *postStepPoint = aStep->GetPostStepPoint();
+    
+    //G4ThreeVector posPhoton = preStepPoint->GetPosition();
+    G4ThreeVector posParticulainicial = preStepPoint->GetPosition();
+    G4ThreeVector posParticulafinal = postStepPoint->GetPosition();
+
+    //G4cout << "Esta partícula ha tocado el detector" << G4endl;
+    G4cout << "Posición inicial de la partícula es: " << posParticulainicial << G4endl;
+    G4cout << "Posición final de la partícula es: " << posParticulafinal << G4endl; 
 
     // Imprimir la posición de la partícula en el detector
     //G4cout << "Posicion de la partícula en el detector: " << posPhoton << G4endl;
+
+     // Incrementar el contador de partículas
+    particleCount++;
+
+    // Imprimir el contador de partículas al final del evento o cuando quieras
+    G4cout << "Número total de partículas que han entrado al detector: " << particleCount << G4endl;
+    
+    // Detener y eliminar la pista de la partícula
+    track->SetTrackStatus(fStopAndKill);
 
     // Devolver true para indicar que el hit fue procesado exitosamente
     return true;

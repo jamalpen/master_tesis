@@ -1,3 +1,4 @@
+/run/initialize
 # Este archivo es unicamente cuando no quieres usar la interfaz gráfica.
 # Tendrías que usar ./sim -m input.in. 
 
@@ -6,27 +7,28 @@
 # 3 y superior: imprime información muy detallada, útil para depuración profunda
 /control/verbose 0
 /tracking/verbose 0
+#/tracking/storeTrajectory 0
 
 # Leer el archivo de espectro
 /spectrum/readfile particle.shw.bz2
 
 # Definir dimensiones del mundo madre
-/geometry/worldSizeX 2 km
-/geometry/worldSizeY 2 km
-/geometry/worldSizeZ 2 km
+/geometry/worldSizeX 40 km
+/geometry/worldSizeY 40 km
+/geometry/worldSizeZ 40 km
 
 # Definir dimensiones del detector
 /geometry/detectorSizeX 1 km
 /geometry/detectorSizeY 1 km
-/geometry/detectorSizeZ 1 km
+/geometry/detectorSizeZ 0.05 km
 
 # Definir la posición del detector dentro del mundo de Geant4
 # La posición inicial del detector con respecto al mundo madre
 # es (0.,0.,0.). Si no quieres modificar esto solo omite estos comandos.
-#/geometry/detectorPosX 0
-#/geometry/detectorPosY 0
-#/geometry/detectorPosZ 0
+#/geometry/detectorPosX 1 km
+#/geometry/detectorPosY 1 km
+#/geometry/detectorPosZ  10 km
 
 # Iniciar la simulación con N eventos
-/run/beamOn 1
+/run/beamOn 100
 
