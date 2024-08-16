@@ -28,6 +28,7 @@ PrimaryGeneratorAction::PrimaryGeneratorAction(PrimarySpectrum* crkPart)
 
   //Configuración inicial de la partícula que puede ser modificada luego
   // Default kinematic (commented out as per original code)
+  
   /*
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
   primaryId = "mu-";

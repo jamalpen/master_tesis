@@ -26,6 +26,7 @@
 PrimarySpectrum::PrimarySpectrum():
     pi(3.14159265358979323846), lineNumber(0)
 {
+    G4cout << "...PrimarySpectrum..." << G4endl;
     //Simplemente inicializo la partícula con cualquier valor
     particlePosition = G4ThreeVector(0., 0., 400.*cm);
     particleDirection = G4ThreeVector(0., 0., -1.);
@@ -147,7 +148,12 @@ void PrimarySpectrum::primaryMomento()
     }
 
     particleDirection = G4ThreeVector(px * GeV, py * GeV, -1. * (pz * GeV));
-    particlePosition = G4ThreeVector(x * m, y * m, z * m); // Update position particle with input.in file
+    //particlePosition = G4ThreeVector(x * m, y * m, z * m); // Update position particle with input.in file y no olvidar que este es el verdadero
+    particlePosition = G4ThreeVector(x * m, 0., 0.);//pondre cero en z o cualquier valor para que no tome el eje z de los datos
+    //de particle.shw.bz2 ya que es de 2200 m cuando no quiero eso
+    //Una buena estrategia para ver si funciona o no el codigo es poner aqui en particlePosition cualquier posicion para ver si funciona o no
+    
+    //particlePosition = G4ThreeVector(0., 0., 0.);
     //G4cout << "Dirección de la partícula: " << particleDirection << G4endl;
     //G4cout << "Posición de la partícula: " << particlePosition << G4endl;
     //G4cout << "El ID de la particula es: " << parId << G4endl;

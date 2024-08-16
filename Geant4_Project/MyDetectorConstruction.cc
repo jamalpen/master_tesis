@@ -86,6 +86,21 @@ void MyDetectorConstruction::ConstructSDandField()
 
     // Asignar el detector sensible al volumen lógico
     logicDetector->SetSensitiveDetector(sensDet);
+    
+    //Aquí es el mejor lugar para poder saber si las dimensiones del detector efectivamente cambian con geometry.mac o input.in
+    G4cout << "Tamaño del mundo en X: " << worldSizeX << G4endl;
+    G4cout << "Tamaño del mundo en Y: " << worldSizeY << G4endl;
+    G4cout << "Tamaño del mundo en Z: " << worldSizeZ << G4endl;
+
+    G4cout << "Tamaño del detector en X: " << detectorSizeX << G4endl;
+    G4cout << "Tamaño del detector en Y: " << detectorSizeY << G4endl;
+    G4cout << "Tamaño del detector en Z: " << detectorSizeZ << G4endl;
+
+    G4cout << "Ubicación del detector en X: " << detectorPosX << G4endl;
+    G4cout << "Ubicación del detector en Y: " << detectorPosY << G4endl;
+    G4cout << "Ubicación del detector en Z: " << detectorPosZ << G4endl;
+
+    
 }
 
 void MyDetectorConstruction::SetWorldSizeX(G4double newWorldSizeX) {
