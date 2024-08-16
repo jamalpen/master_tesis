@@ -24,7 +24,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
     G4StepPoint *postStepPoint = aStep->GetPostStepPoint();
     
     //G4ThreeVector posPhoton = preStepPoint->GetPosition();
-    G4ThreeVector posParticulainicial = preStepPoint->GetPosition();
+    G4ThreeVector posParticulainicial = preStepPoint->GetPosition(); // los valores están en mm. Recuerda que Geant4 entrega valores por defecto en mm.
     G4ThreeVector posParticulafinal = postStepPoint->GetPosition();
 
     //G4cout << "Esta partícula ha tocado el detector" << G4endl;

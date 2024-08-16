@@ -10,11 +10,11 @@
 # Definir dimensiones del detector
 /geometry/detectorSizeX 1 km
 /geometry/detectorSizeY 1 km
-/geometry/detectorSizeZ 1.5 km
+/geometry/detectorSizeZ 1 km
 
 # Definir la posición del detector dentro del mundo de Geant4
 # La posición inicial del detector con respecto al mundo madre
 # es (0.,0.,0.). Si no quieres modificar esto solo omite estos comandos.
-#/geometry/detectorPosX 1 km
-#/geometry/detectorPosY 1 km
-/geometry/detectorPosZ 10 km
+#/geometry/detectorPosX 0 km
+#/geometry/detectorPosY 0 km
+/geometry/detectorPosZ  0 km

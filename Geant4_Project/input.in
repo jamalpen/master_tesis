@@ -26,7 +26,7 @@
 # es (0.,0.,0.). Si no quieres modificar esto solo omite estos comandos.
 /geometry/detectorPosX 0 km
 /geometry/detectorPosY 0 km
-/geometry/detectorPosZ 0.5 km
+/geometry/detectorPosZ 0 km
 
 #inicializar aquí para que se actualice el mundo con los parametros de arriba
 /run/initialize

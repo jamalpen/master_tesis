@@ -1,3 +1,4 @@
+# Es importante que primero se ejecute geometry.mac y luego se ponga /run/initialize para inicializar el programa.
 /control/execute geometry.mac
 /run/initialize
 
