@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y \
     libexpat1-dev \
     qtbase5-dev \
     qtchooser \
-    #qt5-default \
     qt5-qmake \
     qtbase5-dev-tools \
     libglu1-mesa-dev \
@@ -56,6 +55,12 @@ RUN wget https://gitlab.cern.ch/geant4/geant4/-/archive/v10.7.3/geant4-v10.7.3.t
     && cd .. \
     && rm -rf geant4-v10.7.3.tar.gz
     
+# Create the Geant4_projects directory
+RUN mkdir /home/geant4lab/Geant4_projects
+
+# Set the working directory to Geant4_projects
+WORKDIR /home/geant4lab/Geant4_projects
+
 # Create the alias g4make. This alias is used to avoid searching for the geant4make.sh file and executing the source geant4make.sh command in the directory containing this file.
 RUN echo "alias g4make='cd /home/geant4lab/geant4/geant4-v10.7.3-install/share/Geant4-10.7.3/geant4make && source geant4make.sh && cd -'" >> /root/.bashrc
 
