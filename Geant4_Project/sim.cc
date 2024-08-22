@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     
     // Initial debug message
     G4cout << "Starting Geant4 program..." << G4endl;
-
+    //hola bebe
     /*
     // Prueba del método openfile de PrimarySpectrum
     PrimarySpectrum* james1 = new PrimarySpectrum();
