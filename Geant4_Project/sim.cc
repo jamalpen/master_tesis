@@ -10,6 +10,8 @@
 #include "MyPhysicsList.hh"
 #include "ActionInitialization.hh"
 
+//Para funciones de otros archivos
+#include "MySensitiveDetector.hh"
 #include "PrimarySpectrum.hh"
 
 // C++ Libraries
@@ -103,11 +105,13 @@ int main(int argc, char** argv) {
     G4cout << "Seed set to: " << myseed << G4endl;
 
     G4String physName = "QGSP_BERT_HP";
-
+    
+    // Instanciación de MyDetectorConstruction
+    MyDetectorConstruction* detectorConstruction = new MyDetectorConstruction();
     // Set mandatory initialization classes
-    runManager->SetUserInitialization(new MyDetectorConstruction());
+    runManager->SetUserInitialization(detectorConstruction);
     runManager->SetUserInitialization(new MyPhysicsList(physName));
-    runManager->SetUserInitialization(new ActionInitialization());
+    runManager->SetUserInitialization(new ActionInitialization(detectorConstruction));
 
 
     // Initialize G4 kernel
@@ -143,7 +147,7 @@ int main(int argc, char** argv) {
       ui->SessionStart();
       delete ui;
     }
-
+    
     delete visManager;
     delete runManager;
     

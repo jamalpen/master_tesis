@@ -2,16 +2,17 @@
 #define ACTIONINITIALIZATION_HH
 
 #include "G4VUserActionInitialization.hh"
-#include "MyDetectorConstruction.hh"
+#include "RunAction.hh"
 
 #include "PrimarySpectrum.hh"
+#include "MyDetectorConstruction.hh" 
 
 
 // class B4DetectorConstruction;
 class ActionInitialization : public G4VUserActionInitialization
 {
 public:
-    ActionInitialization();
+    ActionInitialization(MyDetectorConstruction* detectorConstruction);
     virtual ~ActionInitialization();
 
     virtual void Build() const;
@@ -19,6 +20,7 @@ public:
 
 private:
     PrimarySpectrum* parCrk;
+    MyDetectorConstruction* fDetectorConstruction;
 };
 
 #endif

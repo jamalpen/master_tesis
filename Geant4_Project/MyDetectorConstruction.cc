@@ -4,7 +4,7 @@
 #include <cmath>
 
 MyDetectorConstruction::MyDetectorConstruction(): worldSizeX(100*km), worldSizeY(100*km), worldSizeZ(100*km),
-      detectorSizeX(10*km), detectorSizeY(10*km), detectorSizeZ(10*km), detectorPosX(0), detectorPosY(0), detectorPosZ(0)
+      detectorSizeX(10*km), detectorSizeY(10*km), detectorSizeZ(10*km), detectorPosX(0), detectorPosY(0), detectorPosZ(0), sensDet(nullptr)
 {
 
     fGMessenger = new GeometryMessenger(this);
@@ -79,7 +79,8 @@ void MyDetectorConstruction::ConstructSDandField()
     G4SDManager* sdManager = G4SDManager::GetSDMpointer();
 
     // Crear el detector sensible
-    MySensitiveDetector* sensDet = new MySensitiveDetector("SensitiveDetector");
+    //MySensitiveDetector* sensDet = new MySensitiveDetector("SensitiveDetector");
+    sensDet = new MySensitiveDetector("SensitiveDetector");
 
     // Registrar el detector sensible en el SDManager
     sdManager->AddNewDetector(sensDet);
@@ -101,6 +102,10 @@ void MyDetectorConstruction::ConstructSDandField()
     G4cout << "Ubicación del detector en Z: " << detectorPosZ << G4endl;
 
     
+}
+
+MySensitiveDetector* MyDetectorConstruction::GetSensitiveDetector() const {
+    return sensDet;
 }
 
 void MyDetectorConstruction::SetWorldSizeX(G4double newWorldSizeX) {

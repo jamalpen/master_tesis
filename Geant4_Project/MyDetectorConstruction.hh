@@ -41,6 +41,9 @@ public:
     void SetDetectorPosY(G4double detectorPosY);
     void SetDetectorPosZ(G4double detectorPosZ);
 
+    // Método para obtener el detector sensible
+    MySensitiveDetector* GetSensitiveDetector() const;
+
 
 private:
 
@@ -51,6 +54,8 @@ private:
     G4LogicalVolume *logicDetector;
 
     GeometryMessenger* fGMessenger; // Puntero a GeometryMessenger, nunca olvidar
+
+    MySensitiveDetector* sensDet; // Puntero al detector sensible
 
     virtual void ConstructSDandField();
 };

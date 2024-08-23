@@ -16,6 +16,8 @@ MySensitiveDetector::~MySensitiveDetector()
 
 G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhist)
 {
+    G4cout << "Dirección en ProcessHits: " << this << G4endl;
+
     // Obtener la pista de la partícula
     G4Track *track = aStep->GetTrack();
 
@@ -49,5 +51,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 
 G4int MySensitiveDetector::GetParticleCount() const
 {
+    //G4cout << "Particle count is: " << particleCount << G4endl;
+    //G4cout << "Dirección en GetParticleCount: " << this << G4endl;
     return particleCount;
 }

@@ -5,12 +5,14 @@
 
 #include "ActionInitialization.hh"
 #include "PrimaryGeneratorAction.hh"
+#include "RunAction.hh"
+#include "MyDetectorConstruction.hh"
 
 
 
-ActionInitialization::ActionInitialization()
+ActionInitialization::ActionInitialization(MyDetectorConstruction* detectorConstruction)
  : G4VUserActionInitialization(),
-   parCrk(new PrimarySpectrum())
+   parCrk(new PrimarySpectrum()), fDetectorConstruction(detectorConstruction)
 {
     G4cout << "...ActionInitialization..." << G4endl;
 }
@@ -24,6 +26,14 @@ void ActionInitialization::Build() const
 {
     PrimaryGeneratorAction* primaryGenAction = new PrimaryGeneratorAction(parCrk);
     SetUserAction(primaryGenAction);
+
+    // Crear y configurar RunAction con el detector sensible
+    RunAction* runAction = new RunAction(fDetectorConstruction);
+    SetUserAction(runAction);
+
+    // Configura la acción de run con el detector sensible
+    //RunAction* runAction = new RunAction(fSensitiveDetector);
+    //SetUserAction(runAction);
     
     //MySteppingAction* steppingAction = new MySteppingAction();
     //SetUserAction(steppingAction);
