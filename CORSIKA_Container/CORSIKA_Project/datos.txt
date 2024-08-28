@@ -1,2 +1,10 @@
 # Time (seconds) / Height (meters) / Distance in x (kilometers) / Distance in y (kilometers) / Zenith angle (degrees) / Max Zenith angle (degrees)
-140	2200	200	200	70	90
+600	2200	5	0	0	90
+600	2260	5	0	0	90
+600	2200	-5	0	0	90
+600	2260	-5	0	0	90
+600	2200	0	5	0	90
+600	2260	0	5	0	90
+600	2200	0	-5	0	90
+600	2260	0	-5	0	90
+
