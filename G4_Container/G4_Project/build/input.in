@@ -1,0 +1,35 @@
+# Este archivo es unicamente cuando no quieres usar la interfaz gráfica.
+# Tendrías que usar ./sim -m input.in. 
+
+# verbose es el grado de detalle que se imprime en consola sobre el proceso de simulación.
+# 0: nivel más bajo de detalle
+# 3 y superior: imprime información muy detallada, útil para depuración profunda
+/control/verbose 0
+/tracking/verbose 0
+#/tracking/storeTrajectory 0
+
+# Leer el archivo de espectro
+/spectrum/readfile particle.shw.bz2
+
+# Definir dimensiones del mundo madre
+/geometry/worldSizeX 2000 km
+/geometry/worldSizeY 2000 km
+/geometry/worldSizeZ 0.06 km
+
+# Definir dimensiones del detector
+/geometry/detectorSizeX 1 km
+/geometry/detectorSizeY 1 km
+/geometry/detectorSizeZ 0.001 km
+
+# Definir la posición del detector dentro del mundo de Geant4
+# La posición inicial del detector con respecto al mundo madre
+# es (0.,0.,0.). Si no quieres modificar esto solo omite estos comandos.
+/geometry/detectorPosX -10 km
+/geometry/detectorPosY 0 km
+/geometry/detectorPosZ 0.0295 km
+
+#inicializar aquí para que se actualice el mundo con los parametros de arriba
+/run/initialize
+
+# Iniciar la simulación con N eventos
+/run/beamOn 348397

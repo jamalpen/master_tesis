@@ -1,0 +1,17 @@
+# Es importante que primero se ejecute geometry.mac y luego se ponga /run/initialize para inicializar el programa.
+/control/execute geometry.mac
+/run/initialize
+
+/vis/open OGL
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/drawVolume
+/vis/viewer/set/autoRefresh true
+/vis/scene/add/trajectories smooth
+/vis/scene/add/scale 1 km
+/vis/scene/add/axes
+/vis/scene/add/eventID
+/vis/scene/endOfEventAction accumulate 100
+
+
+
+
