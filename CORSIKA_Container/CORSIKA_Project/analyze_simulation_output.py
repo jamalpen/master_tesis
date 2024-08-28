@@ -5,10 +5,10 @@ import numpy as np
 df = pd.read_csv('output.txt', sep='/', comment='#', header=None, engine='python')
 
 # Name the columns
-df.columns = ['Time', 'Height', 'Distance', 'Theta', 'Thetamax', 'Simulation_Time', 'Selected_Particles', 'Particles_At_Detector', 'Flux_At_Detector']
+df.columns = ['Time', 'Height', 'Distance_X', 'Distance_Y', 'Theta', 'Thetamax', 'Simulation_Time', 'Selected_Particles', 'Particles_At_Detector', 'Flux_At_Detector']
 
 # Group by the first five parameters
-grouped = df.groupby(['Time', 'Height', 'Distance', 'Theta', 'Thetamax'])
+grouped = df.groupby(['Time', 'Height', 'Distance_X', 'Distance_Y', 'Theta', 'Thetamax'])
 
 # Create a list to store the results
 results = []
@@ -36,7 +36,7 @@ for name, group in grouped:
     results.append(list(name) + [sum_simulation_time, mean_flux_at_detector, std_flux_at_detector, mean_particles_at_detector, std_particles_at_detector, cv_flux_at_detector, count_data_points])
 
 # Create a DataFrame with the results
-results_df = pd.DataFrame(results, columns=['Time', 'Height', 'Distance', 'Theta', 'Thetamax', 'Sum_Simulation_Time', 'Mean_Flux', 'Std_Flux', 'Mean_Particles', 'Std_Particles', 'CV_Flux', 'Count_Data_Points'])
+results_df = pd.DataFrame(results, columns=['Time', 'Height', 'Distance_X', 'Distance_Y', 'Theta', 'Thetamax', 'Sum_Simulation_Time', 'Mean_Flux', 'Std_Flux', 'Mean_Particles', 'Std_Particles', 'CV_Flux', 'Count_Data_Points'])
 
 # Change column names for display and output purposes
 display_df = results_df.rename(columns={'Theta': 'Low_Theta', 'Thetamax': 'High_Theta'})
@@ -48,6 +48,6 @@ print(display_df)
 # Write the results to a text file
 with open('output_summary.txt', 'w') as f:
     # Write the header
-    f.write("#Time/Height/Distance/Low_Theta/High_Theta/Sum_Simulation_Time/Mean_Flux/Std_Flux/Mean_Particles/Std_Particles/CV_Flux/Count_Data_Points\n")
+    f.write("#Time/Height/Distance_X/Distance_Y/Low_Theta/High_Theta/Sum_Simulation_Time/Mean_Flux/Std_Flux/Mean_Particles/Std_Particles/CV_Flux/Count_Data_Points\n")
     for result in display_df.itertuples(index=False, name=None):
         f.write('/'.join(map(str, result)) + '\n')

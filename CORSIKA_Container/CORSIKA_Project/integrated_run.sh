@@ -27,7 +27,7 @@ do_showers="/opt/arti/analysis/do_showers.sh"
 cleanup_dir="/home/cleanup_simulation_data.sh"
 
 # Define the area size in meters
-area_size=400000
+area_size=1000
 
 # The directory where integrated_run.sh is located is in /home.
 
