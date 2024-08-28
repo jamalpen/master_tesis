@@ -26,19 +26,19 @@ do_showers="/opt/arti/analysis/do_showers.sh"
 # Cleanup script file
 cleanup_dir="/home/cleanup_simulation_data.sh"
 
-# Define the area size
-area_size=1000
+# Define the area size in meters
+area_size=400000
 
 # The directory where integrated_run.sh is located is in /home.
 
 # Write the header to the output file only if it doesn't already exist
 if [ ! -f "$output_file" ]; then
-    echo "#Time/height/distance/theta/thetamax/simulation_time/selected_particles/particles_at_detector/flux_at_detector" > "$output_file"
+    echo "#Time/height/distance_x/distance_y/theta/thetamax/simulation_time/selected_particles/particles_at_detector/flux_at_detector" > "$output_file"
 fi
 
-tail -n +2 "$data_file" | while read -r time height dist theta thetamax; do
+tail -n +2 "$data_file" | while read -r time height dist_x dist_y theta thetamax; do
     # Check if all variables are set (non-empty)
-    if [ -z "$time" ] || [ -z "$height" ] || [ -z "$dist" ] || [ -z "$theta" ] || [ -z "$thetamax" ]; then
+    if [ -z "$time" ] || [ -z "$height" ] || [ -z "$dist_x" ] || [ -z "$dist_y" ] || [ -z "$theta" ] || [ -z "$thetamax" ]; then
         echo "Warning: Skipping incomplete line in $data_file"
         continue
     fi
@@ -164,7 +164,7 @@ EOF
 
     # Run the Python script with the decompressed file as an argument
     cd "$sim_dir"
-    python3 "$python_script" "$shw_file" "${theta}-${thetamax}deg_${time}_${selected_particles}" "$dist" "$area_size"
+    python3 "$python_script" "$shw_file" "${theta}-${thetamax}deg_${time}_${selected_particles}" "$dist_x" "$dist_y" "$area_size"
     sleep 15
 
     # Check if the Python script executed successfully
@@ -194,7 +194,7 @@ EOF
     sleep 10
 
     # Run the count_particles.py script and capture its output
-    particles_at_detector=$(python3 "$count_particles_script" "$shw_filepath" "$dist" "$area_size" | head -n 1)
+    particles_at_detector=$(python3 "$count_particles_script" "$shw_filepath" "$dist_x" "$dist_y" "$area_size" | head -n 1)
     # head is to get the first output of the python script. In this case, the first output is particle_count_in_area. Check the python script.
 
     # Calculate flux at detector
@@ -208,7 +208,7 @@ EOF
     elapsed_time=$((end_time - start_time))
 
     # Append the data to the output file
-    echo "${time}/${height}/${dist}/${theta}/${thetamax}/${elapsed_time}/${selected_particles}/${particles_at_detector}/${flux_at_detector}" >> "$output_file"
+    echo "${time}/${height}/${dist_x}/${dist_y}/${theta}/${thetamax}/${elapsed_time}/${selected_particles}/${particles_at_detector}/${flux_at_detector}" >> "$output_file"
     sleep 5
 
     # Run cleanup.sh

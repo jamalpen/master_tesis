@@ -1,6 +1,6 @@
 import sys
 
-def count_particles_in_area(shw_file, dist, area_size):
+def count_particles_in_area(shw_file, dist_x, dist_y, area_size):
     # Read the .shw file
     with open(shw_file, 'r') as file:
         lines = file.readlines()
@@ -14,8 +14,8 @@ def count_particles_in_area(shw_file, dist, area_size):
     origin_y = 0
     
     # Define the new origin based on the distance (dist) and convert to meters
-    new_origin_x = origin_x - (dist * 1000)  # Convert distance from km to meters
-    new_origin_y = origin_y  # The y-coordinate remains 0
+    new_origin_x = origin_x - (dist_x * 1000)  # Convert distance_x from km to meters
+    new_origin_y = origin_y - (dist_y * 1000)  # Convert distance_y from km to meters
     
     # Define the area of interest around the new origin
     area_half_size = area_size / 2  # Half the size of the area to simplify limit calculations
@@ -42,15 +42,16 @@ def count_particles_in_area(shw_file, dist, area_size):
     return particle_count_in_area, total_particle_count
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: python count_particles.py <file.shw> <dist> <area_size>")
+    if len(sys.argv) != 5:
+        print("Usage: python count_particles.py <file.shw> <dist_x> <dist_y> <area_size>")
         sys.exit(1)
     
     shw_file = sys.argv[1]
-    dist = float(sys.argv[2])
-    area_size = float(sys.argv[3])
+    dist_x = float(sys.argv[2])
+    dist_y = float(sys.argv[3])
+    area_size = float(sys.argv[4])
     
-    particle_count_in_area, total_particle_count = count_particles_in_area(shw_file, dist, area_size)
+    particle_count_in_area, total_particle_count = count_particles_in_area(shw_file, dist_x, dist_y, area_size)
     print(particle_count_in_area)
 
 

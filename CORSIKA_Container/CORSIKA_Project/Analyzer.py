@@ -6,8 +6,9 @@ from mpl_toolkits.mplot3d import Axes3D
 # File path and output prefix passed as arguments
 file_path = sys.argv[1]
 output_prefix = sys.argv[2]
-dist = float(sys.argv[3])
-area_size = float(sys.argv[4])
+dist_x = float(sys.argv[3])
+dist_y = float(sys.argv[4])
+area_size = float(sys.argv[5])
 
 # Initialize lists to store the data
 x = []
@@ -116,12 +117,13 @@ plt.show()
 # Define the area of interest around the new origin
 origin_x = 0
 origin_y = 0
-new_origin_x = origin_x - (dist * 1000)  # Convert distance from km to meters
-new_origin_y = origin_y
+new_origin_x = origin_x - (dist_x * 1000)  # Convert distance from km to meters
+new_origin_y = origin_y - (dist_y * 1000)  # Convert distance from km to meters
 area_half_size = area_size / 2
 
 # Filter particles within the area of interest
-within_area = (new_origin_x - area_half_size <= x) & (x <= new_origin_x + area_half_size) & (new_origin_y - area_half_size <= y) & (y <= new_origin_y + area_half_size)
+within_area = (new_origin_x - area_half_size <= x) & (x <= new_origin_x + area_half_size) & \
+              (new_origin_y - area_half_size <= y) & (y <= new_origin_y + area_half_size)
 x_within = x[within_area]
 y_within = y[within_area]
 
@@ -138,6 +140,9 @@ plt.ylabel('Y axis (m)')
 plt.title(f'Particle distribution in the area of interest\nNumber of particles: {particles_in_area}')
 plt.grid(True)
 plt.axis([new_origin_x - area_half_size, new_origin_x + area_half_size, new_origin_y - area_half_size, new_origin_y + area_half_size])
-plt.axis('equal')
+# The following function ensures that the units on the X and Y axes are scaled equally.
+# This means that one "unit" on the X-axis will have the same physical length as one "unit" on the Y-axis in the plot
+# I recommend not to use this function.
+#plt.axis('equal') 
 plt.savefig(f'{output_prefix}_area_distribution.png')
 plt.show()
