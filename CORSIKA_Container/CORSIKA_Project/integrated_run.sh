@@ -55,19 +55,22 @@ EOF
     else
         $do_sims -w "$corsika_dir" -p "${theta}-${thetamax}deg" -s quie -v 77402 -t "$time" -m "$theta" -n "$thetamax" -i 10000 -b -1 -y
     fi
-    sleep 7
+    sleep 15
+
 
     # Run polar_condition.sh
+    # It is better not to use this script polar_condition.sh
     cd "$corsika_dir"
-    if [ ${#time} -eq 3 ]; then
-        ./polar_condition.sh -d "${theta}-${thetamax}deg_000${time}/" -m -90 -n 90
-    elif [ ${#time} -eq 4 ]; then
-        ./polar_condition.sh -d "${theta}-${thetamax}deg_00${time}/" -m -90 -n 90
-    else
-        echo "Error: incorrect time format."
-        exit 1
-    fi
-    sleep 15
+    #if [ ${#time} -eq 3 ]; then
+    #    ./polar_condition.sh -d "${theta}-${thetamax}deg_000${time}/" -m -90 -n 90
+    #elif [ ${#time} -eq 4 ]; then
+    #    ./polar_condition.sh -d "${theta}-${thetamax}deg_00${time}/" -m -90 -n 90
+    #else
+    #    echo "Error: incorrect time format."
+    #    exit 1
+    #fi
+    #sleep 15
+    
 
     # Run rungo.sh
     if [ ${#time} -eq 3 ]; then
