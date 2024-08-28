@@ -1,7 +1,0 @@
-#Time/Height/Distance_X/Distance_Y/Low_Theta/High_Theta/Sum_Simulation_Time/Mean_Flux/Std_Flux/Mean_Particles/Std_Particles/CV_Flux/Count_Data_Points
-140/2200/0/0/70/90/656/0.0002171357/0.0002573445/6423.0/5504.7480414638/1.1851782088/3
-140/2200/0/10/70/90/256/0.0/nan/0.0/nan/0.0/1
-140/2200/10/0/70/90/256/0.0/nan/0.0/nan/0.0/1
-140/2200/10/10/70/90/201/7.1428e-06/nan/1.0/nan/nan/1
-140/2200/200/200/70/90/199/8.05357e-05/nan/4510.0/nan/nan/1
-140/2200/1000/1000/70/90/256/0.0/nan/0.0/nan/0.0/1
