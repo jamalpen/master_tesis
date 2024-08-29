@@ -17,6 +17,7 @@
 // C++ Libraries
 #include "Randomize.hh"
 #include <iostream>
+#include <ctime>
 
 namespace {
   void PrintUsage() {
@@ -130,7 +131,14 @@ int main(int argc, char** argv) {
       // Batch mode
       //runManager->Initialize();
       G4String command = "/control/execute ";
+      //Measure time before executing the command
+      clock_t start = clock();
       UImanager->ApplyCommand(command+macro);
+      //Measure time after executing the command
+      clock_t end = clock();
+      // Calculate duration
+      double duration = double(end - start) / CLOCKS_PER_SEC;
+      std::cout << "The /run/beamOn command took " << duration << " seconds to execute." << std::endl;
       //UImanager->ApplyCommand("/control/execute vis.mac");
       //UImanager->ApplyCommand("/vis/open OGL");
     } else { 
