@@ -24,12 +24,12 @@
 # Definir la posición del detector dentro del mundo de Geant4
 # La posición inicial del detector con respecto al mundo madre
 # es (0.,0.,0.). Si no quieres modificar esto solo omite estos comandos.
-/geometry/detectorPosX -10 km
-/geometry/detectorPosY 0 km
+/geometry/detectorPosX 0 km
+/geometry/detectorPosY -5 km
 /geometry/detectorPosZ 0.0295 km
 
 #inicializar aquí para que se actualice el mundo con los parametros de arriba
 /run/initialize
 
 # Iniciar la simulación con N eventos
-/run/beamOn 348397
+/run/beamOn 1486878

@@ -17,4 +17,4 @@
 # es (0.,0.,0.). Si no quieres modificar esto solo omite estos comandos.
 /geometry/detectorPosX -100 km
 #/geometry/detectorPosY 0 km
-/geometry/detectorPosZ  250 km
+/geometry/detectorPosZ  0 km
