@@ -15,6 +15,15 @@
 # Definir la posición del detector dentro del mundo de Geant4
 # La posición inicial del detector con respecto al mundo madre
 # es (0.,0.,0.). Si no quieres modificar esto solo omite estos comandos.
-/geometry/detectorPosX -100 km
+/geometry/detectorPosX  0 km
 #/geometry/detectorPosY 0 km
-/geometry/detectorPosZ  0 km
+/geometry/detectorPosZ  300 km
+
+# Definir dimensiones del cilindro adicional
+/geometry/cylinderRadius 50 km
+/geometry/cylinderHeight 100 km
+
+# Definir posición del cilindro dentro del mundo de Geant4
+/geometry/cylinderPosX 0 km
+/geometry/cylinderPosY 0 km
+/geometry/cylinderPosZ 30 km

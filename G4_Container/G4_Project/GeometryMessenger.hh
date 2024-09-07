@@ -35,6 +35,13 @@ private:
     G4UIcmdWithADoubleAndUnit* detectorPosXCmd;
     G4UIcmdWithADoubleAndUnit* detectorPosYCmd;
     G4UIcmdWithADoubleAndUnit* detectorPosZCmd;
+
+    // Tamaño y posición del cilindro
+    G4UIcmdWithADoubleAndUnit* cylinderRadiusCmd;
+    G4UIcmdWithADoubleAndUnit* cylinderHeightCmd;
+    G4UIcmdWithADoubleAndUnit* cylinderPosXCmd;
+    G4UIcmdWithADoubleAndUnit* cylinderPosYCmd;
+    G4UIcmdWithADoubleAndUnit* cylinderPosZCmd;
 };
 
 #endif

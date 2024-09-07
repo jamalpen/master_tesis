@@ -4,7 +4,8 @@
 #include <cmath>
 
 MyDetectorConstruction::MyDetectorConstruction(): worldSizeX(100*km), worldSizeY(100*km), worldSizeZ(100*km),
-      detectorSizeX(10*km), detectorSizeY(10*km), detectorSizeZ(10*km), detectorPosX(0), detectorPosY(0), detectorPosZ(0), sensDet(nullptr)
+      detectorSizeX(10*km), detectorSizeY(10*km), detectorSizeZ(10*km), detectorPosX(0), detectorPosY(0), detectorPosZ(0),
+      cylinderRadius(5*km), cylinderHeight(10*km), cylinderPosX(0), cylinderPosY(0), cylinderPosZ(30*km), sensDet(nullptr)
 {
 
     fGMessenger = new GeometryMessenger(this);
@@ -57,6 +58,18 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     // Colocar el volumen lógico del detector fantasma en el volumen lógico del mundo
     G4VPhysicalVolume *physGhostDetector = new G4PVPlacement(0, G4ThreeVector(detectorPosX, detectorPosY, detectorPosZ), logicDetector, "physDetector", logicWorld, false, 0, true);
     
+    // Ahora creamos el cilindro
+    G4Material* cylinderMat = nist->FindOrBuildMaterial("G4_AIR");
+
+    // Crear el volumen sólido del cilindro
+    G4Tubs* solidCylinder = new G4Tubs("solidCylinder", 0., cylinderRadius, cylinderHeight / 2, 0., 360*deg);
+
+    // Crear el volumen lógico del cilindro utilizando el material de aire
+    G4LogicalVolume* logicCylinder = new G4LogicalVolume(solidCylinder, cylinderMat, "logicCylinder");
+
+    // Colocar el volumen lógico del cilindro en el volumen lógico del mundo
+    G4VPhysicalVolume* physCylinder = new G4PVPlacement(0, G4ThreeVector(cylinderPosX, cylinderPosY, cylinderPosZ), logicCylinder, "physCylinder", logicWorld, false, 0, true);
+
     // Definir límites de producción
     //G4double maxStep = 10.0 * cm;
     //logicGhostDetector->SetUserLimits(new G4UserLimits(maxStep));
@@ -101,7 +114,9 @@ void MyDetectorConstruction::ConstructSDandField()
     G4cout << "Ubicación del detector en Y: " << detectorPosY << G4endl;
     G4cout << "Ubicación del detector en Z: " << detectorPosZ << G4endl;
 
-    
+    // Aquí se puede verificar que las dimensiones del cilindro se hayan aplicado correctamente
+    G4cout << "Tamaño del cilindro: radio = " << cylinderRadius << " y altura = " << cylinderHeight << G4endl;
+    G4cout << "Ubicación del cilindro: X = " << cylinderPosX << ", Y = " << cylinderPosY << ", Z = " << cylinderPosZ << G4endl;  
 }
 
 MySensitiveDetector* MyDetectorConstruction::GetSensitiveDetector() const {
@@ -154,5 +169,25 @@ void MyDetectorConstruction::SetDetectorPosZ(G4double newPosZ)
 {
     detectorPosZ = newPosZ;
     //G4cout << "El posición en el eje z del detector es: " << detectorPosZ << G4endl;
+}
+
+void MyDetectorConstruction::SetCylinderRadius(G4double radius) {
+    cylinderRadius = radius;
+}
+
+void MyDetectorConstruction::SetCylinderHeight(G4double height) {
+    cylinderHeight = height;
+}
+
+void MyDetectorConstruction::SetCylinderPosX(G4double posX) {
+    cylinderPosX = posX;
+}
+
+void MyDetectorConstruction::SetCylinderPosY(G4double posY) {
+    cylinderPosY = posY;
+}
+
+void MyDetectorConstruction::SetCylinderPosZ(G4double posZ) {
+    cylinderPosZ = posZ;
 }
 

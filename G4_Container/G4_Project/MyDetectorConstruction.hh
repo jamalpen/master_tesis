@@ -28,10 +28,17 @@ public:
 
     virtual G4VPhysicalVolume *Construct();
 
-    //Métodos para actualizar las dimensiones del mundo y el detector y la posicion del detector
+    // Methods to update world and detector dimensions and detector position
     void SetWorldSizeX(G4double worldSizeX);
     void SetWorldSizeY(G4double worldSizeY);
     void SetWorldSizeZ(G4double worldSizeZ);
+
+    void SetCylinderRadius(G4double cylinderRadius);    // For cylindrical world
+    void SetCylinderHeight(G4double cylinderHeight);    // For cylindrical world
+
+    void SetCylinderPosX(G4double cylinderPosX);  // Nueva posición del cilindro
+    void SetCylinderPosY(G4double cylinderPosY);
+    void SetCylinderPosZ(G4double cylinderPosZ);
 
     void SetDetectorSizeX(G4double detectorSizeX);
     void SetDetectorSizeY(G4double detectorSizeY);
@@ -47,15 +54,20 @@ public:
 
 private:
 
+    // Dimensions for cubic world
     G4double worldSizeX, worldSizeY, worldSizeZ;
+
+    // Dimensions and position of the detector
     G4double detectorSizeX, detectorSizeY, detectorSizeZ;
     G4double detectorPosX, detectorPosY, detectorPosZ;
 
+    // Dimensions and position for cylindrical world
+    G4double cylinderRadius, cylinderHeight;
+    G4double cylinderPosX, cylinderPosY, cylinderPosZ;
+
     G4LogicalVolume *logicDetector;
-
-    GeometryMessenger* fGMessenger; // Puntero a GeometryMessenger, nunca olvidar
-
-    MySensitiveDetector* sensDet; // Puntero al detector sensible
+    GeometryMessenger* fGMessenger; // Pointer to GeometryMessenger, important
+    MySensitiveDetector* sensDet; // Pointer to the sensitive detector
 
     virtual void ConstructSDandField();
 };

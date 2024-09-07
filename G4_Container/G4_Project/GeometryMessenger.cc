@@ -64,6 +64,33 @@ GeometryMessenger::GeometryMessenger(MyDetectorConstruction* detectorConstructio
   detectorPosZCmd->SetParameterName("DetectorPosZ", false);
   detectorPosZCmd->SetUnitCategory("Length");
 
+  // Añadir comandos para las dimensiones del cilindro
+  cylinderRadiusCmd = new G4UIcmdWithADoubleAndUnit("/geometry/cylinderRadius", this);
+  cylinderRadiusCmd->SetGuidance("Set the radius of the cylinder");
+  cylinderRadiusCmd->SetParameterName("CylinderRadius", true);
+  cylinderRadiusCmd->SetUnitCategory("Length");
+
+  cylinderHeightCmd = new G4UIcmdWithADoubleAndUnit("/geometry/cylinderHeight", this);
+  cylinderHeightCmd->SetGuidance("Set the height of the cylinder");
+  cylinderHeightCmd->SetParameterName("CylinderHeight", true);
+  cylinderHeightCmd->SetUnitCategory("Length");
+
+  // Añadir comandos para la posición del cilindro
+  cylinderPosXCmd = new G4UIcmdWithADoubleAndUnit("/geometry/cylinderPosX", this);
+  cylinderPosXCmd->SetGuidance("Set the X position of the cylinder");
+  cylinderPosXCmd->SetParameterName("CylinderPosX", true);
+  cylinderPosXCmd->SetUnitCategory("Length");
+
+  cylinderPosYCmd = new G4UIcmdWithADoubleAndUnit("/geometry/cylinderPosY", this);
+  cylinderPosYCmd->SetGuidance("Set the Y position of the cylinder");
+  cylinderPosYCmd->SetParameterName("CylinderPosY", true);
+  cylinderPosYCmd->SetUnitCategory("Length");
+
+  cylinderPosZCmd = new G4UIcmdWithADoubleAndUnit("/geometry/cylinderPosZ", this);
+  cylinderPosZCmd->SetGuidance("Set the Z position of the cylinder");
+  cylinderPosZCmd->SetParameterName("CylinderPosZ", true);
+  cylinderPosZCmd->SetUnitCategory("Length");
+
 }
 
 GeometryMessenger::~GeometryMessenger()
@@ -78,6 +105,12 @@ GeometryMessenger::~GeometryMessenger()
   delete detectorPosXCmd;
   delete detectorPosYCmd;
   delete detectorPosZCmd;
+  delete cylinderRadiusCmd;
+  delete cylinderHeightCmd;
+  delete cylinderPosXCmd;
+  delete cylinderPosYCmd;
+  delete cylinderPosZCmd;
+
 }
 
 void GeometryMessenger::SetNewValue(G4UIcommand* command, G4String newValue)
@@ -119,5 +152,25 @@ void GeometryMessenger::SetNewValue(G4UIcommand* command, G4String newValue)
   if (command == detectorPosZCmd)
   {
     fDetectorConstruction->SetDetectorPosZ(detectorPosZCmd->GetNewDoubleValue(newValue));
+  }
+
+  if (command == cylinderRadiusCmd) {
+    fDetectorConstruction->SetCylinderRadius(cylinderRadiusCmd->GetNewDoubleValue(newValue));
+  }
+
+  if (command == cylinderHeightCmd) {
+    fDetectorConstruction->SetCylinderHeight(cylinderHeightCmd->GetNewDoubleValue(newValue));
+  }
+
+  if (command == cylinderPosXCmd) {
+    fDetectorConstruction->SetCylinderPosX(cylinderPosXCmd->GetNewDoubleValue(newValue));
+  }
+
+  if (command == cylinderPosYCmd) {
+    fDetectorConstruction->SetCylinderPosY(cylinderPosYCmd->GetNewDoubleValue(newValue));
+  }
+
+  if (command == cylinderPosZCmd) {
+    fDetectorConstruction->SetCylinderPosZ(cylinderPosZCmd->GetNewDoubleValue(newValue));
   }
 }
