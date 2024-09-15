@@ -149,8 +149,8 @@ void PrimarySpectrum::primaryMomento()
 
     particleDirection = G4ThreeVector(px * GeV, py * GeV, -1. * (pz * GeV));
     //particlePosition = G4ThreeVector(x * m, y * m, z * m); // Update position particle with input.in file y no olvidar que este es el verdadero
-    //particlePosition = G4ThreeVector(x * m, y * m, 30 * m); //original
-    particlePosition = G4ThreeVector(x * m, y * m, 5 * km); //original
+    particlePosition = G4ThreeVector(x * m, y * m, 30 * m); //original
+    //particlePosition = G4ThreeVector(x * m, y * m, 5 * km); //original
     //particlePosition = G4ThreeVector(x * m, 0., 0.);//pondre cero en z o cualquier valor para que no tome el eje z de los datos
     //de particle.shw.bz2 ya que es de 2200 m cuando no quiero eso
     //Una buena estrategia para ver si funciona o no el codigo es poner aqui en particlePosition cualquier posicion para ver si funciona o no

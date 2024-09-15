@@ -25,8 +25,8 @@
 # Definir la posición del detector dentro del mundo de Geant4
 /geometry/detectorPosX 0 km
 /geometry/detectorPosY -5 km
-#/geometry/detectorPosZ -0.0295 km #original
-/geometry/detectorPosZ -4.9995 km
+/geometry/detectorPosZ -0.0295 km #original
+#/geometry/detectorPosZ -4.9995 km
 
 # Definir dimensiones del cilindro adicional
 /geometry/cylinderRadius 0.01 km
