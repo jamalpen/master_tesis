@@ -2,10 +2,10 @@
 /control/execute geometry.mac
 /run/initialize
 
-/vis/open OGL
+/vis/open OGL # Abre el visor OpenGL
 /vis/viewer/set/viewpointVector 1 1 1
-/vis/drawVolume
-/vis/viewer/set/autoRefresh true
+/vis/drawVolume # Dibuja los volúmenes
+/vis/viewer/set/autoRefresh true # Refresca automáticamente
 /vis/scene/add/trajectories smooth
 /vis/scene/add/scale 1 km
 /vis/scene/add/axes

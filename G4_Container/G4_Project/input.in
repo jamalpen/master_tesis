@@ -14,8 +14,8 @@
 # Definir dimensiones del mundo madre
 /geometry/worldSizeX 2000 km
 /geometry/worldSizeY 2000 km
-#/geometry/worldSizeZ 0.06 km #original
-/geometry/worldSizeZ 10 km
+/geometry/worldSizeZ 0.06 km #original
+#/geometry/worldSizeZ 10 km
 
 # Definir dimensiones del detector
 /geometry/detectorSizeX 1 km
@@ -41,4 +41,12 @@
 /run/initialize
 
 # Iniciar la simulación con N eventos
-/run/beamOn 1486878
+#/run/beamOn 1486878
+/run/beamOn 50000
+/run/beamOn 50000
+/run/beamOn 50000
+/run/beamOn 50000
+/run/beamOn 50000
+/run/beamOn 50000
+/run/beamOn 50000
+/run/beamOn 50000

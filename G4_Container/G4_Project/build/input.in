@@ -14,8 +14,8 @@
 # Definir dimensiones del mundo madre
 /geometry/worldSizeX 2000 km
 /geometry/worldSizeY 2000 km
-#/geometry/worldSizeZ 0.06 km original
-/geometry/worldSizeZ 10 km
+/geometry/worldSizeZ 0.06 km #original
+#/geometry/worldSizeZ 10 km
 
 # Definir dimensiones del detector
 /geometry/detectorSizeX 1 km
@@ -25,8 +25,8 @@
 # Definir la posición del detector dentro del mundo de Geant4
 /geometry/detectorPosX 0 km
 /geometry/detectorPosY -5 km
-#/geometry/detectorPosZ -0.0295 km #original
-/geometry/detectorPosZ -4.9995 km
+/geometry/detectorPosZ -0.0295 km #original
+#/geometry/detectorPosZ -4.9995 km
 
 # Definir dimensiones del cilindro adicional
 /geometry/cylinderRadius 0.01 km
@@ -41,4 +41,5 @@
 /run/initialize
 
 # Iniciar la simulación con N eventos
-/run/beamOn 1486878
+#/run/beamOn 1486878
+/run/beamOn 50000

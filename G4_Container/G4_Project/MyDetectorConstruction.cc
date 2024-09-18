@@ -5,7 +5,8 @@
 
 MyDetectorConstruction::MyDetectorConstruction(): worldSizeX(100*km), worldSizeY(100*km), worldSizeZ(100*km),
       detectorSizeX(10*km), detectorSizeY(10*km), detectorSizeZ(10*km), detectorPosX(0), detectorPosY(0), detectorPosZ(0),
-      cylinderRadius(5*km), cylinderHeight(10*km), cylinderPosX(0), cylinderPosY(0), cylinderPosZ(30*km), sensDet(nullptr)
+      cylinderRadius(5*km), cylinderHeight(10*km), cylinderPosX(0), cylinderPosY(0), cylinderPosZ(30*km), magneticField(nullptr),
+      fieldManager(nullptr), sensDet(nullptr)
 {
 
     fGMessenger = new GeometryMessenger(this);
@@ -35,7 +36,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     G4Box *solidWorld = new G4Box("solidWorld", worldSizeX / 2, worldSizeY / 2, worldSizeZ / 2);
 
     // Crear el volumen lógico del mundo utilizando el material de aire
-    G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld, worldMat, "logicWorld");
+    logicWorld = new G4LogicalVolume(solidWorld, worldMat, "logicWorld");
 
     // Colocar el volumen lógico del mundo en el volumen físico del mundo
     G4VPhysicalVolume *physWorld = new G4PVPlacement(0, G4ThreeVector(0.,0.,0.), logicWorld, "physWorld", 0, false, 0, true);
@@ -100,6 +101,18 @@ void MyDetectorConstruction::ConstructSDandField()
 
     // Asignar el detector sensible al volumen lógico
     logicDetector->SetSensitiveDetector(sensDet);
+
+    // Aquí se agrega el campo magnético
+    G4ThreeVector fieldValue(26612.7e-9 * tesla, -2160.6e-9 * tesla, 9631.2e-9 * tesla);  
+    magneticField = new G4UniformMagField(fieldValue);  // Crea el campo magnético
+
+    fieldManager = new G4FieldManager(magneticField);  // Crea el Field Manager
+    logicWorld->SetFieldManager(fieldManager, true);   // Asigna el campo al mundo madre
+
+    G4cout << "Campo magnético configurado con componentes: "
+           << "X = " << fieldValue.x()/tesla << " T, "
+           << "Y = " << fieldValue.y()/tesla << " T, "
+           << "Z = " << fieldValue.z()/tesla << " T." << G4endl;
     
     //Aquí es el mejor lugar para poder saber si las dimensiones del detector efectivamente cambian con geometry.mac o input.in
     G4cout << "Tamaño del mundo en X: " << worldSizeX << G4endl;
