@@ -43,4 +43,3 @@
 # Iniciar la simulación con N eventos
 #/run/beamOn 1486878
 /run/beamOn 50000
-/run/beamOn 50000
