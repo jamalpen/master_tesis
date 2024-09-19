@@ -16,7 +16,13 @@ public:
     virtual void EndOfRunAction(const G4Run*);
 
 private:
+
+    // Variables para medir el tiempo
+    std::clock_t startTime;
+    std::clock_t endTime;
+
     MyDetectorConstruction* fDetectorConstruction;
+    std::ofstream outFile;  // Archivo de salida para guardar la información
 
 };
 

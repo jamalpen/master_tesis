@@ -53,6 +53,9 @@ public:
     // Método para obtener el detector sensible
     MySensitiveDetector* GetSensitiveDetector() const;
 
+    // Métodos para obtener los valores del campo magnético
+    G4ThreeVector GetMagneticFieldValue() const;
+
 
 private:
 
@@ -75,6 +78,7 @@ private:
     // Para mi campo magnético
     G4UniformMagField* magneticField;  // Puntero al campo magnético uniforme
     G4FieldManager* fieldManager;      // Puntero al Field Manager
+    G4ThreeVector magneticFieldValue;  // Store the field value manually
 
     virtual void ConstructSDandField();
 };
