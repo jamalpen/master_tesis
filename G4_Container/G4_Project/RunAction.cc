@@ -92,5 +92,4 @@ void RunAction::EndOfRunAction(const G4Run* run)
     } else {
         G4cerr << "Error: Could not open output file." << G4endl;
     }
-    
 }

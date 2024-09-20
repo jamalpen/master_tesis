@@ -56,7 +56,6 @@ public:
     // Métodos para obtener los valores del campo magnético
     G4ThreeVector GetMagneticFieldValue() const;
 
-
 private:
 
     // Dimensions for cubic world
