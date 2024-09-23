@@ -72,6 +72,21 @@ ENV GEANT4_DIR=/home/geant4lab/geant4/geant4-v10.7.3-install
 ENV PATH=${GEANT4_DIR}/bin:${PATH}
 ENV LD_LIBRARY_PATH=${GEANT4_DIR}/lib:${LD_LIBRARY_PATH}
 
-# Entry point or default command
-CMD ["/bin/bash"]
+# Copy the G4_project folder into the container
+COPY G4_Project /home/geant4lab/Geant4_projects/G4_Project
 
+# Create an entrypoint script to execute g4make and then run the simulation inside the build folder
+RUN echo '#!/bin/bash\n\
+source /home/geant4lab/geant4/geant4-v10.7.3-install/share/Geant4-10.7.3/geant4make/geant4make.sh\n\
+g4make\n\
+cd /home/geant4lab/Geant4_projects/G4_Project/build\n\
+./sim -m input.in -t 1' > /home/geant4lab/Geant4_projects/entrypoint.sh
+
+# Grant execution permissions to the entrypoint script
+RUN chmod +x /home/geant4lab/Geant4_projects/entrypoint.sh
+
+# Set the entrypoint to run the script
+ENTRYPOINT ["/home/geant4lab/Geant4_projects/entrypoint.sh"]
+
+# Entry point or default command
+#CMD ["/bin/bash"]
