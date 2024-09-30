@@ -72,6 +72,18 @@ ENV GEANT4_DIR=/home/geant4lab/geant4/geant4-v10.7.3-install
 ENV PATH=${GEANT4_DIR}/bin:${PATH}
 ENV LD_LIBRARY_PATH=${GEANT4_DIR}/lib:${LD_LIBRARY_PATH}
 
+# Copy the G4_project folder into the container
+COPY G4_Project /home/geant4lab/Geant4_projects/G4_Project
+
+
+# Install Google Cloud SDK (includes gsutil)
+RUN apt-get update && apt-get install -y curl apt-transport-https ca-certificates gnupg \
+  && echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list \
+  && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - \
+  && apt-get update && apt-get install -y google-cloud-sdk
+
+# Verify gsutil is installed
+RUN gsutil version
+
 # Entry point or default command
 CMD ["/bin/bash"]
-
