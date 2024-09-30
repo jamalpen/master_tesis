@@ -114,6 +114,9 @@ CMakeFiles/sim.dir/ActionInitialization.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ExceptionSeverity.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exp.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FastVector.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Field.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ForceCondition.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GPILSelection.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GRSSolid.hh
@@ -143,6 +146,7 @@ CMakeFiles/sim.dir/ActionInitialization.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LorentzVector.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Material.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesIndex.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesTable.hh
@@ -264,6 +268,7 @@ CMakeFiles/sim.dir/ActionInitialization.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserRunAction.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserStackingAction.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserSteppingAction.hh
@@ -373,6 +378,9 @@ CMakeFiles/sim.dir/GeometryMessenger.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exception.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ExceptionSeverity.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exp.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Field.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GenericMessenger.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GeomConfig.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GeomSplitter.hh
@@ -395,6 +403,7 @@ CMakeFiles/sim.dir/GeometryMessenger.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LorentzVector.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Material.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesIndex.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesTable.hh
@@ -471,6 +480,7 @@ CMakeFiles/sim.dir/GeometryMessenger.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VGraphicsScene.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VHit.hh
@@ -559,6 +569,9 @@ CMakeFiles/sim.dir/MyDetectorConstruction.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exception.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ExceptionSeverity.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exp.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Field.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GenericMessenger.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GeomConfig.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GeomSplitter.hh
@@ -582,6 +595,7 @@ CMakeFiles/sim.dir/MyDetectorConstruction.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LorentzVector.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Material.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesIndex.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesTable.hh
@@ -659,6 +673,7 @@ CMakeFiles/sim.dir/MyDetectorConstruction.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VGraphicsScene.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VHit.hh
@@ -1471,6 +1486,9 @@ CMakeFiles/sim.dir/RunAction.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exception.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ExceptionSeverity.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exp.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Field.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GenericMessenger.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GeomConfig.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GeomSplitter.hh
@@ -1493,6 +1511,7 @@ CMakeFiles/sim.dir/RunAction.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LorentzVector.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Material.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesIndex.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesTable.hh
@@ -1569,6 +1588,7 @@ CMakeFiles/sim.dir/RunAction.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserRunAction.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VGraphicsScene.hh
@@ -1726,6 +1746,9 @@ CMakeFiles/sim.dir/sim.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ExceptionSeverity.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exp.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FastVector.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Field.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.icc
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ForceCondition.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GMocrenFile.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GPILSelection.hh
@@ -1763,6 +1786,7 @@ CMakeFiles/sim.dir/sim.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MCCIndexConversionTable.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MTBarrier.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MTRunManager.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Material.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialCutsCouple.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MaterialPropertiesIndex.hh
@@ -1916,6 +1940,7 @@ CMakeFiles/sim.dir/sim.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserRunAction.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserStackingAction.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserSteppingAction.hh

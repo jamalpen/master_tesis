@@ -13,6 +13,8 @@
 #include "G4OpticalSurface.hh"
 #include "G4LogicalBorderSurface.hh"
 #include "G4LogicalSkinSurface.hh"
+#include "G4UniformMagField.hh"
+#include "G4FieldManager.hh"
 
 #include "MySensitiveDetector.hh"
 
@@ -51,6 +53,8 @@ public:
     // Método para obtener el detector sensible
     MySensitiveDetector* GetSensitiveDetector() const;
 
+    // Métodos para obtener los valores del campo magnético
+    G4ThreeVector GetMagneticFieldValue() const;
 
 private:
 
@@ -65,9 +69,15 @@ private:
     G4double cylinderRadius, cylinderHeight;
     G4double cylinderPosX, cylinderPosY, cylinderPosZ;
 
+    G4LogicalVolume* logicWorld;
     G4LogicalVolume *logicDetector;
     GeometryMessenger* fGMessenger; // Pointer to GeometryMessenger, important
     MySensitiveDetector* sensDet; // Pointer to the sensitive detector
+
+    // Para mi campo magnético
+    G4UniformMagField* magneticField;  // Puntero al campo magnético uniforme
+    G4FieldManager* fieldManager;      // Puntero al Field Manager
+    G4ThreeVector magneticFieldValue;  // Store the field value manually
 
     virtual void ConstructSDandField();
 };
