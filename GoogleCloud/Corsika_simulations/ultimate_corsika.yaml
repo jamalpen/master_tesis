@@ -1,0 +1,84 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: simulation-job
+spec:
+  completions: 40  # 40 simulations
+  parallelism: 8   # Execute 8 simulations in parallel
+  template:
+    spec:
+      containers:
+      - name: simulation-container
+        image: jpenafiell/corsika:latest
+        command: ["/bin/bash"]
+        args:
+        - "-c"
+        - |
+          echo "---- Starting the job ----"
+
+          # Change to the correct working directory
+          echo "Changing to the /home working directory"
+          cd /home || { echo "Error changing to /home directory"; exit 1; }
+
+          export ARTI=/opt/arti
+
+          # Check the working directory and environment variables
+          echo "Checking working directory and environment variables"
+          echo "Current directory: $(pwd)"
+          echo "Environment variables:"
+          echo "PATH: $PATH"
+          echo "ARTI: $ARTI"
+          ls /opt/arti/sims || { echo "Error listing contents of /opt/arti/sims"; exit 1; }
+          env
+
+          # Define the simulation index using the completion index (pod number)
+          SIMULATION_INDEX=$(( ${POD_COMPLETION_INDEX} + 1 ))
+          echo "POD_COMPLETION_INDEX: ${POD_COMPLETION_INDEX}"
+          echo "SIMULATION_INDEX: ${SIMULATION_INDEX}"
+
+          # Authenticate with Google Cloud using the service account
+          echo "Authenticating with Google Cloud using the service account"
+          gcloud auth activate-service-account --key-file=/secret/key.json || { echo "Error authenticating with service account"; exit 1; }
+
+          # Download the corresponding datos_X.txt file from the bucket
+          echo "Downloading datos_${SIMULATION_INDEX}.txt from the bucket"
+          gsutil cp gs://myg4-bucket/datos_${SIMULATION_INDEX}.txt /home/datos_${SIMULATION_INDEX}.txt || { echo "Error downloading datos_${SIMULATION_INDEX}.txt from the bucket"; exit 1; }
+
+          # Rename datos_X.txt to datos.txt
+          echo "Renaming datos_${SIMULATION_INDEX}.txt to datos.txt"
+          mv /home/datos_${SIMULATION_INDEX}.txt /home/datos.txt || { echo "Error renaming datos_${SIMULATION_INDEX}.txt to datos.txt"; exit 1; }
+
+          # Check permissions and assign execution permission to integrated_run.sh
+          echo "Checking execution permissions for integrated_run.sh"
+          chmod +x /home/integrated_run.sh || { echo "Error assigning permissions to integrated_run.sh"; exit 1; }
+
+          # Add a wait to ensure files are ready
+          echo "Waiting 5 seconds to ensure files are ready"
+          sleep 5
+
+          # Run the simulation
+          echo "Running the simulation with integrated_run.sh"
+          ./integrated_run.sh || { echo "Error running integrated_run.sh"; exit 1; }
+
+          # Generate a unique timestamp
+          TIMESTAMP=$(date +%Y%m%d%H%M%S)
+          echo "Generated timestamp: $TIMESTAMP"
+
+          # Upload the results folder to Google Cloud Storage
+          echo "Uploading the results folder to Google Cloud Storage"
+          gsutil cp -r /home/results gs://myg4-bucket/results_${SIMULATION_INDEX}_$TIMESTAMP/ || { echo "Error uploading results folder to Google Cloud Storage"; exit 1; }
+
+          echo "---- Job finished ----"
+
+        env:
+        - name: PATH
+          value: /opt/arti/sims/:/opt/arti/eas:/opt/arti/analysis:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+        volumeMounts:
+        - name: gcs-key-volume
+          mountPath: /secret
+      volumes:
+      - name: gcs-key-volume
+        secret:
+          secretName: gcs-mycorsika-key
+      restartPolicy: Never
