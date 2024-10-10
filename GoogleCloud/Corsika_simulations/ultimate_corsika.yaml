@@ -69,7 +69,11 @@ spec:
           gsutil cp -r /home/results gs://myg4-bucket/results_${SIMULATION_INDEX}_$TIMESTAMP/ || { echo "Error uploading results folder to Google Cloud Storage"; exit 1; }
 
           echo "---- Job finished ----"
-
+        resources:
+          limits:
+            memory: "4Gi"    # Set a maximum memory limit of 4GiB per pod
+          requests:
+            memory: "2Gi"    # Request at least 2GiB of memory for each pod
         env:
         - name: PATH
           value: /opt/arti/sims/:/opt/arti/eas:/opt/arti/analysis:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
