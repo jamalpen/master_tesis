@@ -3,8 +3,8 @@ kind: Job
 metadata:
   name: simulation-job
 spec:
-  completions: 40  # 40 simulations
-  parallelism: 8   # Execute 8 simulations in parallel
+  completions: 1  # 40 simulations
+  parallelism: 1   # Execute 8 simulations in parallel
   template:
     spec:
       containers:
@@ -86,3 +86,4 @@ spec:
         secret:
           secretName: gcs-mycorsika-key
       restartPolicy: Never
+      
