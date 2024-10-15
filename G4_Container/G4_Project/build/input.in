@@ -43,7 +43,11 @@
 # Iniciar la simulación con N eventos
 #/run/beamOn 1486878
 <<<<<<< HEAD
+<<<<<<< HEAD
 /run/beamOn 10000
 =======
 /run/beamOn 50000
+>>>>>>> g4prueba1
+=======
+/run/beamOn 10000
 >>>>>>> g4prueba1
