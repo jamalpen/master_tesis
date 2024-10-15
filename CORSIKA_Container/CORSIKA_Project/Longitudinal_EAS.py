@@ -2,7 +2,6 @@ import glob
 import re
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.optimize import curve_fit
 
 # Pattern to match your files
 filenames = glob.glob("0-90deg_002000_*.shw")
