@@ -1,0 +1,90 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: simulation-job42 #From simulation 4 to 6
+spec:
+  completions: 1 #40 simulations
+  parallelism: 1  #Execute 8 simulations in parallel
+  template:
+    spec:
+      containers:
+      - name: simulation-container
+        image: jpenafiell/corsika:latest
+        command: ["/bin/bash"]
+        args:
+        - "-c"
+        - |
+          echo "---- Inicio del trabajo ----"
+
+          # Cambiar al directorio de trabajo adecuado
+          echo "Cambiando al directorio de trabajo /home"
+          cd /home || { echo "Error al cambiar al directorio /home"; exit 1; }
+
+          export ARTI=/opt/arti
+
+          # Verificar el directorio de trabajo y variables de entorno
+          echo "Verificando el directorio de trabajo y variables de entorno"
+          echo "Directorio actual: $(pwd)"
+          echo "Variables de entorno:"
+          echo "PATH: $PATH"
+          echo "ARTI: $ARTI"
+          ls /opt/arti/sims || { echo "Error al listar el contenido de /opt/arti/sims"; exit 1; }
+          env
+
+          # Definir el índice de simulación usando el completion index (número del pod)
+          SIMULATION_INDEX=$(( ${POD_COMPLETION_INDEX} + 42 ))
+          echo "POD_COMPLETION_INDEX: ${POD_COMPLETION_INDEX}"
+          echo "SIMULATION_INDEX: ${SIMULATION_INDEX}"
+
+          # Autenticar con Google Cloud usando la cuenta de servicio
+          echo "Autenticando con Google Cloud usando la cuenta de servicio"
+          gcloud auth activate-service-account --key-file=/secret/key.json || { echo "Error al autenticar con la cuenta de servicio"; exit 1; }
+
+          # Descargar el archivo datos_X.txt desde el bucket
+          echo "Descargando el archivo datos_${SIMULATION_INDEX}.txt desde el bucket"
+          gsutil cp gs://myg4-bucket/datos_${SIMULATION_INDEX}.txt /home/datos_${SIMULATION_INDEX}.txt || { echo "Error al descargar datos_${SIMULATION_INDEX}.txt desde el bucket"; exit 1; }
+
+          # Renombrar datos_X.txt a datos.txt
+          echo "Renombrando el archivo datos_${SIMULATION_INDEX}.txt a datos.txt"
+          mv /home/datos_${SIMULATION_INDEX}.txt /home/datos.txt || { echo "Error al renombrar datos_${SIMULATION_INDEX}.txt a datos.txt"; exit 1; }
+
+          # Verificar permisos y otorgar permisos si es necesario
+          echo "Verificando permisos de ejecución para integrated_run.sh"
+          chmod +x /home/integrated_run.sh || { echo "Error al asignar permisos a integrated_run.sh"; exit 1; }
+
+          # Agregar una espera para asegurarse de que los archivos están listos
+          echo "Esperando 5 segundos para asegurarse de que los archivos están listos"
+          sleep 5
+
+          # Ejecutar la simulación
+          echo "Ejecutando la simulación con integrated_run.sh"
+          ./integrated_run.sh || { echo "Error al ejecutar integrated_run.sh"; exit 1; }
+
+          # Generar un timestamp único
+          TIMESTAMP=$(date +%Y%m%d%H%M%S)
+          echo "Timestamp generado: $TIMESTAMP"
+
+          # Subir la carpeta de resultados a Google Cloud Storage
+          echo "Subiendo la carpeta de resultados a Google Cloud Storage"
+          gsutil cp -r /home/results gs://myg4-bucket/results_${SIMULATION_INDEX}_$TIMESTAMP/ || { echo "Error al subir la carpeta de resultados a Google Cloud Storage"; exit 1; }
+
+          echo "---- Fin del trabajo ----"
+        resources:
+          limits:
+            memory: "16Gi"    # Set a maximum memory limit of 4GiB per pod
+            cpu: "4"        # Limit CPU usage to 4 vCPUs per pod (the maximum available per node)
+          requests:
+            memory: "8Gi"    # Request at least 2GiB of memory for each pod
+            cpu: "2"        # Request a minimum of 2 vCPUs
+        env:
+        - name: PATH
+          value: /opt/arti/sims/:/opt/arti/eas:/opt/arti/analysis:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+        volumeMounts:
+        - name: gcs-key-volume
+          mountPath: /secret
+      volumes:
+      - name: gcs-key-volume
+        secret:
+          secretName: gcs-mycorsika-key
+      restartPolicy: Never

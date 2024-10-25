@@ -1,0 +1,39 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: geant4-job1
+spec:
+  completions: 1  # Total number of jobs to run
+  parallelism: 1   # Limit of parallel jobs running at the same time
+  template:
+    spec:
+      containers:
+      - name: geant4-container
+        image: jpenafiell/geant4-v10.7.3:latest
+        command: ["/bin/bash"]
+        args:
+        - "-c"
+        - |
+          # Source Geant4 environment
+          source /home/geant4lab/geant4/geant4-v10.7.3-install/share/Geant4-10.7.3/geant4make/geant4make.sh
+
+          # Navigate to the build directory and run the simulation
+          cd /home/geant4lab/Geant4_projects/G4_Project/build/
+          ./sim -m input.in -t 1
+
+          # Get the pod name to use as a unique identifier for the output file
+          POD_NAME=$(hostname)
+
+          # Authenticate with Google Cloud using the service account key
+          gcloud auth activate-service-account --key-file=/secret/key.json
+
+          # Copy the simulation results to GCS with a unique name
+          gsutil cp /home/geant4lab/Geant4_projects/G4_Project/build/simulation_results.txt gs://myg4-bucket/simulation_results_${POD_NAME}.txt
+        volumeMounts:
+        - name: gcs-key-volume
+          mountPath: /secret
+      volumes:
+      - name: gcs-key-volume
+        secret:
+          secretName: gcs-mycorsika-key
+      restartPolicy: Never
