@@ -212,6 +212,7 @@ EOF
 
     # Append the data to the output file
     echo "${time}/${height}/${dist_x}/${dist_y}/${theta}/${thetamax}/${elapsed_time}/${selected_particles}/${particles_at_detector}/${flux_at_detector}" >> "$output_file"
+    cp "$output_file" "$result_dir"
     sleep 5
 
     # Run cleanup.sh
