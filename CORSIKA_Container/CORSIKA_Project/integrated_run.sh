@@ -216,5 +216,5 @@ EOF
 
     # Run cleanup.sh
     "$cleanup_dir" "${theta}" "${thetamax}" "${time}"
-    sleep 30
+    sleep 20
 done
