@@ -31,6 +31,14 @@ spec:
           # Rename input_${SIMULATION_INDEX}.in to input.in, overwriting the existing file
           echo "Renaming input_${SIMULATION_INDEX}.in to input.in"
           mv /home/geant4lab/Geant4_projects/G4_Project/build/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/build/input.in || { echo "Error renaming input_${SIMULATION_INDEX}.in to input.in"; exit 1; }
+          
+          # Download the particle file from the bucket and rename it
+          echo "Downloading particle_${SIMULATION_INDEX}.shw.bz2 from the bucket"
+          gsutil cp gs://myg4-bucket/particle_${SIMULATION_INDEX}.shw.bz2 /home/geant4lab/Geant4_projects/G4_Project/build/particle_${SIMULATION_INDEX}.shw.bz2 || { echo "Error downloading particle_${SIMULATION_INDEX}.shw.bz2 from the bucket"; exit 1; }
+
+          # Rename particle_${SIMULATION_INDEX}.shw.bz2 to particle.shw.bz2, overwriting if necessary
+          echo "Renaming particle_${SIMULATION_INDEX}.shw.bz2 to particle.shw.bz2"
+          mv /home/geant4lab/Geant4_projects/G4_Project/build/particle_${SIMULATION_INDEX}.shw.bz2 /home/geant4lab/Geant4_projects/G4_Project/build/particle.shw.bz2 || { echo "Error renaming particle_${SIMULATION_INDEX}.shw.bz2 to particle.shw.bz2"; exit 1; }
 
 
           # Navigate to the build directory and run the simulation
@@ -40,7 +48,6 @@ spec:
           # Get the pod name to use as a unique identifier for the output file
           POD_NAME=$(hostname)
 
-          
 
           # Copy the simulation results to GCS with a unique name
           gsutil cp /home/geant4lab/Geant4_projects/G4_Project/build/simulation_results.txt gs://myg4-bucket/simulation_results_${POD_NAME}.txt
@@ -50,5 +57,7 @@ spec:
       volumes:
       - name: gcs-key-volume
         secret:
-          secretName: gcs-mycorsika-key
+          secretName: gcs-myg4-key
       restartPolicy: Never
+      
+      
