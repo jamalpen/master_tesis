@@ -16,31 +16,16 @@ spec:
         - |
           # Source Geant4 environment
           source /home/geant4lab/geant4/geant4-v10.7.3-install/share/Geant4-10.7.3/geant4make/geant4make.sh
-          
-          # Define the simulation index
-          SIMULATION_INDEX=$(( ${POD_COMPLETION_INDEX} + 1 ))
-          echo "SIMULATION_INDEX: ${SIMULATION_INDEX}"
-          
-          # Authenticate with Google Cloud using the service account key
-          gcloud auth activate-service-account --key-file=/secret/key.json
-          
-          # Download the input file from the bucket
-          echo "Downloading input_${SIMULATION_INDEX}.in from the bucket"
-          gsutil cp gs://myg4-bucket/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/build/input_${SIMULATION_INDEX}.in || { echo "Error downloading input_${SIMULATION_INDEX}.in from the bucket"; exit 1; }
-          
-          # Rename input_${SIMULATION_INDEX}.in to input.in, overwriting the existing file
-          echo "Renaming input_${SIMULATION_INDEX}.in to input.in"
-          mv /home/geant4lab/Geant4_projects/G4_Project/build/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/build/input.in || { echo "Error renaming input_${SIMULATION_INDEX}.in to input.in"; exit 1; }
-
 
           # Navigate to the build directory and run the simulation
           cd /home/geant4lab/Geant4_projects/G4_Project/build/
-          ./sim -m input.in -t 1 || { echo "Error executing ./sim"; exit 1; }
+          ./sim -m input.in -t 1
 
           # Get the pod name to use as a unique identifier for the output file
           POD_NAME=$(hostname)
 
-          
+          # Authenticate with Google Cloud using the service account key
+          gcloud auth activate-service-account --key-file=/secret/key.json
 
           # Copy the simulation results to GCS with a unique name
           gsutil cp /home/geant4lab/Geant4_projects/G4_Project/build/simulation_results.txt gs://myg4-bucket/simulation_results_${POD_NAME}.txt
