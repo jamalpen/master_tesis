@@ -16,22 +16,22 @@ spec:
         - |
           # Source Geant4 environment
           source /home/geant4lab/geant4/geant4-v10.7.3-install/share/Geant4-10.7.3/geant4make/geant4make.sh
-          
+
           # Define the simulation index
           SIMULATION_INDEX=$(( ${POD_COMPLETION_INDEX} + 1 ))
           echo "SIMULATION_INDEX: ${SIMULATION_INDEX}"
-          
+
           # Authenticate with Google Cloud using the service account key
           gcloud auth activate-service-account --key-file=/secret/key.json
-          
+
           # Download the input file from the bucket
           echo "Downloading input_${SIMULATION_INDEX}.in from the bucket"
           gsutil cp gs://myg4-bucket/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/build/input_${SIMULATION_INDEX}.in || { echo "Error downloading input_${SIMULATION_INDEX}.in from the bucket"; exit 1; }
-          
+
           # Rename input_${SIMULATION_INDEX}.in to input.in, overwriting the existing file
           echo "Renaming input_${SIMULATION_INDEX}.in to input.in"
           mv /home/geant4lab/Geant4_projects/G4_Project/build/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/build/input.in || { echo "Error renaming input_${SIMULATION_INDEX}.in to input.in"; exit 1; }
-          
+
           # Download the particle file from the bucket and rename it
           echo "Downloading particle_${SIMULATION_INDEX}.shw.bz2 from the bucket"
           gsutil cp gs://myg4-bucket/particle_${SIMULATION_INDEX}.shw.bz2 /home/geant4lab/Geant4_projects/G4_Project/build/particle_${SIMULATION_INDEX}.shw.bz2 || { echo "Error downloading particle_${SIMULATION_INDEX}.shw.bz2 from the bucket"; exit 1; }
