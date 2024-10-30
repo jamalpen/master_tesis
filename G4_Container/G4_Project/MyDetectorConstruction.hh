@@ -14,7 +14,9 @@
 #include "G4LogicalBorderSurface.hh"
 #include "G4LogicalSkinSurface.hh"
 #include "G4UniformMagField.hh"
+#include "G4UniformElectricField.hh"
 #include "G4FieldManager.hh"
+#include "G4ThreeVector.hh"
 
 #include "MySensitiveDetector.hh"
 
@@ -71,6 +73,7 @@ private:
 
     G4LogicalVolume* logicWorld;
     G4LogicalVolume *logicDetector;
+    G4LogicalVolume* logicCylinder;
     GeometryMessenger* fGMessenger; // Pointer to GeometryMessenger, important
     MySensitiveDetector* sensDet; // Pointer to the sensitive detector
 
@@ -78,6 +81,11 @@ private:
     G4UniformMagField* magneticField;  // Puntero al campo magnético uniforme
     G4FieldManager* fieldManager;      // Puntero al Field Manager
     G4ThreeVector magneticFieldValue;  // Store the field value manually
+
+    // Electric and magnetic field for the cylinder
+    //G4UniformMagField* cylinderMagneticField;
+    //G4UniformElectricField* cylinderElectricField;
+    //G4FieldManager* cylinderFieldManager;
 
     virtual void ConstructSDandField();
 };

@@ -2,6 +2,7 @@
 #include "G4SDManager.hh"
 #include "GeometryMessenger.hh"
 #include <cmath>
+#include "G4NistManager.hh"
 
 MyDetectorConstruction::MyDetectorConstruction(): worldSizeX(100*km), worldSizeY(100*km), worldSizeZ(100*km),
       detectorSizeX(10*km), detectorSizeY(10*km), detectorSizeZ(10*km), detectorPosX(0), detectorPosY(0), detectorPosZ(0),
@@ -17,6 +18,8 @@ MyDetectorConstruction::~MyDetectorConstruction()
 {
 
     delete fGMessenger;
+    //delete cylinderMagneticField;
+    //delete cylinderFieldManager;
 
 }
 
@@ -113,7 +116,35 @@ void MyDetectorConstruction::ConstructSDandField()
            << "X = " << magneticFieldValue.x()/tesla << " T, "
            << "Y = " << magneticFieldValue.y()/tesla << " T, "
            << "Z = " << magneticFieldValue.z()/tesla << " T." << G4endl;
+
+    // Magnetic field for the cylindrical volume only
+    //G4ThreeVector cylinderMagneticFieldVector(1.0 * tesla, 0., 0.);
+    //cylinderMagneticField = new G4UniformMagField(cylinderMagneticFieldVector);
     
+    // Field manager for the cylinder
+    //cylinderFieldManager = new G4FieldManager(cylinderMagneticField);
+    //logicCylinder->SetFieldManager(cylinderFieldManager, true);
+
+    // Verification messages
+    /*G4cout << "Cylinder magnetic field configured with components: "
+           << "X = " << cylinderMagneticFieldVector.x()/tesla << " T, "
+           << "Y = " << cylinderMagneticFieldVector.y()/tesla << " T, "
+           << "Z = " << cylinderMagneticFieldVector.z()/tesla << " T." << G4endl;
+
+    G4cout << "World and detector sizes and positions:" << G4endl;
+    G4cout << "World size: X = " << worldSizeX << ", Y = " << worldSizeY << ", Z = " << worldSizeZ << G4endl;
+    G4cout << "Detector size: X = " << detectorSizeX << ", Y = " << detectorSizeY << ", Z = " << detectorSizeZ << G4endl;
+    G4cout << "Detector position: X = " << detectorPosX << ", Y = " << detectorPosY << ", Z = " << detectorPosZ << G4endl;
+    G4cout << "Cylinder size: Radius = " << cylinderRadius << ", Height = " << cylinderHeight << G4endl;
+    G4cout << "Cylinder position: X = " << cylinderPosX << ", Y = " << cylinderPosY << ", Z = " << cylinderPosZ << G4endl;*/
+
+
+
+
+
+    
+
+
     //Aquí es el mejor lugar para poder saber si las dimensiones del detector efectivamente cambian con geometry.mac o input.in
     G4cout << "Tamaño del mundo en X: " << worldSizeX << G4endl;
     G4cout << "Tamaño del mundo en Y: " << worldSizeY << G4endl;

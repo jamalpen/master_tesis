@@ -102,6 +102,8 @@ CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DataVector.icc
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.icc
+CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectricField.hh
+CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectroMagneticField.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectronOccupancy.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Element.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElementTable.hh
@@ -267,6 +269,7 @@ CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformElectricField.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserRunAction.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserStackingAction.hh
@@ -369,6 +372,8 @@ CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DataVector.icc
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.icc
+CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectricField.hh
+CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectroMagneticField.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectronOccupancy.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Element.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElementTable.hh
@@ -479,6 +484,7 @@ CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformElectricField.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VGraphicsScene.hh
@@ -560,6 +566,8 @@ CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v1
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DataVector.icc
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.icc
+CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectricField.hh
+CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectroMagneticField.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectronOccupancy.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Element.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElementTable.hh
@@ -672,6 +680,7 @@ CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v1
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformElectricField.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VGraphicsScene.hh
@@ -1477,6 +1486,8 @@ CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DataVector.icc
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.hh
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.icc
+CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectricField.hh
+CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectroMagneticField.hh
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectronOccupancy.hh
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Element.hh
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElementTable.hh
@@ -1587,6 +1598,7 @@ CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformElectricField.hh
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserRunAction.hh
 CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
@@ -1733,6 +1745,8 @@ CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/inclu
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DigiFilterFactories.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DynamicParticle.icc
+CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectricField.hh
+CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectroMagneticField.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectronOccupancy.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Element.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElementTable.hh
@@ -1939,6 +1953,7 @@ CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/inclu
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UIparameter.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UItokenNum.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UTubs.hh
+CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformElectricField.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserRunAction.hh
 CMakeFiles/sim.dir/sim.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserStackingAction.hh

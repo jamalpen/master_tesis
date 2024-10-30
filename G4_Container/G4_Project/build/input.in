@@ -32,8 +32,8 @@
 
 
 # Definir dimensiones del cilindro adicional
-/geometry/cylinderRadius 0.01 km
-/geometry/cylinderHeight 0.01 km
+/geometry/cylinderRadius 1 km
+/geometry/cylinderHeight 1 km
 
 # Definir posición del cilindro dentro del mundo de Geant4
 /geometry/cylinderPosX 0 km
@@ -45,4 +45,5 @@
 
 # Iniciar la simulación con N eventos
 #/run/beamOn 1486878
-/run/beamOn 5185385
+#/run/beamOn 5185385
+/run/beamOn 10000
