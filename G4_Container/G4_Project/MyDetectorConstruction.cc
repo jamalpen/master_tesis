@@ -69,10 +69,16 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     G4Tubs* solidCylinder = new G4Tubs("solidCylinder", 0., cylinderRadius, cylinderHeight / 2, 0., 360*deg);
 
     // Crear el volumen lógico del cilindro utilizando el material de aire
-    G4LogicalVolume* logicCylinder = new G4LogicalVolume(solidCylinder, cylinderMat, "logicCylinder");
+    logicCylinder = new G4LogicalVolume(solidCylinder, cylinderMat, "logicCylinder");
 
     // Colocar el volumen lógico del cilindro en el volumen lógico del mundo
     G4VPhysicalVolume* physCylinder = new G4PVPlacement(0, G4ThreeVector(cylinderPosX, cylinderPosY, cylinderPosZ), logicCylinder, "physCylinder", logicWorld, false, 0, true);
+    
+    if (logicCylinder) {
+    G4cout << "logicCylinder successfully initialized in Construct()." << G4endl;
+    } else {
+    G4cerr << "Error: logicCylinder failed to initialize in Construct()." << G4endl;
+    }
 
     // Definir límites de producción
     //G4double maxStep = 10.0 * cm;
@@ -94,6 +100,12 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
 void MyDetectorConstruction::ConstructSDandField()
 {
     G4SDManager* sdManager = G4SDManager::GetSDMpointer();
+
+    // Ensure the logical volume for the cylinder exists
+    if (!logicCylinder) {
+        G4cerr << "Error: logicCylinder not initialized!" << G4endl;
+        return;
+    }
 
     // Crear el detector sensible
     //MySensitiveDetector* sensDet = new MySensitiveDetector("SensitiveDetector");
@@ -118,25 +130,40 @@ void MyDetectorConstruction::ConstructSDandField()
            << "Z = " << magneticFieldValue.z()/tesla << " T." << G4endl;
 
     // Magnetic field for the cylindrical volume only
-    //G4ThreeVector cylinderMagneticFieldVector(1.0 * tesla, 0., 0.);
-    //cylinderMagneticField = new G4UniformMagField(cylinderMagneticFieldVector);
+    G4ThreeVector cylinderMagneticFieldVector(26612.7e-9 * tesla, 0., 0.);
+    //G4ThreeVector cylinderElectricFieldVector(0., 0., 20 * volt/m);
+
+    cylinderMagneticField = new G4UniformMagField(cylinderMagneticFieldVector);
+    //cylinderElectricField = new G4UniformElectricField(cylinderElectricFieldVector);
     
     // Field manager for the cylinder
-    //cylinderFieldManager = new G4FieldManager(cylinderMagneticField);
+    cylinderFieldManager = new G4FieldManager(cylinderMagneticField);
+    //cylinderFieldManager->SetDetectorField(cylinderElectricField);
+    logicCylinder->SetFieldManager(cylinderFieldManager, true);
+
+    // Crear y configurar el FieldManager para el cilindro
+    //cylinderFieldManager = new G4FieldManager();
+    //cylinderFieldManager->SetDetectorField(cylinderMagneticField);
+    //cylinderFieldManager->SetDetectorField(cylinderElectricField);
     //logicCylinder->SetFieldManager(cylinderFieldManager, true);
 
     // Verification messages
-    /*G4cout << "Cylinder magnetic field configured with components: "
+    G4cout << "Cylinder magnetic field configured with components: "
            << "X = " << cylinderMagneticFieldVector.x()/tesla << " T, "
            << "Y = " << cylinderMagneticFieldVector.y()/tesla << " T, "
            << "Z = " << cylinderMagneticFieldVector.z()/tesla << " T." << G4endl;
+
+    /*G4cout << "Campo eléctrico en el cilindro: "
+           << "X = " << cylinderElectricFieldVector.x()/(volt/m) << " V/m, "
+           << "Y = " << cylinderElectricFieldVector.y()/(volt/m) << " V/m, "
+           << "Z = " << cylinderElectricFieldVector.z()/(volt/m) << " V/m." << G4endl;*/
 
     G4cout << "World and detector sizes and positions:" << G4endl;
     G4cout << "World size: X = " << worldSizeX << ", Y = " << worldSizeY << ", Z = " << worldSizeZ << G4endl;
     G4cout << "Detector size: X = " << detectorSizeX << ", Y = " << detectorSizeY << ", Z = " << detectorSizeZ << G4endl;
     G4cout << "Detector position: X = " << detectorPosX << ", Y = " << detectorPosY << ", Z = " << detectorPosZ << G4endl;
     G4cout << "Cylinder size: Radius = " << cylinderRadius << ", Height = " << cylinderHeight << G4endl;
-    G4cout << "Cylinder position: X = " << cylinderPosX << ", Y = " << cylinderPosY << ", Z = " << cylinderPosZ << G4endl;*/
+    G4cout << "Cylinder position: X = " << cylinderPosX << ", Y = " << cylinderPosY << ", Z = " << cylinderPosZ << G4endl;
 
 
 

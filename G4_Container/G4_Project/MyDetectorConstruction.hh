@@ -83,9 +83,9 @@ private:
     G4ThreeVector magneticFieldValue;  // Store the field value manually
 
     // Electric and magnetic field for the cylinder
-    //G4UniformMagField* cylinderMagneticField;
-    //G4UniformElectricField* cylinderElectricField;
-    //G4FieldManager* cylinderFieldManager;
+    G4UniformMagField* cylinderMagneticField;
+    G4UniformElectricField* cylinderElectricField;
+    G4FieldManager* cylinderFieldManager;
 
     virtual void ConstructSDandField();
 };

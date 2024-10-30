@@ -32,7 +32,7 @@
 
 
 # Definir dimensiones del cilindro adicional
-/geometry/cylinderRadius 1 km
+/geometry/cylinderRadius 5 km
 /geometry/cylinderHeight 1 km
 
 # Definir posición del cilindro dentro del mundo de Geant4
