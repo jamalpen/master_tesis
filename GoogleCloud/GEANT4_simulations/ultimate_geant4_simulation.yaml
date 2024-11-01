@@ -21,16 +21,27 @@ spec:
           SIMULATION_INDEX=$(( ${POD_COMPLETION_INDEX} + 1 ))
           echo "SIMULATION_INDEX: ${SIMULATION_INDEX}"
 
+          # Remove the CMakeCache.txt
+          rm /home/geant4lab/Geant4_projects/G4_Project/build/CMakeCache.txt
+
           # Authenticate with Google Cloud using the service account key
           gcloud auth activate-service-account --key-file=/secret/key.json
 
+          # Download the PrimarySpectrum.cc
+          echo "Downloading PrimarySpectrum_${SIMULATION_INDEX}.cc from the bucket"
+          gsutil cp gs://myg4-bucket/PrimarySpectrum_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/PrimarySpectrum_${SIMULATION_INDEX}.cc || { echo "Error downloading input_${SIMULATION_INDEX}.in from the bucket"; exit 1; }
+
+          # Rename PrimarySpectrum_${SIMULATION_INDEX}.cc
+          echo "Renaming PrimarySpectrum_${SIMULATION_INDEX}.cc from the bucket"
+          mv /home/geant4lab/Geant4_projects/G4_Project/PrimarySpectrum_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/PrimarySpectrum.cc || { echo "Error renaming input_${SIMULATION_INDEX}.in to input.in"; exit 1; }
+
           # Download the input file from the bucket
           echo "Downloading input_${SIMULATION_INDEX}.in from the bucket"
-          gsutil cp gs://myg4-bucket/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/build/input_${SIMULATION_INDEX}.in || { echo "Error downloading input_${SIMULATION_INDEX}.in from the bucket"; exit 1; }
+          gsutil cp gs://myg4-bucket/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/input_${SIMULATION_INDEX}.in || { echo "Error downloading input_${SIMULATION_INDEX}.in from the bucket"; exit 1; }
 
           # Rename input_${SIMULATION_INDEX}.in to input.in, overwriting the existing file
           echo "Renaming input_${SIMULATION_INDEX}.in to input.in"
-          mv /home/geant4lab/Geant4_projects/G4_Project/build/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/build/input.in || { echo "Error renaming input_${SIMULATION_INDEX}.in to input.in"; exit 1; }
+          mv /home/geant4lab/Geant4_projects/G4_Project/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/input.in || { echo "Error renaming input_${SIMULATION_INDEX}.in to input.in"; exit 1; }
 
           # Download the particle file from the bucket and rename it
           echo "Downloading particle_${SIMULATION_INDEX}.shw.bz2 from the bucket"
@@ -43,6 +54,8 @@ spec:
 
           # Navigate to the build directory and run the simulation
           cd /home/geant4lab/Geant4_projects/G4_Project/build/
+          cmake ..
+          make
           ./sim -m input.in -t 1 || { echo "Error executing ./sim"; exit 1; }
 
           # Get the pod name to use as a unique identifier for the output file
@@ -58,6 +71,4 @@ spec:
       - name: gcs-key-volume
         secret:
           secretName: gcs-myg4-key
-      restartPolicy: Never
-      
-      
+      restartPolicy: Never      

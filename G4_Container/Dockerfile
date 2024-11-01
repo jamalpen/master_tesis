@@ -73,7 +73,7 @@ ENV PATH=${GEANT4_DIR}/bin:${PATH}
 ENV LD_LIBRARY_PATH=${GEANT4_DIR}/lib:${LD_LIBRARY_PATH}
 
 # Copy the G4_project folder into the container
-#COPY G4_Project /home/geant4lab/Geant4_projects/G4_Project
+COPY G4_Project /home/geant4lab/Geant4_projects/G4_Project
 
 
 # Install Google Cloud SDK (includes gsutil)
