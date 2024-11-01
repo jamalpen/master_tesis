@@ -130,7 +130,7 @@ void MyDetectorConstruction::ConstructSDandField()
            << "Z = " << magneticFieldValue.z()/tesla << " T." << G4endl;
 
     // Magnetic field for the cylindrical volume only
-    G4ThreeVector cylinderMagneticFieldVector(26612.7e-9 * tesla, 0., 0.);
+    G4ThreeVector cylinderMagneticFieldVector(100e-9 * tesla, 0., 0.);
     //G4ThreeVector cylinderElectricFieldVector(0., 0., 20 * volt/m);
 
     cylinderMagneticField = new G4UniformMagField(cylinderMagneticFieldVector);
