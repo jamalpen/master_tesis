@@ -15,8 +15,15 @@
 #include "G4LogicalSkinSurface.hh"
 #include "G4UniformMagField.hh"
 #include "G4UniformElectricField.hh"
+#include "G4EqMagElectricField.hh"
 #include "G4FieldManager.hh"
+#include "G4TransportationManager.hh"
+#include "G4MagIntegratorStepper.hh" 
 #include "G4ThreeVector.hh"
+#include "G4ClassicalRK4.hh"
+#include "G4ChordFinder.hh"
+#include "G4DormandPrince745.hh"
+#include "G4IntegrationDriver.hh"
 
 #include "MySensitiveDetector.hh"
 

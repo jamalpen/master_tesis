@@ -162,17 +162,6 @@ void MyDetectorConstruction::ConstructSDandField()
     // Asigna el FieldManager al volumen lógico del cilindro
     logicCylinder->SetFieldManager(cylinderFieldManager, true);
 
-    // Mensajes de verificación para los campos
-    G4cout << "Campo magnético en el cilindro: "
-           << "X = " << cylinderMagneticFieldVector.x()/tesla << " T, "
-           << "Y = " << cylinderMagneticFieldVector.y()/tesla << " T, "
-           << "Z = " << cylinderMagneticFieldVector.z()/tesla << " T." << G4endl;
-
-    G4cout << "Campo eléctrico en el cilindro: "
-           << "X = " << cylinderElectricFieldVector.x()/(volt/m) << " V/m, "
-           << "Y = " << cylinderElectricFieldVector.y()/(volt/m) << " V/m, "
-           << "Z = " << cylinderElectricFieldVector.z()/(volt/m) << " V/m." << G4endl;
-
 
     // Verification messages
     G4cout << "Cylinder magnetic field configured with components: "
@@ -180,6 +169,10 @@ void MyDetectorConstruction::ConstructSDandField()
            << "Y = " << cylinderMagneticFieldVector.y()/tesla << " T, "
            << "Z = " << cylinderMagneticFieldVector.z()/tesla << " T." << G4endl;
 
+    G4cout << "Campo eléctrico en el cilindro: "
+       << "X = " << cylinderElectricFieldVector.x()/(volt/m) << " V/m, "
+       << "Y = " << cylinderElectricFieldVector.y()/(volt/m) << " V/m, "
+       << "Z = " << cylinderElectricFieldVector.z()/(volt/m) << " V/m." << G4endl;
 
     G4cout << "World and detector sizes and positions:" << G4endl;
     G4cout << "World size: X = " << worldSizeX << ", Y = " << worldSizeY << ", Z = " << worldSizeZ << G4endl;
