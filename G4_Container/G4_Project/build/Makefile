@@ -190,6 +190,33 @@ GeometryMessenger.cc.s:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/GeometryMessenger.cc.s
 .PHONY : GeometryMessenger.cc.s
 
+MyCompositeField.o: MyCompositeField.cc.o
+
+.PHONY : MyCompositeField.o
+
+# target to build an object file
+MyCompositeField.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MyCompositeField.cc.o
+.PHONY : MyCompositeField.cc.o
+
+MyCompositeField.i: MyCompositeField.cc.i
+
+.PHONY : MyCompositeField.i
+
+# target to preprocess a source file
+MyCompositeField.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MyCompositeField.cc.i
+.PHONY : MyCompositeField.cc.i
+
+MyCompositeField.s: MyCompositeField.cc.s
+
+.PHONY : MyCompositeField.s
+
+# target to generate assembly for a file
+MyCompositeField.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/MyCompositeField.cc.s
+.PHONY : MyCompositeField.cc.s
+
 MyDetectorConstruction.o: MyDetectorConstruction.cc.o
 
 .PHONY : MyDetectorConstruction.o
@@ -449,6 +476,9 @@ help:
 	@echo "... GeometryMessenger.o"
 	@echo "... GeometryMessenger.i"
 	@echo "... GeometryMessenger.s"
+	@echo "... MyCompositeField.o"
+	@echo "... MyCompositeField.i"
+	@echo "... MyCompositeField.s"
 	@echo "... MyDetectorConstruction.o"
 	@echo "... MyDetectorConstruction.i"
 	@echo "... MyDetectorConstruction.s"

@@ -85,9 +85,9 @@ private:
     MySensitiveDetector* sensDet; // Pointer to the sensitive detector
 
     // Para mi campo magnético
-    G4UniformMagField* magneticField;  // Puntero al campo magnético uniforme
-    G4FieldManager* fieldManager;      // Puntero al Field Manager
-    G4ThreeVector magneticFieldValue;  // Store the field value manually
+    G4UniformMagField* magneticField;  // Puntero al campo magnético uniforme para el mundo madre
+    G4FieldManager* worldfieldManager; // Puntero al Field Manager del mundo madre
+    G4ThreeVector magneticFieldValue;  // Store the world magnetic field value manually
 
     // Electric and magnetic field for the cylinder
     G4UniformMagField* cylinderMagneticField;
