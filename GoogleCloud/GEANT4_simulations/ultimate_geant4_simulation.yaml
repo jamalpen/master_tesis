@@ -29,35 +29,35 @@ spec:
 
           # Download the MyDetectorConstruction.cc
           echo "Downloading MyDetectorConstruction_${SIMULATION_INDEX}.cc from the bucket"
-          gsutil cp gs://myg4-bucket/MyDetectorConstruction_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/MyDetectorConstruction_${SIMULATION_INDEX}.cc || { echo "Error downloading MyDetectorConstruction_${SIMULATION_INDEX}.cc from the bucket"; exit 1; }
+          gsutil cp gs://mycorsika-bucket/MyDetectorConstruction_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/MyDetectorConstruction_${SIMULATION_INDEX}.cc || { echo "Error downloading MyDetectorConstruction_${SIMULATION_INDEX}.cc from the bucket"; exit 1; }
 
           # Rename MyDetectorConstruction_${SIMULATION_INDEX}.cc
           echo "Renaming MyDetectorConstruction_${SIMULATION_INDEX}.cc from the bucket"
           mv /home/geant4lab/Geant4_projects/G4_Project/MyDetectorConstruction_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/MyDetectorConstruction.cc || { echo "Error renaming MyDetectorConstruction_${SIMULATION_INDEX}.cc to MyDetectorConstruction.cc"; exit 1; }
 
           # Download the PrimarySpectrum.cc
-          echo "Downloading PrimarySpectrum_${SIMULATION_INDEX}.cc from the bucket"
-          gsutil cp gs://myg4-bucket/PrimarySpectrum_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/PrimarySpectrum_${SIMULATION_INDEX}.cc || { echo "Error downloading PrimarySpectrum_${SIMULATION_INDEX}.cc from the bucket"; exit 1; }
+          #echo "Downloading PrimarySpectrum_${SIMULATION_INDEX}.cc from the bucket"
+          #gsutil cp gs://mycorsika-bucket/PrimarySpectrum_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/PrimarySpectrum_${SIMULATION_INDEX}.cc || { echo "Error downloading PrimarySpectrum_${SIMULATION_INDEX}.cc from the bucket"; exit 1; }
 
           # Rename PrimarySpectrum_${SIMULATION_INDEX}.cc
-          echo "Renaming PrimarySpectrum_${SIMULATION_INDEX}.cc from the bucket"
-          mv /home/geant4lab/Geant4_projects/G4_Project/PrimarySpectrum_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/PrimarySpectrum.cc || { echo "Error renaming PrimarySpectrum_${SIMULATION_INDEX}.cc to PrimarySpectrum.cc"; exit 1; }
+          #echo "Renaming PrimarySpectrum_${SIMULATION_INDEX}.cc from the bucket"
+          #mv /home/geant4lab/Geant4_projects/G4_Project/PrimarySpectrum_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/PrimarySpectrum.cc || { echo "Error renaming PrimarySpectrum_${SIMULATION_INDEX}.cc to PrimarySpectrum.cc"; exit 1; }
 
           # Download the input file from the bucket
           echo "Downloading input_${SIMULATION_INDEX}.in from the bucket"
-          gsutil cp gs://myg4-bucket/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/input_${SIMULATION_INDEX}.in || { echo "Error downloading input_${SIMULATION_INDEX}.in from the bucket"; exit 1; }
+          gsutil cp gs://mycorsika-bucket/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/input_${SIMULATION_INDEX}.in || { echo "Error downloading input_${SIMULATION_INDEX}.in from the bucket"; exit 1; }
 
           # Rename input_${SIMULATION_INDEX}.in to input.in, overwriting the existing file
           echo "Renaming input_${SIMULATION_INDEX}.in to input.in"
           mv /home/geant4lab/Geant4_projects/G4_Project/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/input.in || { echo "Error renaming input_${SIMULATION_INDEX}.in to input.in"; exit 1; }
 
           # Download the particle file from the bucket and rename it
-          echo "Downloading particle_${SIMULATION_INDEX}.shw.bz2 from the bucket"
-          gsutil cp gs://myg4-bucket/particle_${SIMULATION_INDEX}.shw.bz2 /home/geant4lab/Geant4_projects/G4_Project/build/particle_${SIMULATION_INDEX}.shw.bz2 || { echo "Error downloading particle_${SIMULATION_INDEX}.shw.bz2 from the bucket"; exit 1; }
+          #echo "Downloading particle_${SIMULATION_INDEX}.shw.bz2 from the bucket"
+          #gsutil cp gs://mycorsika-bucket/particle_${SIMULATION_INDEX}.shw.bz2 /home/geant4lab/Geant4_projects/G4_Project/build/particle_${SIMULATION_INDEX}.shw.bz2 || { echo "Error downloading particle_${SIMULATION_INDEX}.shw.bz2 from the bucket"; exit 1; }
 
           # Rename particle_${SIMULATION_INDEX}.shw.bz2 to particle.shw.bz2, overwriting if necessary
-          echo "Renaming particle_${SIMULATION_INDEX}.shw.bz2 to particle.shw.bz2"
-          mv /home/geant4lab/Geant4_projects/G4_Project/build/particle_${SIMULATION_INDEX}.shw.bz2 /home/geant4lab/Geant4_projects/G4_Project/build/particle.shw.bz2 || { echo "Error renaming particle_${SIMULATION_INDEX}.shw.bz2 to particle.shw.bz2"; exit 1; }
+          #echo "Renaming particle_${SIMULATION_INDEX}.shw.bz2 to particle.shw.bz2"
+          #mv /home/geant4lab/Geant4_projects/G4_Project/build/particle_${SIMULATION_INDEX}.shw.bz2 /home/geant4lab/Geant4_projects/G4_Project/build/particle.shw.bz2 || { echo "Error renaming particle_${SIMULATION_INDEX}.shw.bz2 to particle.shw.bz2"; exit 1; }
 
 
           # Navigate to the build directory and run the simulation
@@ -71,12 +71,13 @@ spec:
 
 
           # Copy the simulation results to GCS with a unique name
-          gsutil cp /home/geant4lab/Geant4_projects/G4_Project/build/simulation_results.txt gs://myg4-bucket/simulation_results_${POD_NAME}.txt
+          gsutil cp /home/geant4lab/Geant4_projects/G4_Project/build/simulation_results.txt gs://mycorsika-bucket/simulation_results_${POD_NAME}.txt
         volumeMounts:
         - name: gcs-key-volume
           mountPath: /secret
       volumes:
       - name: gcs-key-volume
         secret:
-          secretName: gcs-myg4-key
-      restartPolicy: Never   
+          secretName: gcs-mycorsika-key
+      restartPolicy: Never
+  backoffLimit: 0  # Limita los reintentos a cero, así que el job falla si ocurre un error
