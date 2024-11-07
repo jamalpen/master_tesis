@@ -160,7 +160,6 @@ void PrimarySpectrum::primaryMomento()
     //G4cout << "Posición de la partícula: " << particlePosition << G4endl;
     //G4cout << "El ID de la particula es: " << parId << G4endl;
 }
-
 G4double PrimarySpectrum::getEnergy() const
 {
     return prmEner;
