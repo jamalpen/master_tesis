@@ -1,0 +1,65 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: geant4-job1
+spec:
+  completions: 1  # Total number of jobs to run
+  parallelism: 1   # Limit of parallel jobs running at the same time
+  template:
+    spec:
+      containers:
+      - name: geant4-container
+        image: jpenafiell/geant4-v10.7.3:latest
+        command: ["/bin/bash"]
+        args:
+        - "-c"
+        - |
+          # Source Geant4 environment
+          source /home/geant4lab/geant4/geant4-v10.7.3-install/share/Geant4-10.7.3/geant4make/geant4make.sh
+
+          # Define the simulation index
+          SIMULATION_INDEX=$(( ${POD_COMPLETION_INDEX} + 1 ))
+          echo "SIMULATION_INDEX: ${SIMULATION_INDEX}"
+
+          # Remove the CMakeCache.txt
+          rm /home/geant4lab/Geant4_projects/G4_Project/build/CMakeCache.txt
+
+          # Authenticate with Google Cloud using the service account key
+          gcloud auth activate-service-account --key-file=/secret/key.json
+
+          # Download the MyDetectorConstruction.cc
+          echo "Downloading MyDetectorConstruction_${SIMULATION_INDEX}.cc from the bucket"
+          gsutil cp gs://myg4-bucket/MyDetectorConstruction_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/MyDetectorConstruction_${SIMULATION_INDEX}.cc || { echo "Error downloading MyDetectorConstruction_${SIMULATION_INDEX}.cc from the bucket"; exit 1; }
+
+          # Rename MyDetectorConstruction_${SIMULATION_INDEX}.cc
+          echo "Renaming MyDetectorConstruction_${SIMULATION_INDEX}.cc from the bucket"
+          mv /home/geant4lab/Geant4_projects/G4_Project/MyDetectorConstruction_${SIMULATION_INDEX}.cc /home/geant4lab/Geant4_projects/G4_Project/MyDetectorConstruction.cc || { echo "Error renaming MyDetectorConstruction_${SIMULATION_INDEX}.cc to MyDetectorConstruction.cc"; exit 1; }
+
+          # Download the input file from the bucket
+          echo "Downloading input_${SIMULATION_INDEX}.in from the bucket"
+          gsutil cp gs://myg4-bucket/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/input_${SIMULATION_INDEX}.in || { echo "Error downloading input_${SIMULATION_INDEX}.in from the bucket"; exit 1; }
+
+          # Rename input_${SIMULATION_INDEX}.in to input.in, overwriting the existing file
+          echo "Renaming input_${SIMULATION_INDEX}.in to input.in"
+          mv /home/geant4lab/Geant4_projects/G4_Project/input_${SIMULATION_INDEX}.in /home/geant4lab/Geant4_projects/G4_Project/input.in || { echo "Error renaming input_${SIMULATION_INDEX}.in to input.in"; exit 1; }
+
+          # Navigate to the build directory and run the simulation
+          cd /home/geant4lab/Geant4_projects/G4_Project/build/
+          cmake ..
+          make
+          ./sim -m input.in -t 1 || { echo "Error executing ./sim"; exit 1; }
+
+          # Get the pod name to use as a unique identifier for the output file
+          POD_NAME=$(hostname)
+
+          # Copy the simulation results to GCS with a unique name
+          gsutil cp /home/geant4lab/Geant4_projects/G4_Project/build/simulation_results.txt gs://myg4-bucket/simulation_results_${POD_NAME}.txt
+        volumeMounts:
+        - name: gcs-key-volume
+          mountPath: /secret
+      volumes:
+      - name: gcs-key-volume
+        secret:
+          secretName: gcs-myg4-key
+      restartPolicy: Never
+  backoffLimit: 0  # Limita los reintentos a cero, así que el job falla si ocurre un error
