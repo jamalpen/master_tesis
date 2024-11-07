@@ -3,9 +3,9 @@
 #include "GeometryMessenger.hh"
 #include <cmath>
 #include "G4NistManager.hh"
+#include "G4SimpleRunge.hh"
 
-// Define la variable fuera de cualquier función, al inicio del archivo .cc
-bool useElectricField = true; // true para campo eléctrico, false para campo magnético
+
 
 MyDetectorConstruction::MyDetectorConstruction(): worldSizeX(100*km), worldSizeY(100*km), worldSizeZ(100*km),
       detectorSizeX(10*km), detectorSizeY(10*km), detectorSizeZ(10*km), detectorPosX(0), detectorPosY(0), detectorPosZ(0),
@@ -120,7 +120,7 @@ void MyDetectorConstruction::ConstructSDandField()
     // Asignar el detector sensible al volumen lógico
     logicDetector->SetSensitiveDetector(sensDet);
 
-    // Aquí se agrega el campo magnético
+    // Aquí se agrega el campo magnético al mundo madre
     magneticFieldValue = G4ThreeVector(26612.7e-9 * tesla, -2160.6e-9 * tesla, 9631.2e-9 * tesla);  
     magneticField = new G4UniformMagField(magneticFieldValue);  // Crea el campo magnético
 
@@ -132,64 +132,51 @@ void MyDetectorConstruction::ConstructSDandField()
            << "Y = " << magneticFieldValue.y()/tesla << " T, "
            << "Z = " << magneticFieldValue.z()/tesla << " T." << G4endl;
 
+       
+
     // Magnetic field for the cylindrical volume only
-    //G4ThreeVector cylinderMagneticFieldVector(100e-9 * tesla, 0., 0.);
-    //cylinderMagneticField = new G4UniformMagField(cylinderMagneticFieldVector);
+    G4ThreeVector cylinderMagneticFieldVector(100e-9 * tesla, 0., 0.);
+    cylinderMagneticField = new G4UniformMagField(cylinderMagneticFieldVector);
 
     // Field manager for the cylinder
-    //cylinderFieldManager = new G4FieldManager(cylinderMagneticField);
-    //logicCylinder->SetFieldManager(cylinderFieldManager, true);
+    cylinderFieldManager = new G4FieldManager(cylinderMagneticField);
+    logicCylinder->SetFieldManager(cylinderFieldManager, true);
+
+    G4cout << "Campo magnético configurado en el cilindro." << G4endl;
+
+    G4cout << "Campo magnético en el cilindro configurado con componentes: "
+           << "X = " << cylinderMagneticFieldVector.x()/tesla << " T, "
+           << "Y = " << cylinderMagneticFieldVector.y()/tesla << " T, "
+           << "Z = " << cylinderMagneticFieldVector.z()/tesla << " T." << G4endl;
     
-    /*if (useElectricField) {
-        // Configuración del campo eléctrico
-        G4ThreeVector cylinderElectricFieldVector(0., 1.0e3 * volt/m, 0.);
-        cylinderElectricField = new G4UniformElectricField(cylinderElectricFieldVector);
-        cylinderFieldManager = new G4FieldManager(cylinderElectricField);
-        logicCylinder->SetFieldManager(cylinderFieldManager, true);
-
-        G4cout << "Campo eléctrico en el cilindro configurado con componentes: "
-               << "X = " << cylinderElectricFieldVector.x()/(volt/m) << " V/m, "
-               << "Y = " << cylinderElectricFieldVector.y()/(volt/m) << " V/m, "
-               << "Z = " << cylinderElectricFieldVector.z()/(volt/m) << " V/m." << G4endl;
-    } else {
-        // Configuración del campo magnético
-        G4ThreeVector cylinderMagneticFieldVector(100e-9 * tesla, 0., 0.);
-        cylinderMagneticField = new G4UniformMagField(cylinderMagneticFieldVector);
-        cylinderFieldManager = new G4FieldManager(cylinderMagneticField);
-        logicCylinder->SetFieldManager(cylinderFieldManager, true);
-
-        G4cout << "Campo magnético en el cilindro configurado con componentes: "
-               << "X = " << cylinderMagneticFieldVector.x()/tesla << " T, "
-               << "Y = " << cylinderMagneticFieldVector.y()/tesla << " T, "
-               << "Z = " << cylinderMagneticFieldVector.z()/tesla << " T." << G4endl;
-    }*/
 
 
-    // Electric field for the cylindrical volume only
-    //G4ThreeVector cylinderElectricFieldVector(0., 1.0e3 * volt/m, 0.);
-    //cylinderElectricField = new G4UniformElectricField(cylinderElectricFieldVector);
+    /*// Define el campo eléctrico uniforme
+    cylinderElectricField = new G4UniformElectricField(G4ThreeVector(0.0, 100000.0 * kilovolt/cm, 0.0));
 
-    // Crea la ecuación de movimiento que combina ambos campo
-    //G4EqMagElectricField* equation = new G4EqMagElectricField(cylinderMagneticField, cylinderElectricField);
+    // Define la ecuación de movimiento para el campo eléctrico
+    G4EqMagElectricField* equation = new G4EqMagElectricField(cylinderElectricField);
+    G4int nvar = 8;
+    //G4ClassicalRK4* stepper = new G4ClassicalRK4(equation, nvar); // Cambia aquí al stepper deseado
+    G4SimpleRunge* stepper = new G4SimpleRunge(equation);
 
-    // Define el integrador de paso con la ecuación de movimiento
-    //G4int nvar = 8; // Número de variables para la ecuación de movimiento
-    //G4MagIntegratorStepper* stepper = new G4ClassicalRK4(equation, nvar);
 
-    // Crea el FieldManager para el cilindro
-    //cylinderFieldManager = new G4FieldManager();
-
-    // Asigna la ecuación al FieldManager y configura el ChordFinder
-    //G4double minStep = 0.01 * mm; // Tamaño mínimo de paso para el ChordFinder
-    //G4ChordFinder* chordFinder = new G4ChordFinder(equation, minStep, stepper);
-
-    // Asigna el ChordFinder y los campos al FieldManager del cilindro
-    //cylinderFieldManager->SetDetectorField(cylinderMagneticField);
-    //cylinderFieldManager->SetChordFinder(chordFinder);
-
+    // Crea el FieldManager y el ChordFinder para el cilindro
+    G4FieldManager* cylinderFieldManager = new G4FieldManager(cylinderElectricField);
+    G4double minStep = 0.01 * mm;
+    auto integrationDriver = new G4IntegrationDriver<G4SimpleRunge>(minStep, stepper, stepper->GetNumberOfVariables());
+    G4ChordFinder* chordFinder = new G4ChordFinder(integrationDriver);
+    cylinderFieldManager->SetChordFinder(chordFinder);
     // Asigna el FieldManager al volumen lógico del cilindro
-    //logicCylinder->SetFieldManager(cylinderFieldManager, true);
+    logicCylinder->SetFieldManager(cylinderFieldManager, true);
 
+    G4cout << "Campo eléctrico configurado en el cilindro." << G4endl;
+
+    G4cout << "Campo eléctrico en el cilindro configurado con componentes: "
+           << "X = " << cylinderElectricFieldVector.x()/(volt/m) << " V/m, "
+           << "Y = " << cylinderElectricFieldVector.y()/(volt/m) << " V/m, "
+           << "Z = " << cylinderElectricFieldVector.z()/(volt/m) << " V/m." << G4endl;*/
+    
 
     //Aquí es el mejor lugar para poder saber si las dimensiones del detector efectivamente cambian con geometry.mac o input.in
     G4cout << "World and detector sizes and positions:" << G4endl;

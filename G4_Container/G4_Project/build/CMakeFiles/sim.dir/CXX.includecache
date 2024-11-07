@@ -23,6 +23,8 @@ cmath
 -
 G4NistManager.hh
 /home/geant4lab/Geant4_projects/G4NistManager.hh
+G4SimpleRunge.hh
+/home/geant4lab/Geant4_projects/G4SimpleRunge.hh
 
 /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
 G4VUserDetectorConstruction.hh
@@ -1411,6 +1413,10 @@ G4LogicalVolume.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.hh
 G4VPhysicalVolume.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VPhysicalVolume.hh
+
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SimpleRunge.hh
+G4MagErrorStepper.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagErrorStepper.hh
 
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SmartVoxelHeader.hh
 G4Types.hh
