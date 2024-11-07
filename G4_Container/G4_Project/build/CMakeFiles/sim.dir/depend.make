@@ -603,31 +603,6 @@ CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/trkdefs.hh
 
-CMakeFiles/sim.dir/MyCompositeField.cc.o: ../MyCompositeField.cc
-CMakeFiles/sim.dir/MyCompositeField.cc.o: ../MyCompositeField.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Utility/defs.h
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/ThreeVector.h
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectricField.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectroMagneticField.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4EnvironmentUtils.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exception.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ExceptionSeverity.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Field.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GlobalConfig.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4String.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4String.icc
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ThreeVector.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Types.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformElectricField.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ios.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/templates.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
-
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: ../GeometryMessenger.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: ../MyDetectorConstruction.cc
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: ../MyDetectorConstruction.hh

@@ -603,31 +603,6 @@ CMakeFiles/sim.dir/GeometryMessenger.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/templates.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/trkdefs.hh
-CMakeFiles/sim.dir/MyCompositeField.cc.o
- /home/geant4lab/Geant4_projects/MyCompositeField.cc
- /home/geant4lab/Geant4_projects/MyCompositeField.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Utility/defs.h
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/ThreeVector.h
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectricField.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectroMagneticField.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4EnvironmentUtils.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exception.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ExceptionSeverity.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Field.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GlobalConfig.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4String.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4String.icc
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ThreeVector.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Types.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformElectricField.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ios.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/templates.hh
- /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o
  /home/geant4lab/Geant4_projects/GeometryMessenger.hh
  /home/geant4lab/Geant4_projects/MyDetectorConstruction.cc
