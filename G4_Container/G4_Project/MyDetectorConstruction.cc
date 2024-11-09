@@ -120,7 +120,7 @@ void MyDetectorConstruction::ConstructSDandField()
     // Asignar el detector sensible al volumen lógico
     logicDetector->SetSensitiveDetector(sensDet);
 
-    // Aquí se agrega el campo magnético al mundo madre
+    /*// Aquí se agrega el campo magnético al mundo madre
     magneticFieldValue = G4ThreeVector(26612.7e-9 * tesla, -2160.6e-9 * tesla, 9631.2e-9 * tesla);  
     magneticField = new G4UniformMagField(magneticFieldValue);  // Crea el campo magnético
 
@@ -130,7 +130,7 @@ void MyDetectorConstruction::ConstructSDandField()
     G4cout << "Campo magnético configurado con componentes: "
            << "X = " << magneticFieldValue.x()/tesla << " T, "
            << "Y = " << magneticFieldValue.y()/tesla << " T, "
-           << "Z = " << magneticFieldValue.z()/tesla << " T." << G4endl;
+           << "Z = " << magneticFieldValue.z()/tesla << " T." << G4endl;*/
 
        
 
@@ -201,9 +201,9 @@ MySensitiveDetector* MyDetectorConstruction::GetSensitiveDetector() const {
     return sensDet;
 }
 
-G4ThreeVector MyDetectorConstruction::GetMagneticFieldValue() const {
+/*G4ThreeVector MyDetectorConstruction::GetMagneticFieldValue() const {
     return magneticFieldValue;
-}
+}*/
 
 void MyDetectorConstruction::SetWorldSizeX(G4double newWorldSizeX) {
     worldSizeX = newWorldSizeX;

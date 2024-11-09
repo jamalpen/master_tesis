@@ -69,7 +69,7 @@ void RunAction::EndOfRunAction(const G4Run* run)
     // Aquí también puedes guardar resultados en un archivo, cerrar archivos, etc.
 
     // Obtener los valores del campo magnético
-    G4ThreeVector magneticField = fDetectorConstruction->GetMagneticFieldValue();
+    //G4ThreeVector magneticField = fDetectorConstruction->GetMagneticFieldValue();
 
     G4cout << "### Run " << run->GetRunID() << " end." << G4endl;
 
@@ -77,9 +77,9 @@ void RunAction::EndOfRunAction(const G4Run* run)
     if (outFile.is_open())
     {
         outFile << "### Run " << run->GetRunID() << " ###\n";
-        outFile << "Magnetic Field (X): " << magneticField.x() / tesla << " T\n";
-        outFile << "Magnetic Field (Y): " << magneticField.y() / tesla << " T\n";
-        outFile << "Magnetic Field (Z): " << magneticField.z() / tesla << " T\n";
+        //outFile << "Magnetic Field (X): " << magneticField.x() / tesla << " T\n";
+        //outFile << "Magnetic Field (Y): " << magneticField.y() / tesla << " T\n";
+        //outFile << "Magnetic Field (Z): " << magneticField.z() / tesla << " T\n";
         outFile << "Simulation time: " << simulationTime << " seconds\n";
         outFile << "Particles detected: " << sensitiveDetector->GetParticleCount() << "\n";
         outFile << "Particles simulated: " << run->GetNumberOfEventToBeProcessed() << "\n";
