@@ -46,5 +46,3 @@ CylindricalElectricFieldSetup::~CylindricalElectricFieldSetup()
     delete fFieldManager;
     delete fChordFinder;
 }
-
-

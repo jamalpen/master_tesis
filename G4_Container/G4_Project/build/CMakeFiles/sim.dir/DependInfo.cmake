@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/geant4lab/Geant4_projects/ActionInitialization.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/ActionInitialization.cc.o"
   "/home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/CylindricalElectricFieldSetup.cc.o"
+  "/home/geant4lab/Geant4_projects/CylindricalMagneticFieldSetup.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/CylindricalMagneticFieldSetup.cc.o"
   "/home/geant4lab/Geant4_projects/GeometryMessenger.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/GeometryMessenger.cc.o"
   "/home/geant4lab/Geant4_projects/MyDetectorConstruction.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/MyDetectorConstruction.cc.o"
   "/home/geant4lab/Geant4_projects/MyPhysicsList.cc" "/home/geant4lab/Geant4_projects/build/CMakeFiles/sim.dir/MyPhysicsList.cc.o"

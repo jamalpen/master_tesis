@@ -190,6 +190,33 @@ CylindricalElectricFieldSetup.cc.s:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/CylindricalElectricFieldSetup.cc.s
 .PHONY : CylindricalElectricFieldSetup.cc.s
 
+CylindricalMagneticFieldSetup.o: CylindricalMagneticFieldSetup.cc.o
+
+.PHONY : CylindricalMagneticFieldSetup.o
+
+# target to build an object file
+CylindricalMagneticFieldSetup.cc.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/CylindricalMagneticFieldSetup.cc.o
+.PHONY : CylindricalMagneticFieldSetup.cc.o
+
+CylindricalMagneticFieldSetup.i: CylindricalMagneticFieldSetup.cc.i
+
+.PHONY : CylindricalMagneticFieldSetup.i
+
+# target to preprocess a source file
+CylindricalMagneticFieldSetup.cc.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/CylindricalMagneticFieldSetup.cc.i
+.PHONY : CylindricalMagneticFieldSetup.cc.i
+
+CylindricalMagneticFieldSetup.s: CylindricalMagneticFieldSetup.cc.s
+
+.PHONY : CylindricalMagneticFieldSetup.s
+
+# target to generate assembly for a file
+CylindricalMagneticFieldSetup.cc.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/CylindricalMagneticFieldSetup.cc.s
+.PHONY : CylindricalMagneticFieldSetup.cc.s
+
 GeometryMessenger.o: GeometryMessenger.cc.o
 
 .PHONY : GeometryMessenger.o
@@ -476,6 +503,9 @@ help:
 	@echo "... CylindricalElectricFieldSetup.o"
 	@echo "... CylindricalElectricFieldSetup.i"
 	@echo "... CylindricalElectricFieldSetup.s"
+	@echo "... CylindricalMagneticFieldSetup.o"
+	@echo "... CylindricalMagneticFieldSetup.i"
+	@echo "... CylindricalMagneticFieldSetup.s"
 	@echo "... GeometryMessenger.o"
 	@echo "... GeometryMessenger.i"
 	@echo "... GeometryMessenger.s"
