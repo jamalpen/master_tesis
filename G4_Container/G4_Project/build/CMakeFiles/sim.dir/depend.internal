@@ -4,6 +4,7 @@
 CMakeFiles/sim.dir/ActionInitialization.cc.o
  /home/geant4lab/Geant4_projects/ActionInitialization.cc
  /home/geant4lab/Geant4_projects/ActionInitialization.hh
+ /home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.hh
  /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
  /home/geant4lab/Geant4_projects/MySensitiveDetector.hh
  /home/geant4lab/Geant4_projects/PrimaryGeneratorAction.hh
@@ -352,7 +353,150 @@ CMakeFiles/sim.dir/ActionInitialization.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/templates.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/trkdefs.hh
+CMakeFiles/sim.dir/CylindricalElectricFieldSetup.cc.o
+ /home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.cc
+ /home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Geometry/Normal3D.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Geometry/Point3D.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Geometry/Transform3D.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Geometry/Transform3D.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Geometry/Vector3D.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Units/PhysicalConstants.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Units/SystemOfUnits.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Utility/defs.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/AxisAngle.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/AxisAngle.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/LorentzVector.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/LorentzVector.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/Rotation.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/Rotation.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/RotationInterfaces.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/RotationInterfaces.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/RotationX.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/RotationX.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/RotationY.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/RotationY.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/RotationZ.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/RotationZ.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/ThreeVector.h
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4AffineTransform.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4AffineTransform.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Allocator.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4AllocatorPool.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4AutoLock.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4AuxiliaryNavServices.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4AuxiliaryNavServices.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4BlockingList.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4BlockingList.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ChargeState.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ChordFinder.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ChordFinder.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ChordFinderDelegate.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ChordFinderDelegate.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ClassicalRK4.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4DormandPrince745.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectricField.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ElectroMagneticField.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4EnvironmentUtils.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4EqMagElectricField.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4EquationOfMotion.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4EquationOfMotion.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Exception.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ExceptionSeverity.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Field.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldManager.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldTrack.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldTrack.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldUtils.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4FieldUtils.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GRSSolid.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GRSSolid.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GRSVolume.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GRSVolume.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GeomSplitter.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4GlobalConfig.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4IntegrationDriver.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4IntegrationDriver.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagErrorStepper.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagErrorStepper.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagIntegratorStepper.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagIntegratorStepper.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Mag_EqRhs.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NavigationHistory.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NavigationHistory.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NavigationHistoryPool.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NavigationLevel.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NavigationLevel.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NavigationLevelRep.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NavigationLevelRep.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NavigationLogger.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Navigator.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Navigator.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NormalNavigation.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4NormalNavigation.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ParameterisedNavigation.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ParameterisedNavigation.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RKIntegrationDriver.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RKIntegrationDriver.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ReferenceCountedHandle.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Region.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Region.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RegionStore.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RegularNavigation.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ReplicaNavigation.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ReplicaNavigation.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4RotationMatrix.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SafetyHelper.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SmartVoxelHeader.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SmartVoxelHeader.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SmartVoxelNode.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SmartVoxelNode.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SmartVoxelProxy.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SmartVoxelProxy.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4String.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4String.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SystemOfUnits.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Threading.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ThreeVector.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4TouchableHandle.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4TouchableHistory.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4TouchableHistory.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4TouchableHistoryHandle.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Transform3D.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4TransportationManager.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4TransportationManager.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Types.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformElectricField.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UniformMagField.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExternalNavigation.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VIntegrationDriver.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VNotifier.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VPVParameterisation.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VPhysicalVolume.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VPhysicalVolume.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VSolid.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VSolid.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VStoreNotifier.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VTouchable.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VTouchable.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VVolumeMaterialScanner.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VoxelNavigation.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VoxelNavigation.icc
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ios.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/geomdefs.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/geomwdefs.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/templates.hh
+ /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o
+ /home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.hh
  /home/geant4lab/Geant4_projects/GeometryMessenger.cc
  /home/geant4lab/Geant4_projects/GeometryMessenger.hh
  /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
@@ -604,6 +748,7 @@ CMakeFiles/sim.dir/GeometryMessenger.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/trkdefs.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o
+ /home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.hh
  /home/geant4lab/Geant4_projects/GeometryMessenger.hh
  /home/geant4lab/Geant4_projects/MyDetectorConstruction.cc
  /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
@@ -1582,6 +1727,7 @@ CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/templates.hh
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
 CMakeFiles/sim.dir/RunAction.cc.o
+ /home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.hh
  /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
  /home/geant4lab/Geant4_projects/MySensitiveDetector.hh
  /home/geant4lab/Geant4_projects/RunAction.cc
@@ -1835,6 +1981,7 @@ CMakeFiles/sim.dir/RunAction.cc.o
  /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/trkdefs.hh
 CMakeFiles/sim.dir/sim.cc.o
  /home/geant4lab/Geant4_projects/ActionInitialization.hh
+ /home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.hh
  /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
  /home/geant4lab/Geant4_projects/MyPhysicsList.hh
  /home/geant4lab/Geant4_projects/MySensitiveDetector.hh

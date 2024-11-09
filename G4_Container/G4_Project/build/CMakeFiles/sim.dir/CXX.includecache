@@ -6,6 +6,50 @@
 
 #IncludeRegexTransform: 
 
+/home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.hh
+G4UniformElectricField.hh
+/home/geant4lab/Geant4_projects/G4UniformElectricField.hh
+G4UniformMagField.hh
+/home/geant4lab/Geant4_projects/G4UniformMagField.hh
+G4FieldManager.hh
+/home/geant4lab/Geant4_projects/G4FieldManager.hh
+G4ChordFinder.hh
+/home/geant4lab/Geant4_projects/G4ChordFinder.hh
+G4EqMagElectricField.hh
+/home/geant4lab/Geant4_projects/G4EqMagElectricField.hh
+G4ClassicalRK4.hh
+/home/geant4lab/Geant4_projects/G4ClassicalRK4.hh
+G4LogicalVolume.hh
+/home/geant4lab/Geant4_projects/G4LogicalVolume.hh
+G4ThreeVector.hh
+/home/geant4lab/Geant4_projects/G4ThreeVector.hh
+G4SystemOfUnits.hh
+/home/geant4lab/Geant4_projects/G4SystemOfUnits.hh
+G4DormandPrince745.hh
+/home/geant4lab/Geant4_projects/G4DormandPrince745.hh
+G4IntegrationDriver.hh
+/home/geant4lab/Geant4_projects/G4IntegrationDriver.hh
+
+/home/geant4lab/Geant4_projects/GeometryMessenger.hh
+G4UImessenger.hh
+/home/geant4lab/Geant4_projects/G4UImessenger.hh
+globals.hh
+/home/geant4lab/Geant4_projects/globals.hh
+
+/home/geant4lab/Geant4_projects/MyDetectorConstruction.cc
+MyDetectorConstruction.hh
+/home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
+G4SDManager.hh
+/home/geant4lab/Geant4_projects/G4SDManager.hh
+GeometryMessenger.hh
+/home/geant4lab/Geant4_projects/GeometryMessenger.hh
+cmath
+-
+G4NistManager.hh
+/home/geant4lab/Geant4_projects/G4NistManager.hh
+G4SimpleRunge.hh
+/home/geant4lab/Geant4_projects/G4SimpleRunge.hh
+
 /home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
 G4VUserDetectorConstruction.hh
 /home/geant4lab/Geant4_projects/G4VUserDetectorConstruction.hh
@@ -53,32 +97,14 @@ G4DormandPrince745.hh
 /home/geant4lab/Geant4_projects/G4DormandPrince745.hh
 G4IntegrationDriver.hh
 /home/geant4lab/Geant4_projects/G4IntegrationDriver.hh
+CylindricalElectricFieldSetup.hh
+/home/geant4lab/Geant4_projects/CylindricalElectricFieldSetup.hh
 MySensitiveDetector.hh
 /home/geant4lab/Geant4_projects/MySensitiveDetector.hh
 
 /home/geant4lab/Geant4_projects/MySensitiveDetector.hh
 G4VSensitiveDetector.hh
 /home/geant4lab/Geant4_projects/G4VSensitiveDetector.hh
-
-/home/geant4lab/Geant4_projects/RunAction.cc
-RunAction.hh
-/home/geant4lab/Geant4_projects/RunAction.hh
-MySensitiveDetector.hh
-/home/geant4lab/Geant4_projects/MySensitiveDetector.hh
-G4ios.hh
-/home/geant4lab/Geant4_projects/G4ios.hh
-G4SystemOfUnits.hh
-/home/geant4lab/Geant4_projects/G4SystemOfUnits.hh
-
-/home/geant4lab/Geant4_projects/RunAction.hh
-G4UserRunAction.hh
-/home/geant4lab/Geant4_projects/G4UserRunAction.hh
-G4Run.hh
-/home/geant4lab/Geant4_projects/G4Run.hh
-globals.hh
-/home/geant4lab/Geant4_projects/globals.hh
-MyDetectorConstruction.hh
-/home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
 
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
 iosfwd
@@ -657,6 +683,12 @@ G4Allocator.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Allocator.hh
 G4VHitsCollection.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VHitsCollection.hh
+vector
+-
+
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4HCtable.hh
+globals.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
 vector
 -
 
@@ -1356,11 +1388,23 @@ globals.hh
 CLHEP/Vector/Rotation.h
 -
 
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Run.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SDManager.hh
 globals.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
-G4Profiler.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Profiler.hh
+G4SDStructure.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SDStructure.hh
+G4HCtable.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4HCtable.hh
+G4VSDFilter.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VSDFilter.hh
+vector
+-
+
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SDStructure.hh
+globals.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
+G4VSensitiveDetector.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VSensitiveDetector.hh
 vector
 -
 
@@ -1395,6 +1439,10 @@ G4LogicalVolume.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4LogicalVolume.hh
 G4VPhysicalVolume.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VPhysicalVolume.hh
+
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SimpleRunge.hh
+G4MagErrorStepper.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagErrorStepper.hh
 
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SmartVoxelHeader.hh
 G4Types.hh
@@ -1759,10 +1807,6 @@ G4ThreeVector.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ThreeVector.hh
 G4MagneticField.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
-
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserRunAction.hh
-G4Types.hh
-/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Types.hh
 
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
 G4ExceptionSeverity.hh
