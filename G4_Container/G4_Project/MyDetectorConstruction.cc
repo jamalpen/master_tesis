@@ -154,6 +154,16 @@ void MyDetectorConstruction::ConstructSDandField()
 
     // Instancia de CylindricalEMFieldSetup para aplicar el campo al cilindro
     cylEMFieldSetup = new CylindricalElectricFieldSetup(logicCylinder, electricFieldVector);
+
+    
+    
+    /*// Define el vector del campo magnético en Tesla
+    G4ThreeVector magneticFieldVector(1.0 * tesla, 0., 0.); // Campo magnético en la dirección Z
+
+    // Crear una instancia de CylindricalMagneticFieldSetup para aplicar el campo magnético solo al cilindro
+    fMagneticFieldSetup = new CylindricalMagneticFieldSetup(logicCylinder, magneticFieldVector);*/
+
+
     
 
 

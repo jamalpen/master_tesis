@@ -25,6 +25,7 @@
 #include "G4DormandPrince745.hh"
 #include "G4IntegrationDriver.hh"
 #include "CylindricalElectricFieldSetup.hh"
+#include "CylindricalMagneticFieldSetup.hh"
 
 #include "MySensitiveDetector.hh"
 
@@ -95,6 +96,7 @@ private:
     G4UniformElectricField* cylinderElectricField;
     G4FieldManager* cylinderFieldManager;
     CylindricalElectricFieldSetup* cylEMFieldSetup;
+    CylindricalMagneticFieldSetup* fMagneticFieldSetup;
 
     virtual void ConstructSDandField();
 };
