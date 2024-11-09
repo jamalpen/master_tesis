@@ -4,6 +4,7 @@
 CMakeFiles/sim.dir/ActionInitialization.cc.o: ../ActionInitialization.cc
 CMakeFiles/sim.dir/ActionInitialization.cc.o: ../ActionInitialization.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: ../CylindricalElectricFieldSetup.hh
+CMakeFiles/sim.dir/ActionInitialization.cc.o: ../CylindricalMagneticFieldSetup.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: ../MyDetectorConstruction.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: ../MySensitiveDetector.hh
 CMakeFiles/sim.dir/ActionInitialization.cc.o: ../PrimaryGeneratorAction.hh
@@ -623,6 +624,7 @@ CMakeFiles/sim.dir/CylindricalMagneticFieldSetup.cc.o: /home/geant4lab/geant4/ge
 CMakeFiles/sim.dir/CylindricalMagneticFieldSetup.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
 
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: ../CylindricalElectricFieldSetup.hh
+CMakeFiles/sim.dir/GeometryMessenger.cc.o: ../CylindricalMagneticFieldSetup.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: ../GeometryMessenger.cc
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: ../GeometryMessenger.hh
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: ../MyDetectorConstruction.hh
@@ -875,6 +877,7 @@ CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3
 CMakeFiles/sim.dir/GeometryMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/trkdefs.hh
 
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: ../CylindricalElectricFieldSetup.hh
+CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: ../CylindricalMagneticFieldSetup.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: ../GeometryMessenger.hh
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: ../MyDetectorConstruction.cc
 CMakeFiles/sim.dir/MyDetectorConstruction.cc.o: ../MyDetectorConstruction.hh
@@ -1854,6 +1857,7 @@ CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.o: /home/geant4lab/geant4/geant4-
 CMakeFiles/sim.dir/PrimarySpectrumMessenger.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/tls.hh
 
 CMakeFiles/sim.dir/RunAction.cc.o: ../CylindricalElectricFieldSetup.hh
+CMakeFiles/sim.dir/RunAction.cc.o: ../CylindricalMagneticFieldSetup.hh
 CMakeFiles/sim.dir/RunAction.cc.o: ../MyDetectorConstruction.hh
 CMakeFiles/sim.dir/RunAction.cc.o: ../MySensitiveDetector.hh
 CMakeFiles/sim.dir/RunAction.cc.o: ../RunAction.cc
@@ -2108,6 +2112,7 @@ CMakeFiles/sim.dir/RunAction.cc.o: /home/geant4lab/geant4/geant4-v10.7.3-install
 
 CMakeFiles/sim.dir/sim.cc.o: ../ActionInitialization.hh
 CMakeFiles/sim.dir/sim.cc.o: ../CylindricalElectricFieldSetup.hh
+CMakeFiles/sim.dir/sim.cc.o: ../CylindricalMagneticFieldSetup.hh
 CMakeFiles/sim.dir/sim.cc.o: ../MyDetectorConstruction.hh
 CMakeFiles/sim.dir/sim.cc.o: ../MyPhysicsList.hh
 CMakeFiles/sim.dir/sim.cc.o: ../MySensitiveDetector.hh
