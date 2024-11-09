@@ -61,5 +61,5 @@ spec:
       - name: gcs-key-volume
         secret:
           secretName: gcs-myg4-key
-      restartPolicy: Never
+      restartPolicy: OnFailure
   backoffLimit: 0  # Limita los reintentos a cero, así que el job falla si ocurre un error
