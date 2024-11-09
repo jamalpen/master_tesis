@@ -67,6 +67,27 @@ public:
     // Métodos para obtener los valores del campo magnético
     G4ThreeVector GetMagneticFieldValue() const;
 
+    G4ThreeVector GetCylinderMagneticField() const;
+    G4ThreeVector GetCylinderElectricField() const;
+
+    G4double GetWorldSizeX() const;
+    G4double GetWorldSizeY() const;
+    G4double GetWorldSizeZ() const;
+
+    G4double GetDetectorSizeX() const;
+    G4double GetDetectorSizeY() const;
+    G4double GetDetectorSizeZ() const;
+
+    G4double GetDetectorPosX() const;
+    G4double GetDetectorPosY() const;
+    G4double GetDetectorPosZ() const;
+
+    G4double GetCylinderRadius() const;
+    G4double GetCylinderHeight() const;
+    G4double GetCylinderPosX() const;
+    G4double GetCylinderPosY() const;
+    G4double GetCylinderPosZ() const;
+
 private:
 
     // Dimensions for cubic world
@@ -92,11 +113,14 @@ private:
     G4ThreeVector magneticFieldValue;  // Store the world magnetic field value manually
 
     // Electric and magnetic field for the cylinder
-    G4UniformMagField* cylinderMagneticField;
-    G4UniformElectricField* cylinderElectricField;
+    //G4UniformMagField* cylinderMagneticField;
+    //G4UniformElectricField* cylinderElectricField;
     G4FieldManager* cylinderFieldManager;
     CylindricalElectricFieldSetup* cylEMFieldSetup;
     CylindricalMagneticFieldSetup* fMagneticFieldSetup;
+    G4ThreeVector electricFieldVector;
+    G4ThreeVector magneticFieldVector;
+
 
     virtual void ConstructSDandField();
 };

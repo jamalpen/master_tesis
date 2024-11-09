@@ -25,7 +25,7 @@
 # Definir la posición del detector dentro del mundo de Geant4
 /geometry/detectorPosX 0 km
 /geometry/detectorPosY -5 km
-/geometry/detectorPosZ -0.04995 km
+/geometry/detectorPosZ -0.0495 km
 
 
 # Definir dimensiones del cilindro adicional
@@ -41,4 +41,4 @@
 /run/initialize
 
 # Iniciar la simulación con N eventos 1537965
-/run/beamOn 1000
+/run/beamOn 100000

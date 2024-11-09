@@ -68,8 +68,29 @@ void RunAction::EndOfRunAction(const G4Run* run)
 
     // Aquí también puedes guardar resultados en un archivo, cerrar archivos, etc.
 
-    // Obtener los valores del campo magnético
-    //G4ThreeVector magneticField = fDetectorConstruction->GetMagneticFieldValue();
+    // Obtener los valores del campo magnético del mundo madre
+    G4ThreeVector worldmagneticField = fDetectorConstruction->GetMagneticFieldValue();
+    G4double MworldSizeX = fDetectorConstruction->GetWorldSizeX();
+    G4double MworldSizeY = fDetectorConstruction->GetWorldSizeY();
+    G4double MworldSizeZ = fDetectorConstruction->GetWorldSizeZ();
+
+
+    // Obtener los valores de los campos eléctricos y magnéticos del cilindro
+    G4ThreeVector cylindermagneticField = fDetectorConstruction->GetCylinderMagneticField();
+    G4ThreeVector cylinderelectricField = fDetectorConstruction->GetCylinderElectricField();
+    G4double cylinderRadius = fDetectorConstruction->GetCylinderRadius();
+    G4double cylinderHeight = fDetectorConstruction->GetCylinderHeight();
+    G4double cylinderPosX = fDetectorConstruction->GetCylinderPosX();
+    G4double cylinderPosY = fDetectorConstruction->GetCylinderPosY();
+    G4double cylinderPosZ = fDetectorConstruction->GetCylinderPosZ();
+
+    //Obtener los valores del tamaño y posición del detector
+    G4double DetectorSizeX = fDetectorConstruction->GetDetectorSizeX();
+    G4double DetectorSizeY = fDetectorConstruction->GetDetectorSizeY();
+    G4double DetectorSizeZ = fDetectorConstruction->GetDetectorSizeZ();
+    G4double DetectorPosX = fDetectorConstruction->GetDetectorPosX();
+    G4double DetectorPosY = fDetectorConstruction->GetDetectorPosY();
+    G4double DetectorPosZ = fDetectorConstruction->GetDetectorPosZ();
 
     G4cout << "### Run " << run->GetRunID() << " end." << G4endl;
 
@@ -77,9 +98,29 @@ void RunAction::EndOfRunAction(const G4Run* run)
     if (outFile.is_open())
     {
         outFile << "### Run " << run->GetRunID() << " ###\n";
-        //outFile << "Magnetic Field (X): " << magneticField.x() / tesla << " T\n";
-        //outFile << "Magnetic Field (Y): " << magneticField.y() / tesla << " T\n";
-        //outFile << "Magnetic Field (Z): " << magneticField.z() / tesla << " T\n";
+        outFile << "Mother world size (X): " << MworldSizeX << "mm\n";
+        outFile << "Mother world size (Y): " << MworldSizeY << "mm\n";
+        outFile << "Mother world size (Z): " << MworldSizeZ << "mm\n";
+        outFile << "Magnetic Field in mother world (X): " << worldmagneticField.x() / tesla << " T\n";
+        outFile << "Magnetic Field in mother world(Y): " << worldmagneticField.y() / tesla << " T\n";
+        outFile << "Magnetic Field in mother world (Z): " << worldmagneticField.z() / tesla << " T\n";
+        outFile << "Cylinder world Radius: " << cylinderRadius << "mm\n";
+        outFile << "Cylinder world Height: " << cylinderHeight << "mm\n";
+        outFile << "Cylinder world Position (X): " << cylinderPosX << "mm\n";
+        outFile << "Cylinder world Position (Y): " << cylinderPosY << "mm\n";
+        outFile << "Cylinder world Position (Z): " << cylinderPosZ << "mm\n";
+        outFile << "Magnetic Field in cylinder (X): " << cylindermagneticField.x() / tesla << " T\n";
+        outFile << "Magnetic Field in cylinder (Y): " << cylindermagneticField.y() / tesla << " T\n";
+        outFile << "Magnetic Field in cylinder (Z): " << cylindermagneticField.z() / tesla << " T\n";
+        outFile << "Electric Field in cylinder (X): " << cylinderelectricField.x() / volt/m << " V/m\n";
+        outFile << "Electric Field in cylinder (Y): " << cylinderelectricField.y() / volt/m << " V/m\n";
+        outFile << "Electric Field in cylinder (Z): " << cylinderelectricField.z() / volt/m << " V/m\n";
+        outFile << "Detector Size (X): " << DetectorSizeX << "mm\n";
+        outFile << "Detector Size (Y): " << DetectorSizeY << "mm\n";
+        outFile << "Detector Size (Z): " << DetectorSizeZ << "mm\n";
+        outFile << "Detector Position (X): " << DetectorPosX << "mm\n";
+        outFile << "Detector Position (Y): " << DetectorPosY << "mm\n";
+        outFile << "Detector Position (Z): " << DetectorPosZ << "mm\n";
         outFile << "Simulation time: " << simulationTime << " seconds\n";
         outFile << "Particles detected: " << sensitiveDetector->GetParticleCount() << "\n";
         outFile << "Particles simulated: " << run->GetNumberOfEventToBeProcessed() << "\n";

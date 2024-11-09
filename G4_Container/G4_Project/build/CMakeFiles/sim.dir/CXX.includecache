@@ -124,6 +124,26 @@ MySensitiveDetector.hh
 G4VSensitiveDetector.hh
 /home/geant4lab/Geant4_projects/G4VSensitiveDetector.hh
 
+/home/geant4lab/Geant4_projects/RunAction.cc
+RunAction.hh
+/home/geant4lab/Geant4_projects/RunAction.hh
+MySensitiveDetector.hh
+/home/geant4lab/Geant4_projects/MySensitiveDetector.hh
+G4ios.hh
+/home/geant4lab/Geant4_projects/G4ios.hh
+G4SystemOfUnits.hh
+/home/geant4lab/Geant4_projects/G4SystemOfUnits.hh
+
+/home/geant4lab/Geant4_projects/RunAction.hh
+G4UserRunAction.hh
+/home/geant4lab/Geant4_projects/G4UserRunAction.hh
+G4Run.hh
+/home/geant4lab/Geant4_projects/G4Run.hh
+globals.hh
+/home/geant4lab/Geant4_projects/globals.hh
+MyDetectorConstruction.hh
+/home/geant4lab/Geant4_projects/MyDetectorConstruction.hh
+
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
 iosfwd
 -
@@ -1406,6 +1426,14 @@ globals.hh
 CLHEP/Vector/Rotation.h
 -
 
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Run.hh
+globals.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
+G4Profiler.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Profiler.hh
+vector
+-
+
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4SDManager.hh
 globals.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/globals.hh
@@ -1825,6 +1853,10 @@ G4ThreeVector.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4ThreeVector.hh
 G4MagneticField.hh
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4MagneticField.hh
+
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4UserRunAction.hh
+G4Types.hh
+/home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4Types.hh
 
 /home/geant4lab/geant4/geant4-v10.7.3-install/include/Geant4/G4VExceptionHandler.hh
 G4ExceptionSeverity.hh
