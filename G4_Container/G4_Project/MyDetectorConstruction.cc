@@ -128,22 +128,22 @@ void MyDetectorConstruction::ConstructSDandField()
            << "Z = " << magneticFieldValue.z()/tesla << " T." << G4endl;
 
     // Configure the electric field in the cylinder
-    electricFieldVector = G4ThreeVector(0.,0.,0.); // Electric field
+    electricFieldVector = G4ThreeVector(0.,0.,100000.0 * volt/m); // Electric field
     //electricFieldVector = G4ThreeVector(0.,0.,  100.0 * volt/m); // Example of Electric field
-    /*// Instance of CylindricalEMFieldSetup to apply the field to the cylinder
+    // Instance of CylindricalEMFieldSetup to apply the field to the cylinder
     cylEMFieldSetup = new CylindricalElectricFieldSetup(logicCylinder, electricFieldVector);
 
     G4cout << "Electric field configured in the cylinder." << G4endl;
     G4cout << "Electric field in the cylinder configured with components: "
            << "X = " << electricFieldVector.x()/(volt/m) << " V/m, "
            << "Y = " << electricFieldVector.y()/(volt/m) << " V/m, "
-           << "Z = " << electricFieldVector.z()/(volt/m) << " V/m." << G4endl;*/
+           << "Z = " << electricFieldVector.z()/(volt/m) << " V/m." << G4endl;
 
     
     
     // Define the magnetic field vector in Tesla
-    magneticFieldVector = G4ThreeVector(1.0 * tesla, 0., 0.); // Magnetic field
-    //magneticFieldVector = G4ThreeVector(1.0 * tesla, 0., 0.); // Magnetic field
+    magneticFieldVector = G4ThreeVector(0., 0., 0.); // Magnetic field
+    /*//magneticFieldVector = G4ThreeVector(1.0 * tesla, 0., 0.); // Magnetic field
     // Create an instance of CylindricalMagneticFieldSetup to apply the magnetic field only to the cylinder
     fMagneticFieldSetup = new CylindricalMagneticFieldSetup(logicCylinder, magneticFieldVector);
 
@@ -151,7 +151,7 @@ void MyDetectorConstruction::ConstructSDandField()
     G4cout << "Magnetic field in the cylinder set with components: "
            << "X = " << magneticFieldVector.x()/tesla << " T, "
            << "Y = " << magneticFieldVector.y()/tesla << " T, "
-           << "Z = " << magneticFieldVector.z()/tesla << " T." << G4endl;
+           << "Z = " << magneticFieldVector.z()/tesla << " T." << G4endl;*/
 
 
     // Here we can verify that the dimensions of the cylinder have been correctly applied

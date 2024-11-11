@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Number of times to repeat the simulation
-n=6
+n=10
 
 # Loop to run the simulation n times
 for i in $(seq 1 $n); do
