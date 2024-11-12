@@ -128,7 +128,7 @@ void MyDetectorConstruction::ConstructSDandField()
            << "Z = " << magneticFieldValue.z()/tesla << " T." << G4endl;
 
     // Configure the electric field in the cylinder
-    electricFieldVector = G4ThreeVector(0.,0.,100000.0 * volt/m); // Electric field
+    electricFieldVector = G4ThreeVector(0.,0.,100.0 * volt/m); // Electric field
     //electricFieldVector = G4ThreeVector(0.,0.,  100.0 * volt/m); // Example of Electric field
     // Instance of CylindricalEMFieldSetup to apply the field to the cylinder
     cylEMFieldSetup = new CylindricalElectricFieldSetup(logicCylinder, electricFieldVector);

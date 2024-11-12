@@ -34,11 +34,11 @@
 
 # Definir posición del cilindro dentro del mundo de Geant4
 /geometry/cylinderPosX 0 km
-/geometry/cylinderPosY 25 km
+/geometry/cylinderPosY -8.5 km
 /geometry/cylinderPosZ 0 km
 
 #inicializar aquí para que se actualice el mundo con los parametros de arriba
 /run/initialize
 
 # Iniciar la simulación con N eventos 1489428
-/run/beamOn 1489428
+/run/beamOn 90000
