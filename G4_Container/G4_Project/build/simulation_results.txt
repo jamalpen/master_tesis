@@ -990,3 +990,227 @@ Particles simulated: 100000
 ---------------------------------------
 ---------------------------------------
 ---------------------------------------
+### Run 0 ###
+Mother world size (X): 2e+09mm
+Mother world size (Y): 2e+09mm
+Mother world size (Z): 100000mm
+Magnetic Field in mother world (X): 2.66127e-05 T
+Magnetic Field in mother world(Y): -2.1606e-06 T
+Magnetic Field in mother world (Z): 9.6312e-06 T
+Cylinder world Radius: 2.5e+07mm
+Cylinder world Height: 100000mm
+Cylinder world Position (X): 0mm
+Cylinder world Position (Y): -3.05e+07mm
+Cylinder world Position (Z): 0mm
+Magnetic Field in cylinder (X): 0 T
+Magnetic Field in cylinder (Y): 0 T
+Magnetic Field in cylinder (Z): 0 T
+Electric Field in cylinder (X): 0 V/m
+Electric Field in cylinder (Y): 0 V/m
+Electric Field in cylinder (Z): 0.0001 V/m
+Detector Size (X): 1e+06mm
+Detector Size (Y): 1e+06mm
+Detector Size (Z): 1000mm
+Detector Position (X): 0mm
+Detector Position (Y): -5e+06mm
+Detector Position (Z): -49500mm
+Simulation time: 363.108 seconds
+Particles detected: 1517
+Particles simulated: 90000
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+### Run 0 ###
+Mother world size (X): 2e+09mm
+Mother world size (Y): 2e+09mm
+Mother world size (Z): 100000mm
+Magnetic Field in mother world (X): 2.66127e-05 T
+Magnetic Field in mother world(Y): -2.1606e-06 T
+Magnetic Field in mother world (Z): 9.6312e-06 T
+Cylinder world Radius: 2.5e+07mm
+Cylinder world Height: 100000mm
+Cylinder world Position (X): 0mm
+Cylinder world Position (Y): -3.025e+07mm
+Cylinder world Position (Z): 0mm
+Magnetic Field in cylinder (X): 0 T
+Magnetic Field in cylinder (Y): 0 T
+Magnetic Field in cylinder (Z): 0 T
+Electric Field in cylinder (X): 0 V/m
+Electric Field in cylinder (Y): 0 V/m
+Electric Field in cylinder (Z): 0.0001 V/m
+Detector Size (X): 1e+06mm
+Detector Size (Y): 1e+06mm
+Detector Size (Z): 1000mm
+Detector Position (X): 0mm
+Detector Position (Y): -5e+06mm
+Detector Position (Z): -49500mm
+Simulation time: 365.253 seconds
+Particles detected: 1072
+Particles simulated: 90000
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+### Run 0 ###
+Mother world size (X): 2e+09mm
+Mother world size (Y): 2e+09mm
+Mother world size (Z): 100000mm
+Magnetic Field in mother world (X): 2.66127e-05 T
+Magnetic Field in mother world(Y): -2.1606e-06 T
+Magnetic Field in mother world (Z): 9.6312e-06 T
+Cylinder world Radius: 2.5e+07mm
+Cylinder world Height: 100000mm
+Cylinder world Position (X): 0mm
+Cylinder world Position (Y): -3.025e+07mm
+Cylinder world Position (Z): 0mm
+Magnetic Field in cylinder (X): 0 T
+Magnetic Field in cylinder (Y): 0 T
+Magnetic Field in cylinder (Z): 0 T
+Electric Field in cylinder (X): 0 V/m
+Electric Field in cylinder (Y): 0 V/m
+Electric Field in cylinder (Z): -0.0001 V/m
+Detector Size (X): 1e+06mm
+Detector Size (Y): 1e+06mm
+Detector Size (Z): 1000mm
+Detector Position (X): 0mm
+Detector Position (Y): -5e+06mm
+Detector Position (Z): -49500mm
+Simulation time: 367.509 seconds
+Particles detected: 1110
+Particles simulated: 90000
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+### Run 0 ###
+Mother world size (X): 2e+09mm
+Mother world size (Y): 2e+09mm
+Mother world size (Z): 100000mm
+Magnetic Field in mother world (X): 2.66127e-05 T
+Magnetic Field in mother world(Y): -2.1606e-06 T
+Magnetic Field in mother world (Z): 9.6312e-06 T
+Cylinder world Radius: 2.5e+07mm
+Cylinder world Height: 100000mm
+Cylinder world Position (X): 0mm
+Cylinder world Position (Y): -2.925e+07mm
+Cylinder world Position (Z): 0mm
+Magnetic Field in cylinder (X): 0 T
+Magnetic Field in cylinder (Y): 0 T
+Magnetic Field in cylinder (Z): 0 T
+Electric Field in cylinder (X): 0 V/m
+Electric Field in cylinder (Y): 0 V/m
+Electric Field in cylinder (Z): -0.0001 V/m
+Detector Size (X): 1e+06mm
+Detector Size (Y): 1e+06mm
+Detector Size (Z): 1000mm
+Detector Position (X): 0mm
+Detector Position (Y): -5e+06mm
+Detector Position (Z): -49500mm
+Simulation time: 366.607 seconds
+Particles detected: 0
+Particles simulated: 90000
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+### Run 0 ###
+Mother world size (X): 2e+09mm
+Mother world size (Y): 2e+09mm
+Mother world size (Z): 100000mm
+Magnetic Field in mother world (X): 2.66127e-05 T
+Magnetic Field in mother world(Y): -2.1606e-06 T
+Magnetic Field in mother world (Z): 9.6312e-06 T
+Cylinder world Radius: 2.5e+07mm
+Cylinder world Height: 75000mm
+Cylinder world Position (X): 0mm
+Cylinder world Position (Y): -5e+06mm
+Cylinder world Position (Z): 0mm
+Magnetic Field in cylinder (X): 0 T
+Magnetic Field in cylinder (Y): 0 T
+Magnetic Field in cylinder (Z): 0 T
+Electric Field in cylinder (X): 0 V/m
+Electric Field in cylinder (Y): 0 V/m
+Electric Field in cylinder (Z): -0.0001 V/m
+Detector Size (X): 1e+06mm
+Detector Size (Y): 1e+06mm
+Detector Size (Z): 1000mm
+Detector Position (X): 0mm
+Detector Position (Y): -5e+06mm
+Detector Position (Z): -49500mm
+Simulation time: 350.046 seconds
+Particles detected: 1401
+Particles simulated: 90000
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+### Run 0 ###
+Mother world size (X): 2e+09mm
+Mother world size (Y): 2e+09mm
+Mother world size (Z): 100000mm
+Magnetic Field in mother world (X): 2.66127e-05 T
+Magnetic Field in mother world(Y): -2.1606e-06 T
+Magnetic Field in mother world (Z): 9.6312e-06 T
+Cylinder world Radius: 2.5e+07mm
+Cylinder world Height: 95000mm
+Cylinder world Position (X): 0mm
+Cylinder world Position (Y): -5e+06mm
+Cylinder world Position (Z): 0mm
+Magnetic Field in cylinder (X): 0 T
+Magnetic Field in cylinder (Y): 0 T
+Magnetic Field in cylinder (Z): 0 T
+Electric Field in cylinder (X): 0 V/m
+Electric Field in cylinder (Y): 0 V/m
+Electric Field in cylinder (Z): -1 V/m
+Detector Size (X): 1e+06mm
+Detector Size (Y): 1e+06mm
+Detector Size (Z): 1000mm
+Detector Position (X): 0mm
+Detector Position (Y): -5e+06mm
+Detector Position (Z): -49500mm
+Simulation time: 340.746 seconds
+Particles detected: 1388
+Particles simulated: 90000
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+### Run 0 ###
+Mother world size (X): 2e+09mm
+Mother world size (Y): 2e+09mm
+Mother world size (Z): 100000mm
+Magnetic Field in mother world (X): 2.66127e-05 T
+Magnetic Field in mother world(Y): -2.1606e-06 T
+Magnetic Field in mother world (Z): 9.6312e-06 T
+Cylinder world Radius: 2.5e+07mm
+Cylinder world Height: 95000mm
+Cylinder world Position (X): 0mm
+Cylinder world Position (Y): -5e+06mm
+Cylinder world Position (Z): 0mm
+Magnetic Field in cylinder (X): 0 T
+Magnetic Field in cylinder (Y): 0 T
+Magnetic Field in cylinder (Z): 0 T
+Electric Field in cylinder (X): 0 V/m
+Electric Field in cylinder (Y): 0 V/m
+Electric Field in cylinder (Z): -1 V/m
+Detector Size (X): 1e+06mm
+Detector Size (Y): 1e+06mm
+Detector Size (Z): 1000mm
+Detector Position (X): 0mm
+Detector Position (Y): -5e+06mm
+Detector Position (Z): -49500mm
+Simulation time: 344.346 seconds
+Particles detected: 1383
+Particles simulated: 90000
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
