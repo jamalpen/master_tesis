@@ -61,6 +61,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
     // Colocar el volumen lógico del detector fantasma en el volumen lógico del mundo
     G4VPhysicalVolume *physGhostDetector = new G4PVPlacement(0, G4ThreeVector(detectorPosX, detectorPosY, detectorPosZ), logicDetector, "physDetector", logicWorld, false, 0, true);
     
+
+    
     // Ahora creamos el cilindro
     G4Material* cylinderMat = nist->FindOrBuildMaterial("G4_AIR");
 
