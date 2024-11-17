@@ -31,7 +31,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *ROhis
 
     //G4cout << "Esta partícula ha tocado el detector" << G4endl;
     G4cout << "Posición inicial de la partícula es: " << posParticulainicial << G4endl;
-    G4cout << "Posición final de la partícula es: " << posParticulafinal << G4endl; 
+    G4cout << "Posición final de la partícula es: " << posParticulafinal << G4endl;
 
     // Imprimir la posición de la partícula en el detector
     //G4cout << "Posicion de la partícula en el detector: " << posPhoton << G4endl;

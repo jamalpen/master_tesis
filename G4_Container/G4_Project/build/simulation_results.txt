@@ -1214,3 +1214,67 @@ Particles simulated: 90000
 ---------------------------------------
 ---------------------------------------
 ---------------------------------------
+### Run 0 ###
+Mother world size (X): 2e+09mm
+Mother world size (Y): 2e+09mm
+Mother world size (Z): 1e+09mm
+Magnetic Field in mother world (X): 2.66127e-05 T
+Magnetic Field in mother world(Y): -2.1606e-06 T
+Magnetic Field in mother world (Z): 9.6312e-06 T
+Cylinder world Radius: 5e+07mm
+Cylinder world Height: 1e+08mm
+Cylinder world Position (X): 0mm
+Cylinder world Position (Y): 0mm
+Cylinder world Position (Z): 3e+07mm
+Magnetic Field in cylinder (X): 0 T
+Magnetic Field in cylinder (Y): 0 T
+Magnetic Field in cylinder (Z): 0 T
+Electric Field in cylinder (X): 0 V/m
+Electric Field in cylinder (Y): 0 V/m
+Electric Field in cylinder (Z): -1 V/m
+Detector Size (X): 1e+08mm
+Detector Size (Y): 1e+08mm
+Detector Size (Z): 1e+07mm
+Detector Position (X): 0mm
+Detector Position (Y): 0mm
+Detector Position (Z): 3e+08mm
+Simulation time: 6e-06 seconds
+Particles detected: 0
+Particles simulated: 1
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+### Run 0 ###
+Mother world size (X): 2e+09mm
+Mother world size (Y): 2e+09mm
+Mother world size (Z): 1e+09mm
+Magnetic Field in mother world (X): 2.66127e-05 T
+Magnetic Field in mother world(Y): -2.1606e-06 T
+Magnetic Field in mother world (Z): 9.6312e-06 T
+Cylinder world Radius: 5e+07mm
+Cylinder world Height: 1e+08mm
+Cylinder world Position (X): 0mm
+Cylinder world Position (Y): 0mm
+Cylinder world Position (Z): 3e+07mm
+Magnetic Field in cylinder (X): 0 T
+Magnetic Field in cylinder (Y): 0 T
+Magnetic Field in cylinder (Z): 0 T
+Electric Field in cylinder (X): 0 V/m
+Electric Field in cylinder (Y): 0 V/m
+Electric Field in cylinder (Z): -1 V/m
+Detector Size (X): 1e+08mm
+Detector Size (Y): 1e+08mm
+Detector Size (Z): 1e+07mm
+Detector Position (X): 0mm
+Detector Position (Y): 0mm
+Detector Position (Z): 3e+08mm
+Simulation time: 0.008314 seconds
+Particles detected: 0
+Particles simulated: 1
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
